@@ -10,13 +10,21 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import java.time.Duration;
 
 public class AddCelestialSteps {
-    @When("the user inputs valid planet creation data")
-    public void the_user_inputs_valid_planet_creation_data() {
-        // Set valid data
-        // Venus -55_
-        // No image
+//    @When("the user inputs valid planet creation data")
+//    public void the_user_inputs_valid_planet_creation_data() {
+//        // Set valid data
+//        // Venus -55_
+//        // No image
+//        TestRunner.homePage.switchToPlanet();
+//        TestRunner.homePage.setPlanetNameInput("Venus -55_");
+//    }
+
+    @When("the user inputs planet {string}")
+    public void the_user_inputs_planet(String name) {
+        // Switch to planet option
         TestRunner.homePage.switchToPlanet();
-        TestRunner.homePage.setPlanetNameInput("Venus -55_");
+        // Set planet name to name
+        TestRunner.homePage.setPlanetNameInput(name);
     }
 
     @When("the user submits planet creation data")
@@ -42,14 +50,6 @@ public class AddCelestialSteps {
         Assert.assertEquals(3, TestRunner.homePage.getNumberOfPlanets());
     }
 
-    @When("the user inputs planet {string}")
-    public void the_user_inputs_planet(String name) {
-        // Switch to planet option
-        TestRunner.homePage.switchToPlanet();
-        // Set planet name to name
-        TestRunner.homePage.setPlanetNameInput(name);
-    }
-
     @When("the user adds an image of file type {string}")
     public void the_user_adds_an_image_of_file_type(String fileType) {
         // if empty don't set anything, if GIF set to the GIF
@@ -59,20 +59,29 @@ public class AddCelestialSteps {
                 TestRunner.homePage.setPlanetImageInput("C:\\Users\\jacob\\Desktop\\Revature-Project1\\project1\\src\\test\\resources\\Celestial-Images\\planetGIF.gif");
                 return true;
             });
-
+        } else if (fileType.equals("JPEG")){
+            TestRunner.wait.until( d-> {
+                TestRunner.homePage.setPlanetImageInput("C:\\Users\\jacob\\Desktop\\Revature-Project2\\Planetarium\\src\\test\\resources\\Celestial-Images\\planet-1.jpg");
+                return true;
+            });
+        } else if (fileType.equals("PNG")){
+            TestRunner.wait.until( d-> {
+                TestRunner.homePage.setPlanetImageInput("C:\\Users\\jacob\\Desktop\\Revature-Project2\\Planetarium\\src\\test\\resources\\Celestial-Images\\planet-png.png");
+                return true;
+            });
         }
     }
 
-    @When("the user inputs valid moon creation data")
-    public void the_user_inputs_valid_moon_creation_data() {
-        // Set moon creation data
-        // quasi-moon 1 Zoozve_
-        // 1
-        // No image input
-        TestRunner.homePage.switchToMoon();
-        TestRunner.homePage.setMoonNameInput("quasi-moon 1 Zoozve_");
-        TestRunner.homePage.setOrbitedPlanetInput("1");
-    }
+//    @When("the user inputs valid moon creation data")
+//    public void the_user_inputs_valid_moon_creation_data() {
+//        // Set moon creation data
+//        // quasi-moon 1 Zoozve_
+//        // 1
+//        // No image input
+//        TestRunner.homePage.switchToMoon();
+//        TestRunner.homePage.setMoonNameInput("quasi-moon 1 Zoozve_");
+//        TestRunner.homePage.setOrbitedPlanetInput("1");
+//    }
 
     @When("the user submits moon creation data")
     public void the_user_submits_moon_creation_data() {
@@ -110,20 +119,20 @@ public class AddCelestialSteps {
         TestRunner.homePage.setOrbitedPlanetInput(ownerNum);
     }
 
-    @When("the user adds and image of file type {string}")
-    public void the_user_adds_and_image_of_file_type(String fileType) {
-        // if none dont add anything
-        // if GIF add the gif
-        if(fileType.equals("GIF")){
-            TestRunner.wait.until( d-> {
-                TestRunner.homePage.setMoonImageInput("C:\\Users\\jacob\\Desktop\\Revature-Project1\\project1\\src\\test\\resources\\Celestial-Images\\planetGIF.gif");
-                return true;
-            });
-
-        }
-
-
-    }
+//    @When("the user adds and image of file type {string}")
+//    public void the_user_adds_and_image_of_file_type(String fileType) {
+//        // if none dont add anything
+//        // if GIF add the gif
+//        if(fileType.equals("GIF")){
+//            TestRunner.wait.until( d-> {
+//                TestRunner.homePage.setMoonImageInput("C:\\Users\\jacob\\Desktop\\Revature-Project1\\project1\\src\\test\\resources\\Celestial-Images\\planetGIF.gif");
+//                return true;
+//            });
+//
+//        }
+//
+//
+//    }
 
 
 }
