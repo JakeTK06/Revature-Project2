@@ -7,17 +7,15 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import java.time.Duration;
+import java.io.File;
 
 public class AddCelestialSteps {
-//    @When("the user inputs valid planet creation data")
-//    public void the_user_inputs_valid_planet_creation_data() {
-//        // Set valid data
-//        // Venus -55_
-//        // No image
-//        TestRunner.homePage.switchToPlanet();
-//        TestRunner.homePage.setPlanetNameInput("Venus -55_");
-//    }
+
+    private final File CelestialJPEG = new File("src/test/resources/Celestial-Images/planet-1.jpg");
+
+    private final File CelestialPNG = new File("src/test/resources/Celestial-Images/planet-png.png");
+
+    private final File CelestialGIF = new File("src/test/resources/Celestial-Images/planet-gif.gif");
 
     @When("the user inputs planet {string}")
     public void the_user_inputs_planet(String name) {
@@ -56,17 +54,17 @@ public class AddCelestialSteps {
         if (fileType.equals("GIF")){
             // set to GIF
             TestRunner.wait.until( d-> {
-                TestRunner.homePage.setPlanetImageInput("C:\\Users\\jacob\\Desktop\\Revature-Project1\\project1\\src\\test\\resources\\Celestial-Images\\planetGIF.gif");
+                TestRunner.homePage.setPlanetImageInput(CelestialGIF.getAbsolutePath());
                 return true;
             });
         } else if (fileType.equals("JPEG")){
             TestRunner.wait.until( d-> {
-                TestRunner.homePage.setPlanetImageInput("C:\\Users\\jacob\\Desktop\\Revature-Project2\\Planetarium\\src\\test\\resources\\Celestial-Images\\planet-1.jpg");
+                TestRunner.homePage.setPlanetImageInput(CelestialJPEG.getAbsolutePath());
                 return true;
             });
         } else if (fileType.equals("PNG")){
             TestRunner.wait.until( d-> {
-                TestRunner.homePage.setPlanetImageInput("C:\\Users\\jacob\\Desktop\\Revature-Project2\\Planetarium\\src\\test\\resources\\Celestial-Images\\planet-png.png");
+                TestRunner.homePage.setPlanetImageInput(CelestialPNG.getAbsolutePath());
                 return true;
             });
         }
