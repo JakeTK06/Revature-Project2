@@ -4,7 +4,7 @@ import com.revature.planetarium.repository.user.UserDao;
 import com.revature.planetarium.repository.user.UserDaoImp;
 import com.revature.planetarium.service.user.UserService;
 import com.revature.planetarium.service.user.UserServiceImp;
-import com.revature.util.Setup;
+import com.revature.utility.Setup;
 import org.junit.Before;
 import org.mockito.Mockito;
 
