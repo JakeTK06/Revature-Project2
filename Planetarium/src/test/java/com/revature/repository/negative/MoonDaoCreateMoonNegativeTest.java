@@ -70,7 +70,7 @@ public class MoonDaoCreateMoonNegativeTest extends MoonDaoTest {
                 {invalidMoonName4,validPlanetId,jpegPath,moonNameMessage},
                 {validMoonName,invalidPlanetId,jpegPath,planetIdMessage},
                 {invalidMoonName4,invalidPlanetId,jpegPath,moonNameMessage},
-                {invalidMoonName4,validMoonName,pngPath,moonNameMessage},
+                {invalidMoonName4,validPlanetId,pngPath,moonNameMessage},
                 {validMoonName,invalidPlanetId,pngPath,planetIdMessage},
                 {invalidMoonName4,invalidPlanetId,pngPath,moonNameMessage}
         });
