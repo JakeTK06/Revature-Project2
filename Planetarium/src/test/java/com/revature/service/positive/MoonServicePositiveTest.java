@@ -19,6 +19,7 @@ public class MoonServicePositiveTest extends MoonServiceTest {
 
     // inputs/outputs for selectByPlanet
     private List<Moon> mockReturnedMoons;
+    private int positivePlanetId;
 
     // inputs/outputs for deleteMoon
 
@@ -27,6 +28,7 @@ public class MoonServicePositiveTest extends MoonServiceTest {
     public void positiveSetup() {
 
         mockReturnedMoons = new ArrayList<Moon>();
+        positivePlanetId = 1;
         mockReturnedMoons.add(new Moon(1, "Luna", 1));
         mockReturnedMoons.add(new Moon(2, "Titan", 2));
     }
@@ -48,8 +50,8 @@ public class MoonServicePositiveTest extends MoonServiceTest {
 
     @Test
     public void selectByPlanetPositiveTest() {
-        Mockito.when(moonDao.readMoonsByPlanet(1)).thenReturn(mockReturnedMoons);
-        List<Moon> result = moonService.selectByPlanet(1);
+        Mockito.when(moonDao.readMoonsByPlanet(positivePlanetId)).thenReturn(mockReturnedMoons);
+        List<Moon> result = moonService.selectByPlanet(positivePlanetId);
         Assert.assertEquals(result, mockReturnedMoons);
     }
 
