@@ -11,11 +11,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Base64;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
-public class MoonDaoPositveTest extends MoonDaoTest {
+public class MoonDaoPositiveTest extends MoonDaoTest {
 
     private Moon positiveMoon;
     private byte[] imageData;
