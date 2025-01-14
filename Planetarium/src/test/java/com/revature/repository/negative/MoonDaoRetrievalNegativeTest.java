@@ -18,7 +18,7 @@ public class MoonDaoRetrievalNegativeTest extends MoonDaoTest {
     }
 
     @Test
-    public void readMoonsByPlanetNegativeTest(){
+    public void daoReadMoonsByPlanetNegativeTest(){
         List<Moon> result = moonDao.readMoonsByPlanet(negativePlanetIdForRetrieval);
         Assert.assertTrue(result.isEmpty());
     }

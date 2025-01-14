@@ -24,7 +24,7 @@ public class PlanetServiceRetrievalNegativeTest extends PlanetServiceTest {
     }
 
     @Test
-    public void retrievePlanetNegativeTest() {
+    public void serviceRetrievePlanetNegativeTest() {
         Mockito.when(planetDao.readPlanetsByOwner(negativeUserId)).thenReturn(mockReturnedPlanets);
         List<Planet> actualPlanets = planetService.selectByOwner(negativeUserId);
         Assert.assertEquals(actualPlanets, mockReturnedPlanets);

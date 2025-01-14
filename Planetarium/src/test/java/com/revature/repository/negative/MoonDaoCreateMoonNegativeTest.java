@@ -78,7 +78,7 @@ public class MoonDaoCreateMoonNegativeTest extends MoonDaoTest {
     }
 
     @Test
-    public void createMoonNegativeTest(){
+    public void daoCreateMoonNegativeTest(){
         testMoon = new Moon(0,negativeMoonName,negativePlanetId);
 
         // Set image if there  is one

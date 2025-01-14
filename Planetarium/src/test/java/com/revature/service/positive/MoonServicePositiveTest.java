@@ -37,19 +37,19 @@ public class MoonServicePositiveTest extends MoonServiceTest {
     @Test
     @Ignore("cannot compare Moon with boolean")
     // @TODO: Refactor code
-    public void createMoonWithoutImagePositiveTest() {
+    public void serviceCreateMoonWithoutImagePositiveTest() {
 
     }
 
     @Test
     @Ignore("cannot compare Moon with boolean")
     // @TODO: Refactor code
-    public void createMoonImagePositiveTest() {
+    public void serviceCreateMoonImagePositiveTest() {
     }
 
 
     @Test
-    public void selectByPlanetPositiveTest() {
+    public void serviceSelectByPlanetPositiveTest() {
         Mockito.when(moonDao.readMoonsByPlanet(positivePlanetId)).thenReturn(mockReturnedMoons);
         List<Moon> result = moonService.selectByPlanet(positivePlanetId);
         Assert.assertEquals(result, mockReturnedMoons);
@@ -62,14 +62,14 @@ public class MoonServicePositiveTest extends MoonServiceTest {
     @Test
     @Ignore("cannot compare String with boolean")
     // @TODO: Refactor code
-    public void deleteMoonWithoutImagePositiveTest() {
+    public void serviceDeleteMoonWithoutImagePositiveTest() {
 
     }
 
     @Test
     @Ignore("cannot compare String with boolean")
     // @TODO: Refactor code
-    public void deleteMoonWithImagePositiveTest() {
+    public void serviceDeleteMoonWithImagePositiveTest() {
 
     }
 }

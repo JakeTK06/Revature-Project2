@@ -36,7 +36,7 @@ public class PlanetDaoPositiveTest extends PlanetDaoTest {
     }
 
     @Test
-    public void createPlanetPositiveTestJPG(){
+    public void daoCreatePlanetPositiveTestJPG(){
         {
             try {
                 imageData = Files.readAllBytes(Path.of("src/test/resources/Celestial-Images/planet-1.jpg"));
@@ -51,7 +51,7 @@ public class PlanetDaoPositiveTest extends PlanetDaoTest {
     }
 
     @Test
-    public void createPlanetPositiveTestPNG(){
+    public void daoCreatePlanetPositiveTestPNG(){
         {
             try {
                 imageData = Files.readAllBytes(Path.of("src/test/resources/Celestial-Images/planet-png.png"));
@@ -66,21 +66,21 @@ public class PlanetDaoPositiveTest extends PlanetDaoTest {
     }
 
     @Test
-    public void createPlanetPositiveTestNoImage(){
+    public void daoCreatePlanetPositiveTestNoImage(){
         Optional<Planet> response = planetDao.createPlanet(positivePlanet);
         Assert.assertTrue(response.isPresent());
         Assert.assertNotEquals(0, response.get().getPlanetId());
     }
 
     @Test
-    public void readPlanetByOwnerPositiveTest(){
+    public void daoReadPlanetByOwnerPositiveTest(){
         List<Planet> response = planetDao.readPlanetsByOwner(positiveOwnerId);
         System.out.println(response);
         Assert.assertNotNull(response);
     }
 
     @Test
-    public void deletePlanetByNamePositiveTest(){
+    public void daoDeletePlanetByNamePositiveTest(){
         Boolean response = planetDao.deletePlanet(positivePlanetNameDeletion);
         Assert.assertEquals(true, response);
     }

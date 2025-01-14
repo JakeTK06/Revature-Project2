@@ -71,7 +71,7 @@ public class PlanetServiceCreateNegativeTest extends PlanetServiceTest {
     }
 
     @Test
-    public void createPlanetNegativeTest() {
+    public void serviceCreatePlanetNegativeTest() {
         Mockito.when(planetDao.createPlanet(negativePlanet)).thenThrow(new AssertionError("PlanetFail exception, but it was not thrown when it should have been."));
         PlanetFail planetFail = Assert.assertThrows(PlanetFail.class, () -> {planetService.createPlanet(negativePlanet);});
         Assert.assertEquals(expectedMessage, planetFail.getMessage());

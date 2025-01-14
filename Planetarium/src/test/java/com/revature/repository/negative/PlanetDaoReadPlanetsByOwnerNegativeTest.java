@@ -18,7 +18,7 @@ public class PlanetDaoReadPlanetsByOwnerNegativeTest extends PlanetDaoTest {
     }
 
     @Test
-    public void readPlanetByOwnerNegativeTest(){
+    public void daoReadPlanetByOwnerNegativeTest(){
         List<Planet> response = planetDao.readPlanetsByOwner(negativeOwnerId);
         Assert.assertTrue(response.isEmpty());
     }
