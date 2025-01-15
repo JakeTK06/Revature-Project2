@@ -18,7 +18,7 @@ public class MoonDaoDeletionNegativeTest extends MoonDaoTest {
     }
 
     @Test
-    public void deleteMoonNegativeTest(){
+    public void daoDeleteMoonNegativeTest(){
         MoonFail exception = Assert.assertThrows(MoonFail.class, () -> {moonDao.deleteMoon(negativeMoonToDelete); });
         Assert.assertEquals(exceptionMessage, exception.getMessage());
     }

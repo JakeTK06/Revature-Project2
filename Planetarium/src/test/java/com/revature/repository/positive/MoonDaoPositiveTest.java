@@ -32,7 +32,7 @@ public class MoonDaoPositiveTest extends MoonDaoTest {
     }
 
     @Test
-    public void createMoonPositiveTestNoImage(){
+    public void daoCreateMoonPositiveTestNoImage(){
 //        positiveMoon.setImageData(Base64.getEncoder().encodeToString());
         Optional<Moon> result = moonDao.createMoon(positiveMoon);
         Assert.assertTrue(result.isPresent());
@@ -40,7 +40,7 @@ public class MoonDaoPositiveTest extends MoonDaoTest {
     }
 
     @Test
-    public void createMoonPositiveTestJPG(){
+    public void daoCreateMoonPositiveTestJPG(){
         try{
             imageData = Files.readAllBytes(Path.of("src/test/resources/Celestial-Images/moon-1.jpg"));
         } catch(IOException e){
@@ -54,7 +54,7 @@ public class MoonDaoPositiveTest extends MoonDaoTest {
     }
 
     @Test
-    public void createMoonPositiveTestPNG(){
+    public void daoCreateMoonPositiveTestPNG(){
         try{
             imageData = Files.readAllBytes(Path.of("src/test/resources/Celestial-Images/planet-png.png"));
         } catch(IOException e){
@@ -66,13 +66,13 @@ public class MoonDaoPositiveTest extends MoonDaoTest {
     }
 
     @Test
-    public void readMoonsByPlanetPositiveTest(){
+    public void daoReadMoonsByPlanetPositiveTest(){
         List<Moon> result = moonDao.readMoonsByPlanet(positivePlanetIdForRetrieval);
         Assert.assertFalse(result.isEmpty());
     }
 
     @Test
-    public void deleteMoonPositiveTest(){
+    public void daoDeleteMoonPositiveTest(){
         Assert.assertTrue(moonDao.deleteMoon(positiveMoonToDelete));
     }
 
