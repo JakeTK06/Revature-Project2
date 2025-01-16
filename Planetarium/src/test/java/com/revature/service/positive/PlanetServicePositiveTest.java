@@ -56,7 +56,7 @@ public class PlanetServicePositiveTest extends PlanetServiceTest{
 
     //TODO: Refactor code
     @Test @Ignore("Cannot compare String with boolean")
-    public void createPlanetPositiveTest() {
+    public void serviceCreatePlanetPositiveTest() {
     /*  Mockito.when(planetDao.createPlanet(positivePlanet)).thenReturn(mockReturnedPlanet);
         //returns planet or exception, not boolean. Needs fixing.
         boolean result = planetService.createPlanet(positivePlanet);
@@ -65,7 +65,7 @@ public class PlanetServicePositiveTest extends PlanetServiceTest{
     }
 
     @Test
-    public void retrievalPlanetPositiveTest() {
+    public void serviceRetrievalPlanetPositiveTest() {
         Mockito.when(planetDao.readPlanetsByOwner(positivePlanet.getOwnerId())).thenReturn(mockReturnedPlanetList);
         List<Planet> result = planetService.selectByOwner(1);
         Assert.assertEquals(mockReturnedPlanetList, result);
@@ -73,6 +73,6 @@ public class PlanetServicePositiveTest extends PlanetServiceTest{
 
     //TODO:Refactor code
     @Test @Ignore("cannot compare String and boolean")
-    public void deletePlanetPositiveTest() {
+    public void serviceDeletePlanetPositiveTest() {
     }
 }

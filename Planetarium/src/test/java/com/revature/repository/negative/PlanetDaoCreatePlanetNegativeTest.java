@@ -50,7 +50,7 @@ public class PlanetDaoCreatePlanetNegativeTest extends PlanetDaoTest {
     }
 
     @Test
-    public void createPlanetNegativeTest(){
+    public void daoCreatePlanetNegativeTest(){
         testPlanet = new Planet();
         testPlanet.setPlanetId(planetId);
         testPlanet.setPlanetName(planetName);

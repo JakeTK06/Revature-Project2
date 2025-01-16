@@ -18,7 +18,7 @@ public class PlanetDaoDeletePlanetByNameNegativeTest extends PlanetDaoTest {
     }
 
     @Test
-    public void readPlanetByOwnerNegativeTest(){
+    public void daoReadPlanetByOwnerNegativeTest(){
         Boolean response = planetDao.deletePlanet(negativePlanetName);
         Assert.assertEquals(false, response);
     }

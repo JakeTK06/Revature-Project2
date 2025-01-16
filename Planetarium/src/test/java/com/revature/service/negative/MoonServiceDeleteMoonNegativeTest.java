@@ -30,7 +30,7 @@ public class MoonServiceDeleteMoonNegativeTest extends MoonServiceTest {
     }
 
     @Test
-    public void deleteMoonNegativeTest(){
+    public void serviceDeleteMoonNegativeTest(){
         Mockito.when(moonDao.deleteMoon(negativeMoonName)).thenThrow(new AssertionError("MoonFail exception expected, but it was not thrown when it should have been"));
         MoonFail moonFail = Assert.assertThrows(MoonFail.class, ()->{moonService.deleteMoon(negativeMoonName);});
         Assert.assertEquals(expectedExceptionMessage, moonFail.getMessage());
