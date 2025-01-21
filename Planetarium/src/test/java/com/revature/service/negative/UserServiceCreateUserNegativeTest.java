@@ -12,6 +12,7 @@ import org.mockito.Mockito;
 
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.Optional;
 
 import static org.junit.runners.Parameterized.Parameter;
 import static org.junit.runners.Parameterized.Parameters;
@@ -20,6 +21,8 @@ import static org.junit.runners.Parameterized.Parameters;
 public class UserServiceCreateUserNegativeTest extends UserServiceTest {
 
     private User negativeUser;
+
+    public User positiveUser;
 
     @Parameter
     public int userId;
@@ -53,12 +56,15 @@ public class UserServiceCreateUserNegativeTest extends UserServiceTest {
 
     @Before
     public void negativeSetup(){
+
+        positiveUser = new User(0, "Batman", "Iamthenight1939");
         negativeUser = new User(userId, username, password);
     }
 
 
     @Test
     public void createUserNegativeTest(){
+        Mockito.when(userDao.findUserByUsername("Batman")).thenReturn(Optional.of(positiveUser));
         Mockito.when(userDao.createUser(negativeUser)).thenThrow(new AssertionError("UserFail exception expected, but it was not thrown when it should have been"));
         UserFail userFail = Assert.assertThrows(UserFail.class, ()->{userService.createUser(negativeUser);});
         Assert.assertEquals(expectedExceptionMessage, userFail.getMessage());
