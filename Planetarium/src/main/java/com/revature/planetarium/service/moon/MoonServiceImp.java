@@ -93,7 +93,7 @@ public class MoonServiceImp<T> implements MoonService<T> {
         if (deleted) {
             return "Moon deleted successfully";
         } else {
-            throw new MoonFail("Moon delete failed, please try again");
+            throw new MoonFail("Invalid moon name");
         }
     }
 

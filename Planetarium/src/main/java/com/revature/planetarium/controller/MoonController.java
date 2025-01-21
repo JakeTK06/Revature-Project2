@@ -1,6 +1,7 @@
 package com.revature.planetarium.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.exceptions.MoonFail;
@@ -68,10 +69,10 @@ public class MoonController {
                 responseMessage = moonService.deleteMoon(identifier);
             }
             ctx.json(responseMessage);
-            ctx.status(200);
+            ctx.status(204);
         } catch (MoonFail e) {
-            ctx.result(e.getMessage());
-            ctx.status(400);
+            ctx.json(Map.of("message", e.getMessage()));
+            ctx.status(404);
         }
     }
 

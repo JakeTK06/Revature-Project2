@@ -94,7 +94,7 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
         if (deleted) {
             return "Planet deleted successfully";
         } else {
-            throw new PlanetFail("Planet delete failed, please try again");
+            throw new PlanetFail("Invalid planet name");
         }
     }
 
