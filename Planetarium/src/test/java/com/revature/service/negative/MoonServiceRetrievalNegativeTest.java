@@ -27,7 +27,7 @@ public class MoonServiceRetrievalNegativeTest extends MoonServiceTest {
     }
 
     @Test
-    public void selectByPlanetNegativeTest() {
+    public void serviceSelectByPlanetNegativeTest() {
         Mockito.when(moonDao.readMoonsByPlanet(negativePlanetId)).thenReturn(mockReturnedMoons);
         System.out.println(mockReturnedMoons);
         List<Moon> result = moonService.selectByPlanet(negativePlanetId);

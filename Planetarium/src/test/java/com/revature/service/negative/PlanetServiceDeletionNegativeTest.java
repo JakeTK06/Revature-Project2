@@ -19,7 +19,7 @@ public class PlanetServiceDeletionNegativeTest extends PlanetServiceTest {
     }
 
     @Test
-    public void deletePlanetNegativeTest() {
+    public void serviceDeletePlanetNegativeTest() {
         Mockito.when(planetDao.deletePlanet(negativePlanetName)).thenThrow(new AssertionError("PlanetFail exception, but it was not thrown when it should have been."));
         PlanetFail planetFail = Assert.assertThrows(PlanetFail.class, () -> {planetService.deletePlanet(negativePlanetName);});
         Assert.assertEquals(expectedMessage, planetFail.getMessage());
