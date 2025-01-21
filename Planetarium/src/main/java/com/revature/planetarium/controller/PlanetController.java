@@ -1,6 +1,7 @@
 package com.revature.planetarium.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.PlanetFail;
@@ -82,10 +83,10 @@ public class PlanetController {
                 responseMessage = planetService.deletePlanet(identifier);
             }
             ctx.json(responseMessage);
-            ctx.status(200);
+            ctx.status(204);
         } catch (PlanetFail e) {
-            ctx.result(e.getMessage());
-            ctx.status(400);
+            ctx.json(Map.of("message", e.getMessage()));
+            ctx.status(404);
         }
     }
 

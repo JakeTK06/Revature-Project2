@@ -56,9 +56,6 @@ public class MoonServicePositiveTest extends MoonServiceTest {
     }
 
 
-
-
-
     @Test
     @Ignore("cannot compare String with boolean")
     // @TODO: Refactor code

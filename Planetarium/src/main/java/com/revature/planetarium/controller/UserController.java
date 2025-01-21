@@ -7,6 +7,8 @@ import com.revature.planetarium.service.user.UserService;
 
 import io.javalin.http.Context;
 
+import java.util.Map;
+
 public class UserController {
 
     private UserService userService;
@@ -21,7 +23,7 @@ public class UserController {
             User user = ctx.bodyAsClass(User.class);
             String result = userService.createUser(user);
             ctx.status(201);
-            ctx.json(result);
+            ctx.json(Map.of("message", result));
         } catch (UserFail e) {
             ctx.status(400);
             ctx.json(e.getMessage());
@@ -38,6 +40,7 @@ public class UserController {
             ctx.json(user);
         } catch (UserFail e) {
             ctx.status(401);
+            ctx.json(Map.of("message", "invalid credentials"));
         }
     }
 
@@ -45,7 +48,7 @@ public class UserController {
     public void logout(Context ctx){
         ctx.req().getSession().invalidate();
         ctx.json("Logged out");
-        ctx.status(401);
+        ctx.status(200);
     }
 
     public void authenticateUser(Context ctx){
