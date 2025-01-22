@@ -1,23 +1,63 @@
 package com.revature.planetarium.repository.planet;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import com.revature.planetarium.entities.Planet;
+import com.revature.planetarium.exceptions.MoonFail;
 import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.planetarium.utility.DatabaseConnector;
+
+import javax.imageio.ImageIO;
 
 public class PlanetDaoImp implements PlanetDao {
 
     @Override
     public Optional<Planet> createPlanet(Planet planet) {
+        // Order to throw exceptions
+        // 1. Planet name
+        // 2. Image type
+
+        // Check planet does not exist in db
+
+
+        String planetName = planet.getPlanetName();
+        Optional<Planet> existingPlanet = readPlanet(planetName);
+        if (existingPlanet.isPresent()){
+            // planet already exists throw exception
+            throw new PlanetFail("Invalid planet name");
+        }
+
+        // Verify name is valid
+
+        String validCharacters ="^[a-zA-Z0-9 _-]+$";
+        if (planetName.isEmpty() || planetName.length() > 30
+            || !planetName.matches(validCharacters)){
+            throw new PlanetFail("Invalid planet name");
+        }
+        // Check image type
+
+
+        try {
+            if (planet.getImageData() != null) {
+                ByteArrayInputStream bais = new ByteArrayInputStream(planet.imageDataAsByteArray());
+                String format = getFormatName(bais);
+                if (!("jpeg".equalsIgnoreCase(format) || "png".equalsIgnoreCase(format))) {
+                throw new PlanetFail("Invalid file type");
+                }
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         try (Connection conn = DatabaseConnector.getConnection();
              PreparedStatement stmt = conn.prepareStatement("INSERT INTO planets (name, ownerId, image) VALUES (?, ?, ?)", Statement.RETURN_GENERATED_KEYS)){
             stmt.setString(1, planet.getPlanetName());
@@ -36,6 +76,14 @@ public class PlanetDaoImp implements PlanetDao {
             throw new PlanetFail(e.getMessage());
         }
         return Optional.empty();
+    }
+
+    // Helper method to determine the format of the image
+    private String getFormatName(ByteArrayInputStream bais) throws IOException {
+        bais.reset(); // Reset the stream to the beginning
+        // Use ImageIO to get image format
+        return ImageIO.getImageReaders(ImageIO.createImageInputStream(bais))
+                .next().getFormatName();
     }
 
 
@@ -159,6 +207,10 @@ public class PlanetDaoImp implements PlanetDao {
              PreparedStatement stmt = conn.prepareStatement("DELETE FROM planets WHERE id = ?")) {
             stmt.setInt(1, id);
             int rowsDeleted = stmt.executeUpdate();
+            if (rowsDeleted < 1) {
+                // Nothing was deleted need to throw MoonFail
+                throw new PlanetFail("Invalid planet name");
+            }
             return rowsDeleted > 0;
         } catch (SQLException e) {
             System.out.println(e);
@@ -172,6 +224,10 @@ public class PlanetDaoImp implements PlanetDao {
              PreparedStatement stmt = conn.prepareStatement("DELETE FROM planets WHERE name = ?")) {
             stmt.setString(1, name);
             int rowsDeleted = stmt.executeUpdate();
+            if (rowsDeleted < 1) {
+                // Nothing was deleted need to throw MoonFail
+                throw new PlanetFail("Invalid planet name");
+            }
             return rowsDeleted > 0;
         } catch (SQLException e) {
             System.out.println(e);
