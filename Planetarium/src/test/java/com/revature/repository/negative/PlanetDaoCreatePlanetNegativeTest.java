@@ -45,7 +45,7 @@ public class PlanetDaoCreatePlanetNegativeTest extends PlanetDaoTest {
                 {0, "Planet Name That-is 1  long_name ", 1, "src/test/resources/Celestial-Images/planet-1.jpg", "Invalid planet name"},
                 {0, "Exciting!! planet", 1, "src/test/resources/Celestial-Images/planet-1.jpg", "Invalid planet name"},
                 {0, "Earth", 1, "src/test/resources/Celestial-Images/planet-1.jpg", "Invalid planet name"},
-                {0, "", 1, "", "Invalid planet name"}
+                {0, "", 1, "", "Invalid planet name"},
         });
     }
 

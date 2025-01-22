@@ -49,7 +49,7 @@ public class MoonServiceCreateMoonNegativeTest extends MoonServiceTest {
                 {0, "Exciting!! Moon", 1, "src/test/resources/Celestial-Images/planet-1.jpg", "Invalid moon name"},
                 {0, "Luna", 1, "src/test/resources/Celestial-Images/planet-1.jpg", "Invalid moon name"},
                 {0, "quasi-moon 1 Zoozve_", 1, "src/test/resources/Celestial-Images/planet-gif.gif", "Invalid file type"},
-                {0, "quasi-moon 1 Zoozve_", 3, "src/test/resources/Celestial-Images/planet-1.jpg", "Invalid planet ID"},
+                {0, "quasi-moon 1 Zoozve_", 3, "src/test/resources/Celestial-Images/planet-1.jpg", "Invalid planet ID"}
         });
     }
 
