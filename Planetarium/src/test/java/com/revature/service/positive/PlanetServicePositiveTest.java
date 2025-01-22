@@ -9,26 +9,38 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.mockito.Mockito;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.List;
 
 import java.util.Optional;
 
 public class PlanetServicePositiveTest extends PlanetServiceTest{
+
+    // code for retrieval
     private Planet positivePlanet;
     private Optional<Planet> mockOptional;
     private Planet mockReturnedPlanet;
     private Planet mockReturnedPlanet1;
     private Planet mockReturnedPlanet2;
     private List<Planet> mockReturnedPlanetList = new ArrayList<>();
-    private boolean planetReturned;
 
-    private Planet positivePlanetRetrieval;
-    private Optional<Planet> planetRetrievalOptional;
+    // code for deletion
+    private Optional<Planet> positiveDeletePlanetOptional;
+    private String positiveDeletePlanetName;
 
-    private Planet positiveDeletePlanet;
-    private Optional<Planet> planetDeleteOptional;
-
+    public void imageHelper(String path) {
+        byte[] imageData;
+        try {
+            imageData = Files.readAllBytes(Path.of(path));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        positivePlanet.setImageData(Base64.getEncoder().encodeToString(imageData));
+    }
     @Before
     public void positiveSetup() {
         positivePlanet = new Planet();
@@ -36,6 +48,11 @@ public class PlanetServicePositiveTest extends PlanetServiceTest{
         positivePlanet.setPlanetName("Venus-55_");
         positivePlanet.setOwnerId(1);
 
+
+        //setup for planet creation test
+        mockOptional = Optional.of(positivePlanet);
+
+        //setup for planet retrieval test
         mockReturnedPlanet = new Planet();
         mockReturnedPlanet.setPlanetId(3);
         mockReturnedPlanet.setPlanetName("Venus-55_");
@@ -52,16 +69,18 @@ public class PlanetServicePositiveTest extends PlanetServiceTest{
 
         mockReturnedPlanetList.add(mockReturnedPlanet1);
         mockReturnedPlanetList.add(mockReturnedPlanet2);
+
+        // setup for planet delete test
+        positiveDeletePlanetName = "Earth";
+        positiveDeletePlanetOptional = Optional.of(mockReturnedPlanet1);
+
     }
 
-    //TODO: Refactor code
-    @Test @Ignore("Cannot compare String with boolean")
+    @Test
     public void serviceCreatePlanetPositiveTest() {
-    /*  Mockito.when(planetDao.createPlanet(positivePlanet)).thenReturn(mockReturnedPlanet);
-        //returns planet or exception, not boolean. Needs fixing.
+      Mockito.when(planetDao.createPlanet(positivePlanet)).thenReturn(mockOptional);
         boolean result = planetService.createPlanet(positivePlanet);
-        Assert.assertEquals(planetReturned, result);
-     */
+        Assert.assertTrue(result);
     }
 
     @Test
@@ -71,8 +90,12 @@ public class PlanetServicePositiveTest extends PlanetServiceTest{
         Assert.assertEquals(mockReturnedPlanetList, result);
     }
 
-    //TODO:Refactor code
-    @Test @Ignore("cannot compare String and boolean")
+    @Test
     public void serviceDeletePlanetPositiveTest() {
+        Mockito.when(planetDao.readPlanet("Earth")).thenReturn(positiveDeletePlanetOptional);
+        Mockito.when(planetDao.deletePlanet(positiveDeletePlanetName)).thenReturn(true);
+        boolean result = planetService.deletePlanet(positiveDeletePlanetName);
+        Assert.assertTrue(result);
+
     }
 }

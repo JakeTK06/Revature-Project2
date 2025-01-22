@@ -4,6 +4,9 @@ import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.planetarium.repository.planet.PlanetDao;
 
+import javax.imageio.ImageIO;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,17 +19,34 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
     }
 
     @Override
-    public Planet createPlanet(Planet planet) {
+    public boolean createPlanet(Planet planet) {
+        String accepted_characters = "^[A-Za-z0-9 _-]+$";
         if (planet.getPlanetName().length() < 1 || planet.getPlanetName().length() > 30) {
-            throw new PlanetFail("character length fail");
+            throw new PlanetFail("Invalid planet name");
+        }
+        if (!planet.getPlanetName().matches(accepted_characters)) {
+            throw new PlanetFail("Invalid planet name");
         }
         Optional<Planet> existingPlanet = planetDao.readPlanet(planet.getPlanetName());
         if (existingPlanet.isPresent()) {
-            throw new PlanetFail("unique name fail");
+            throw new PlanetFail("Invalid planet name");
+        }
+
+        try {
+            if (planet.getImageData() != null) {
+                ByteArrayInputStream bais = new ByteArrayInputStream(planet.imageDataAsByteArray());
+                String format = getFormatName(bais);
+                if (!("jpeg".equalsIgnoreCase(format) || "png".equalsIgnoreCase(format))) {
+                    throw new PlanetFail("Invalid file type");
+                }
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
         }
         Optional<Planet> createdPlanet = planetDao.createPlanet(planet);
         if (createdPlanet.isPresent()) {
-            return createdPlanet.get();
+            return true;
         } else {
             throw new PlanetFail("Could not create planet");
         }
@@ -82,20 +102,39 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
     }
 
     @Override
-    public String deletePlanet(T idOrName) {
+    public boolean deletePlanet(T idOrName) {
         boolean deleted;
+
         if (idOrName instanceof Integer) {
             deleted = planetDao.deletePlanet((int) idOrName);
-        } else if (idOrName instanceof String) {
-            deleted = planetDao.deletePlanet((String) idOrName);
-        } else {
+        }
+
+        else if (idOrName instanceof String) {
+            String name = (String) idOrName;
+            if (planetDao.readPlanet(name).isEmpty()) {
+                throw new PlanetFail("Invalid planet name");
+            } else {
+                deleted = planetDao.deletePlanet((String) idOrName);
+            }
+
+        }
+
+        else {
             throw new PlanetFail("identifier must be an Integer or String");
         }
         if (deleted) {
-            return "Planet deleted successfully";
+            return true;
         } else {
             throw new PlanetFail("Invalid planet name");
         }
+    }
+
+    // Helper method to determine the format of the image
+    private String getFormatName(ByteArrayInputStream bais) throws IOException {
+        bais.reset(); // Reset the stream to the beginning
+        // Use ImageIO to get image format
+        return ImageIO.getImageReaders(ImageIO.createImageInputStream(bais))
+                .next().getFormatName();
     }
 
 }
