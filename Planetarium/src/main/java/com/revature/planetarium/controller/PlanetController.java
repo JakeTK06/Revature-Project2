@@ -50,11 +50,10 @@ public class PlanetController {
     public void createPlanet(Context ctx) {
         try {
             Planet planet = ctx.bodyAsClass(Planet.class);
-            boolean createdPlanet = planetService.createPlanet(planet);
-            ctx.json(createdPlanet);
+            planetService.createPlanet(planet);
             ctx.status(201);            
         } catch (PlanetFail e) {
-            ctx.result(e.getMessage());
+            ctx.json(Map.of("message", e.getMessage()));
             ctx.status(400);
         }
 
@@ -75,6 +74,10 @@ public class PlanetController {
 
     public void deletePlanet(Context ctx) {
         try {
+            String identifier = ctx.pathParam("identifier");
+            String responseMessage;
+            responseMessage = String.valueOf(planetService.deletePlanet(identifier));
+            ctx.json(responseMessage);
             ctx.status(204);
         } catch (PlanetFail e) {
             ctx.json(Map.of("message", e.getMessage()));

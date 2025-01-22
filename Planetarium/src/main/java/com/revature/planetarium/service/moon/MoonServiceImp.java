@@ -1,9 +1,15 @@
 package com.revature.planetarium.service.moon;
 
 import com.revature.planetarium.entities.Moon;
+import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.MoonFail;
+import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.planetarium.repository.moon.MoonDao;
+import com.revature.planetarium.repository.planet.PlanetDao;
 
+import javax.imageio.ImageIO;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -11,24 +17,57 @@ public class MoonServiceImp<T> implements MoonService<T> {
     
     private MoonDao moonDao;
 
-    public MoonServiceImp(MoonDao moonDao) {
+    public MoonServiceImp(MoonDao moonDao, PlanetDao planetDao) {
         this.moonDao = moonDao;
     }
 
+
+    // Helper method to determine the format of the image
+    private String getFormatName(ByteArrayInputStream bais) throws IOException {
+        bais.reset(); // Reset the stream to the beginning
+        // Use ImageIO to get image format
+        return ImageIO.getImageReaders(ImageIO.createImageInputStream(bais))
+                .next().getFormatName();
+    }
+
     @Override
-    public Moon createMoon(Moon moon) {
+    public boolean createMoon(Moon moon) {
+        String accepted_characters = "^[A-Za-z0-9 _-]+$";
         if (moon.getMoonName().length() < 1 || moon.getMoonName().length() > 30) {
-            throw new MoonFail("character length fail");
+            throw new MoonFail("Invalid moon name");
+        }
+        if (!moon.getMoonName().matches(accepted_characters)) {
+            throw new MoonFail("Invalid moon name");
         }
         Optional<Moon> existingMoon = moonDao.readMoon(moon.getMoonName());
         if (existingMoon.isPresent()) {
-            throw new MoonFail("unique name fail");
+            throw new MoonFail("Invalid moon name");
         }
+
+        Optional<Planet> existingPlanet = moonDao.readPlanet(moon.getOwnerId());
+        if (!existingPlanet.isPresent()) {
+            throw new MoonFail("Invalid planet ID");
+        }
+
+        try {
+            if (moon.getImageData() != null) {
+                ByteArrayInputStream bais = new ByteArrayInputStream(moon.imageDataAsByteArray());
+                String format = getFormatName(bais);
+                if (!("jpeg".equalsIgnoreCase(format) || "png".equalsIgnoreCase(format))) {
+                    throw new MoonFail("Invalid file type");
+                }
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         Optional<Moon> newMoon = moonDao.createMoon(moon);
         if (newMoon.isEmpty()) {
-            throw new MoonFail("Could not create new moon");
+            throw new MoonFail("Unable to create moon");
         }
-        return newMoon.get();
+        return true;
     }
 
 
@@ -81,17 +120,25 @@ public class MoonServiceImp<T> implements MoonService<T> {
     }
 
     @Override
-    public String deleteMoon(T idOrName) {
+    public boolean deleteMoon(T idOrName) {
         boolean deleted;
         if (idOrName instanceof Integer) {
             deleted = moonDao.deleteMoon((int) idOrName);
-        } else if (idOrName instanceof String) {
-            deleted = moonDao.deleteMoon((String) idOrName);
+        }
+
+        else if (idOrName instanceof String) {
+            String name = (String) idOrName;
+            if (moonDao.readMoon(name).isEmpty()) {
+                throw new MoonFail("Invalid moon name");
+            } else {
+                deleted = moonDao.deleteMoon((String) idOrName);
+
+            }
         } else {
-            throw new MoonFail("Identifier must be an Integer or String");
+            throw new PlanetFail("identifier must be an Integer or String");
         }
         if (deleted) {
-            return "Moon deleted successfully";
+            return true;
         } else {
             throw new MoonFail("Invalid moon name");
         }

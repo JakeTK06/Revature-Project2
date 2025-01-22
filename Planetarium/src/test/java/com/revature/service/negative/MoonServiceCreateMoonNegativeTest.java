@@ -1,6 +1,7 @@
 package com.revature.service.negative;
 
 import com.revature.planetarium.entities.Moon;
+import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.entities.User;
 import com.revature.planetarium.exceptions.MoonFail;
 import com.revature.service.parent.MoonServiceTest;
@@ -17,6 +18,7 @@ import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.Collection;
+import java.util.Optional;
 
 import static org.junit.runners.Parameterized.Parameter;
 import static org.junit.runners.Parameterized.Parameters;
@@ -25,6 +27,9 @@ import static org.junit.runners.Parameterized.Parameters;
 public class MoonServiceCreateMoonNegativeTest extends MoonServiceTest {
 
     private Moon negativeMoon;
+    private Moon positiveMoon;
+    private Planet positivePlanet;
+    private Optional<Planet> mockPositivePlanet;
 
     @Parameter
     public int moonId;
@@ -55,6 +60,11 @@ public class MoonServiceCreateMoonNegativeTest extends MoonServiceTest {
 
     @Before
     public void negativeSetup(){
+        positivePlanet = new Planet();
+        positivePlanet.setPlanetName("Earth");
+        positivePlanet.setOwnerId(1);
+        mockPositivePlanet = Optional.of(positivePlanet);
+        positiveMoon = new Moon(0, "Moon2.0", 1);
         negativeMoon = new Moon(moonId, moonName, ownerId);
         if(!imagePath.isEmpty()){
             imageHelper(imagePath);
@@ -63,6 +73,9 @@ public class MoonServiceCreateMoonNegativeTest extends MoonServiceTest {
 
     @Test
     public void serviceCreateMoonNegativeTest(){
+        Mockito.when(moonDao.readPlanet(1)).thenReturn(mockPositivePlanet);
+        Mockito.when(moonDao.readPlanet(3)).thenReturn(Optional.empty());
+        Mockito.when(moonDao.readMoon("Luna")).thenReturn(Optional.of(positiveMoon));
         Mockito.when(moonDao.createMoon(negativeMoon)).thenThrow(new AssertionError("MoonFail exception expected, but it was not thrown when it should have been"));
         MoonFail moonFail = Assert.assertThrows(MoonFail.class, ()-> {moonService.createMoon(negativeMoon);});
         Assert.assertEquals(exceptionMessage, moonFail.getMessage());
