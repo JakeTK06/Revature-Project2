@@ -3,9 +3,13 @@ package com.revature.planetarium.service.moon;
 import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.MoonFail;
+import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.planetarium.repository.moon.MoonDao;
 import com.revature.planetarium.repository.planet.PlanetDao;
 
+import javax.imageio.ImageIO;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -19,25 +23,52 @@ public class MoonServiceImp<T> implements MoonService<T> {
         this.planetDao = planetDao;
     }
 
+
+    // Helper method to determine the format of the image
+    private String getFormatName(ByteArrayInputStream bais) throws IOException {
+        bais.reset(); // Reset the stream to the beginning
+        // Use ImageIO to get image format
+        return ImageIO.getImageReaders(ImageIO.createImageInputStream(bais))
+                .next().getFormatName();
+    }
+
     @Override
     public Moon createMoon(Moon moon) {
+        String accepted_characters = "^[A-Za-z0-9 _-]+$";
         if (moon.getMoonName().length() < 1 || moon.getMoonName().length() > 30) {
             throw new MoonFail("Invalid moon name");
         }
-        if (moon.getMoonName().contains("!") || moon.getMoonName().contains("?")){ //other characters to add
+        if (!moon.getMoonName().matches(accepted_characters)) {
             throw new MoonFail("Invalid moon name");
         }
         Optional<Moon> existingMoon = moonDao.readMoon(moon.getMoonName());
         if (existingMoon.isPresent()) {
             throw new MoonFail("Invalid moon name");
         }
+
         Optional<Planet> existingPlanet = planetDao.readPlanet(moon.getOwnerId());
-        if (existingPlanet.isEmpty()) {
+        System.out.println(existingPlanet.get());
+        if (!existingPlanet.isPresent()) {
             throw new MoonFail("Invalid planet ID");
         }
+
+        try {
+            if (moon.getImageData() != null) {
+                ByteArrayInputStream bais = new ByteArrayInputStream(moon.imageDataAsByteArray());
+                String format = getFormatName(bais);
+                if (!("jpeg".equalsIgnoreCase(format) || "png".equalsIgnoreCase(format))) {
+                    throw new MoonFail("Invalid file type");
+                }
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         Optional<Moon> newMoon = moonDao.createMoon(moon);
         if (newMoon.isEmpty()) {
-            throw new MoonFail("Invalid file type");
+            throw new MoonFail("Unable to create moon");
         }
         return newMoon.get();
     }
