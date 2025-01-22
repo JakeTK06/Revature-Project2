@@ -26,7 +26,7 @@ public class UserController {
             ctx.json(Map.of("message", result));
         } catch (UserFail e) {
             ctx.status(400);
-            ctx.json(e.getMessage());
+            ctx.json(Map.of("message", e.getMessage()));
         }
     }
 
