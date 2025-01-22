@@ -20,6 +20,10 @@ import java.util.Optional;
 
 public class PlanetServicePositiveTest extends PlanetServiceTest{
 
+    //code for creation
+    byte[] imageDataJPG;
+    byte[] imageDataPNG;
+
     // code for retrieval
     private Planet positivePlanet;
     private Optional<Planet> mockOptional;
@@ -74,11 +78,51 @@ public class PlanetServicePositiveTest extends PlanetServiceTest{
         positiveDeletePlanetName = "Earth";
         positiveDeletePlanetOptional = Optional.of(mockReturnedPlanet1);
 
+        //setup for images
+        String jpegPath = "src/test/resources/Celestial-Images/moon-1.jpg";
+        String pngPath = "src/test/resources/Celestial-Images/planet-png.png";
+
+        {
+            try {
+                imageDataJPG = Files.readAllBytes(Path.of(jpegPath));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+
+        {
+            try {
+                imageDataPNG = Files.readAllBytes(Path.of(pngPath));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
     }
 
     @Test
     public void serviceCreatePlanetPositiveTest() {
-      Mockito.when(planetDao.createPlanet(positivePlanet)).thenReturn(mockOptional);
+        Mockito.when(planetDao.createPlanet(positivePlanet)).thenReturn(mockOptional);
+        Mockito.when(planetDao.readPlanet("Venus-55_")).thenReturn(Optional.empty());
+        boolean result = planetService.createPlanet(positivePlanet);
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void serviceCreatePlanetImagePositiveTestPNG() {
+        positivePlanet.setImageData(Base64.getEncoder().encodeToString(imageDataPNG));
+        Mockito.when(planetDao.readPlanet("Venus-55_")).thenReturn(Optional.empty());
+        Mockito.when(planetDao.createPlanet(positivePlanet)).thenReturn(mockOptional);
+        boolean result = planetService.createPlanet(positivePlanet);
+        Assert.assertTrue(result);
+    }
+
+    @Test
+    public void serviceCreatePlanetImagePositiveTestJPG() {
+        positivePlanet.setImageData(Base64.getEncoder().encodeToString(imageDataJPG));
+        Mockito.when(planetDao.readPlanet("Venus-55_")).thenReturn(Optional.empty());
+        Mockito.when(planetDao.createPlanet(positivePlanet)).thenReturn(mockOptional);
         boolean result = planetService.createPlanet(positivePlanet);
         Assert.assertTrue(result);
     }

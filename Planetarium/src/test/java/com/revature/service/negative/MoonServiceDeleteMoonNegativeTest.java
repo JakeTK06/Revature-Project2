@@ -13,6 +13,7 @@ import org.mockito.Mockito;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.runners.Parameterized.Parameter;
 import static org.junit.runners.Parameterized.Parameters;
@@ -31,6 +32,7 @@ public class MoonServiceDeleteMoonNegativeTest extends MoonServiceTest {
 
     @Test
     public void serviceDeleteMoonNegativeTest(){
+        Mockito.when(moonDao.readMoon(negativeMoonName)).thenReturn(Optional.empty());
         Mockito.when(moonDao.deleteMoon(negativeMoonName)).thenThrow(new AssertionError("MoonFail exception expected, but it was not thrown when it should have been"));
         MoonFail moonFail = Assert.assertThrows(MoonFail.class, ()->{moonService.deleteMoon(negativeMoonName);});
         Assert.assertEquals(expectedExceptionMessage, moonFail.getMessage());

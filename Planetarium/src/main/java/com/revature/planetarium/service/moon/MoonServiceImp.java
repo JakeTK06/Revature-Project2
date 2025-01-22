@@ -16,11 +16,9 @@ import java.util.Optional;
 public class MoonServiceImp<T> implements MoonService<T> {
     
     private MoonDao moonDao;
-    private PlanetDao planetDao;
 
     public MoonServiceImp(MoonDao moonDao, PlanetDao planetDao) {
         this.moonDao = moonDao;
-        this.planetDao = planetDao;
     }
 
 
@@ -33,7 +31,7 @@ public class MoonServiceImp<T> implements MoonService<T> {
     }
 
     @Override
-    public Moon createMoon(Moon moon) {
+    public boolean createMoon(Moon moon) {
         String accepted_characters = "^[A-Za-z0-9 _-]+$";
         if (moon.getMoonName().length() < 1 || moon.getMoonName().length() > 30) {
             throw new MoonFail("Invalid moon name");
@@ -46,8 +44,7 @@ public class MoonServiceImp<T> implements MoonService<T> {
             throw new MoonFail("Invalid moon name");
         }
 
-        Optional<Planet> existingPlanet = planetDao.readPlanet(moon.getOwnerId());
-        System.out.println(existingPlanet.get());
+        Optional<Planet> existingPlanet = moonDao.readPlanet(moon.getOwnerId());
         if (!existingPlanet.isPresent()) {
             throw new MoonFail("Invalid planet ID");
         }
@@ -70,7 +67,7 @@ public class MoonServiceImp<T> implements MoonService<T> {
         if (newMoon.isEmpty()) {
             throw new MoonFail("Unable to create moon");
         }
-        return newMoon.get();
+        return true;
     }
 
 
@@ -123,17 +120,25 @@ public class MoonServiceImp<T> implements MoonService<T> {
     }
 
     @Override
-    public String deleteMoon(T idOrName) {
+    public boolean deleteMoon(T idOrName) {
         boolean deleted;
         if (idOrName instanceof Integer) {
             deleted = moonDao.deleteMoon((int) idOrName);
-        } else if (idOrName instanceof String) {
-            deleted = moonDao.deleteMoon((String) idOrName);
+        }
+
+        else if (idOrName instanceof String) {
+            String name = (String) idOrName;
+            if (moonDao.readMoon(name).isEmpty()) {
+                throw new MoonFail("Invalid moon name");
+            } else {
+                deleted = moonDao.deleteMoon((String) idOrName);
+
+            }
         } else {
-            throw new MoonFail("Identifier must be an Integer or String");
+            throw new PlanetFail("identifier must be an Integer or String");
         }
         if (deleted) {
-            return "Moon deleted successfully";
+            return true;
         } else {
             throw new MoonFail("Invalid moon name");
         }

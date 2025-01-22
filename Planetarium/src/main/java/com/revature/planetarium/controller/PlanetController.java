@@ -50,7 +50,7 @@ public class PlanetController {
     public void createPlanet(Context ctx) {
         try {
             Planet planet = ctx.bodyAsClass(Planet.class);
-            boolean createdPlanet = planetService.createPlanet(planet);
+            planetService.createPlanet(planet);
             ctx.status(201);            
         } catch (PlanetFail e) {
             ctx.json(Map.of("message", e.getMessage()));

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.revature.planetarium.entities.Moon;
+import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.MoonFail;
 import com.revature.planetarium.service.moon.MoonService;
 
@@ -50,8 +51,7 @@ public class MoonController {
     public void createMoon(Context ctx) {
         try {
             Moon moon = ctx.bodyAsClass(Moon.class);
-            Moon createdMoon = moonService.createMoon(moon);
-            ctx.json(createdMoon);
+            moonService.createMoon(moon);
             ctx.status(201);
         } catch (MoonFail e) {
             ctx.json(Map.of("message", e.getMessage()));
@@ -63,11 +63,7 @@ public class MoonController {
         try {
             String identifier = ctx.pathParam("identifier");
             String responseMessage;
-            if(identifier.matches("^[0-9]+$")) {
-                responseMessage = moonService.deleteMoon(Integer.parseInt(identifier));
-            } else {
-                responseMessage = moonService.deleteMoon(identifier);
-            }
+            responseMessage = String.valueOf(moonService.deleteMoon(identifier));
             ctx.json(responseMessage);
             ctx.status(204);
         } catch (MoonFail e) {
