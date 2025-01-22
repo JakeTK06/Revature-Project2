@@ -1,8 +1,10 @@
 package com.revature.planetarium.service.moon;
 
 import com.revature.planetarium.entities.Moon;
+import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.MoonFail;
 import com.revature.planetarium.repository.moon.MoonDao;
+import com.revature.planetarium.repository.planet.PlanetDao;
 
 import java.util.List;
 import java.util.Optional;
@@ -10,23 +12,32 @@ import java.util.Optional;
 public class MoonServiceImp<T> implements MoonService<T> {
     
     private MoonDao moonDao;
+    private PlanetDao planetDao;
 
-    public MoonServiceImp(MoonDao moonDao) {
+    public MoonServiceImp(MoonDao moonDao, PlanetDao planetDao) {
         this.moonDao = moonDao;
+        this.planetDao = planetDao;
     }
 
     @Override
     public Moon createMoon(Moon moon) {
         if (moon.getMoonName().length() < 1 || moon.getMoonName().length() > 30) {
-            throw new MoonFail("character length fail");
+            throw new MoonFail("Invalid moon name");
+        }
+        if (moon.getMoonName().contains("!") || moon.getMoonName().contains("?")){ //other characters to add
+            throw new MoonFail("Invalid moon name");
         }
         Optional<Moon> existingMoon = moonDao.readMoon(moon.getMoonName());
         if (existingMoon.isPresent()) {
-            throw new MoonFail("unique name fail");
+            throw new MoonFail("Invalid moon name");
+        }
+        Optional<Planet> existingPlanet = planetDao.readPlanet(moon.getOwnerId());
+        if (existingPlanet.isEmpty()) {
+            throw new MoonFail("Invalid planet ID");
         }
         Optional<Moon> newMoon = moonDao.createMoon(moon);
         if (newMoon.isEmpty()) {
-            throw new MoonFail("Could not create new moon");
+            throw new MoonFail("Invalid file type");
         }
         return newMoon.get();
     }
