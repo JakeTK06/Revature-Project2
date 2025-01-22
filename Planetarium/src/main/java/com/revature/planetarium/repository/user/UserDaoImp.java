@@ -15,6 +15,54 @@ public class UserDaoImp implements UserDao {
 
     @Override
     public Optional<User> createUser(User newUser) {
+
+        String username = newUser.getUsername();
+        String password = newUser.getPassword();
+        // Check that username is valid
+        // username is unique
+        Optional<User> existingUser = findUserByUsername(username);
+        if(existingUser.isPresent()){
+            throw new UserFail("Invalid username");
+        }
+
+        // username is between 5 and 30 characters
+        if(username.length() < 5 || username.length() > 30){
+            throw new UserFail("Invalid username");
+        }
+
+        // username should start with a letter
+        if(!Character.isLetter(username.charAt(0))){
+            throw new UserFail("Invalid username");
+        }
+
+        // usernames should support lowercase, upper case, numbers, underscores, dashes
+        String validCharacters ="^[a-zA-Z0-9 _-]+$";
+        if (!username.matches(validCharacters)){
+            throw new UserFail("Invalid username");
+        }
+
+        // Check that password is valid
+        // password is between 5 - 30 characters
+        if(password.length() < 5 || password.length() > 30){
+            throw new UserFail("Invalid password");
+        }
+
+        // password should start with a letter
+        if(!Character.isLetter(password.charAt(0))){
+            throw new UserFail("Invalid password");
+        }
+
+        // password should contain a lowercase, uppercase, and number
+        String regex_must_contain = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).+$";
+        if (!password.matches(regex_must_contain)){
+            throw new UserFail("Invalid password");
+        }
+
+        // password should support underscores and dashes
+        if (!password.matches(validCharacters)){
+            throw new UserFail("Invalid password");
+        }
+
         try (Connection conn = DatabaseConnector.getConnection(); 
              PreparedStatement stmt = conn.prepareStatement("INSERT INTO users (username, password) VALUES (?, ?)", Statement.RETURN_GENERATED_KEYS)){
             stmt.setString(1, newUser.getUsername());
