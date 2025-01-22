@@ -39,6 +39,12 @@
 
         .submit-button {
             margin-top: 10px;
+            color: white;
+            background-color: #007FFF;
+            border-radius: 3px;
+            cursor: pointer;
+            border: none;
+            padding: 7px;
         }
         #deleteContainer {
             margin-top: 20px;
@@ -50,12 +56,18 @@
 
         #deleteButton {
             margin-left: 10px;
-            padding: 5px 10px;
+            padding: 7px 10px;
+            color: white;
+            background-color: #fd5c63;
+            border-radius: 3px;
+            cursor: pointer;
+            border: none;
         }
         .logout-button {
             position: fixed;
             top: 10px;
             right: 10px;
+            cursor: pointer;
         }
 
         .center{
@@ -80,7 +92,7 @@
             <option value="planet">Planet</option>
         </select>
         <div id="deleteContainer" class="heading">
-            <input type="text" id="deleteInput" placeholder="name for celestial body to be deleted">
+            <input type="text" id="deleteInput" placeholder="Name for celestial body to be deleted">
             <button id="deleteButton" onclick="deleteCelestial()">Delete</button>
         </div>
         <div id="inputContainer"></div>        
@@ -198,8 +210,9 @@
             return new Promise((resolve, reject) => {
                 if (element.files.length > 0) {
                     let file = element.files[0];
-                    if (file.type !== "image/jpeg"){
-                        reject(new Error("Invalid file type: must be an image"));
+                    if (file.type !== "image/jpeg" && file.type !== "image/png"){
+                        reject(new Error("Invalid file type"));
+                        alert("Invalid file type");
                     }
                     let reader = new FileReader();
                     reader.onload = function() {
@@ -316,7 +329,7 @@
             }
             let orbitedPlanet = document.getElementById('orbitedPlanetInput').value;
             if(!validatePlanetId(orbitedPlanet)){
-                alert("Invalid planet id");
+                alert("Invalid planet ID");
                 return;
             }
             let moonImageInput = document.getElementById('moonImageInput');
