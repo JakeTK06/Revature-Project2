@@ -18,6 +18,7 @@ import java.nio.file.Path;
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.Collection;
+import java.util.Optional;
 
 @RunWith(Parameterized.class)
 public class PlanetServiceCreateNegativeTest extends PlanetServiceTest {
@@ -35,6 +36,8 @@ public class PlanetServiceCreateNegativeTest extends PlanetServiceTest {
 
     private Planet negativePlanet;
 
+    private Planet positivePlanet;
+
     @Parameters
     public static Collection<Object> inputs() {
         String jpegPath = "src/test/resources/Celestial-Images/moon-1.jpg";
@@ -46,7 +49,7 @@ public class PlanetServiceCreateNegativeTest extends PlanetServiceTest {
             {"Exciting!! planet",1,null,"Invalid planet name"},
             {"Earth",1,null,"Invalid planet name"},
             {"Venus -55_", 1, gifPath, "Invalid file type"},
-            {"Earth",1,gifPath,"Invalid file type"},
+            {"Earth",1,gifPath,"Invalid planet name"},
             {"Earth",1,pngPath,"Invalid planet name"},
             {"Earth",1,jpegPath,"Invalid planet name"}
         });
@@ -68,10 +71,15 @@ public class PlanetServiceCreateNegativeTest extends PlanetServiceTest {
         negativePlanet.setPlanetName(planetName);
         negativePlanet.setOwnerId(ownerId);
         if (imagePath != null && !imagePath.isEmpty()){imageHelper(imagePath);}
+
+        positivePlanet = new Planet();
+        positivePlanet.setPlanetName("Earth");
+        positivePlanet.setOwnerId(1);
     }
 
     @Test
     public void serviceCreatePlanetNegativeTest() {
+        Mockito.when(planetDao.readPlanet("Earth")).thenReturn(Optional.of(positivePlanet));
         Mockito.when(planetDao.createPlanet(negativePlanet)).thenThrow(new AssertionError("PlanetFail exception, but it was not thrown when it should have been."));
         PlanetFail planetFail = Assert.assertThrows(PlanetFail.class, () -> {planetService.createPlanet(negativePlanet);});
         Assert.assertEquals(expectedMessage, planetFail.getMessage());

@@ -8,6 +8,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
+import java.util.Optional;
+
 public class PlanetServiceDeletionNegativeTest extends PlanetServiceTest {
     private String negativePlanetName;
     private String expectedMessage;
@@ -20,6 +22,7 @@ public class PlanetServiceDeletionNegativeTest extends PlanetServiceTest {
 
     @Test
     public void serviceDeletePlanetNegativeTest() {
+        Mockito.when(planetDao.readPlanet(negativePlanetName)).thenReturn(Optional.empty());
         Mockito.when(planetDao.deletePlanet(negativePlanetName)).thenThrow(new AssertionError("PlanetFail exception, but it was not thrown when it should have been."));
         PlanetFail planetFail = Assert.assertThrows(PlanetFail.class, () -> {planetService.deletePlanet(negativePlanetName);});
         Assert.assertEquals(expectedMessage, planetFail.getMessage());
