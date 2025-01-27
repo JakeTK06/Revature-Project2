@@ -7,6 +7,7 @@ import com.revature.planetarium.service.user.UserService;
 
 import io.javalin.http.Context;
 
+import java.util.List;
 import java.util.Map;
 
 public class UserController {
@@ -41,6 +42,25 @@ public class UserController {
         } catch (UserFail e) {
             ctx.status(401);
             ctx.json(Map.of("message", "invalid credentials"));
+        }
+    }
+    public void checkExistingUser(Context ctx) {
+        String username = ctx.queryParam("username");
+
+        // Check if the username is provided
+        if (username == null || username.isEmpty()) {
+            ctx.status(400);  // Bad Request
+            ctx.json(Map.of("message", "Username is required"));
+            return;
+        }
+
+        try {
+            boolean foundUser = userService.checkName(username);  // Check if the user exists
+            ctx.status(200);  // OK status
+            ctx.json(foundUser);  // Return the result (true or false)
+        } catch (UserFail e) {
+            ctx.status(401);  // Unauthorized if user not found
+            ctx.json(Map.of("message", "Invalid username"));
         }
     }
 

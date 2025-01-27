@@ -55,7 +55,6 @@ public class JavalinSetup {
         /*
          * Mapping Pages to Javalin app
          */
-
         app.get("/", viewController::login);
         app.get("/register", viewController::register);
         app.get("/planetarium", viewController::home);
@@ -67,6 +66,7 @@ public class JavalinSetup {
         app.post("/login", userController::login);
         app.post("/register", userController::createUser);
         app.post("/logout", userController::logout);
+        app.get("/register/getUser", userController::checkExistingUser);
 
         /*
          * Mapping Planet Routes
