@@ -6,5 +6,6 @@ public interface UserService {
     
     public String createUser(User newUser);
     public User authenticate(User credentials);
+    public boolean checkName(String username);
 
 }
