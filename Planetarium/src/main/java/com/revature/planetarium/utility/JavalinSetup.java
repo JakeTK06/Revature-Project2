@@ -20,6 +20,8 @@ import com.revature.planetarium.service.user.UserServiceImp;
 
 import io.javalin.Javalin;
 
+import java.io.FileInputStream;
+
 public class JavalinSetup {
 
     final public static UserDao userDao = new UserDaoImp();
@@ -51,12 +53,22 @@ public class JavalinSetup {
 
         // for background image
         app.get("/background", viewController::backgroundImage);
+
+        app.get("/favicon.ico", ctx -> {
+            ctx.result(new FileInputStream("images/favicon.ico"));
+            ctx.contentType("image/x-icon");
+        });
         
         /*
          * Mapping Pages to Javalin app
          */
         app.get("/", viewController::login);
         app.get("/register", viewController::register);
+        app.before("/planetarium", ctx -> {
+            if (ctx.sessionAttribute("user") == null) {
+                ctx.redirect("/");
+            }
+        });
         app.get("/planetarium", viewController::home);
 
         /*

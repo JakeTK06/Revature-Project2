@@ -184,7 +184,7 @@
 
         async function logout() {
             const response = await fetch('http://{URL}:{PORT}/logout', {method: "POST", credentials: 'include'});
-            if (response.status === 401) {
+            if (response.status === 200) {
                 sessionStorage.removeItem("user");
                 sessionStorage.removeItem("userId");
                 window.location.replace("http://{URL}:{PORT}");            
