@@ -68,7 +68,7 @@ public class HomePage {
     }
 
     public void tryToAccessHomePAgeDirectly(){
-        driver.get("http://localhost:8080/planetarium");
+        driver.get("http://localhost:8081/planetarium");
     }
 
     public void logout(){
