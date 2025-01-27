@@ -37,10 +37,15 @@
 			<version>6.1.1</version>
 			<scope>test</scope>
 		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.xerial</groupId>-->
+<!--			<artifactId>sqlite-jdbc</artifactId>-->
+<!--			<version>3.45.2.0</version>-->
+<!--		</dependency>-->
 		<dependency>
-			<groupId>org.xerial</groupId>
-			<artifactId>sqlite-jdbc</artifactId>
-			<version>3.45.2.0</version>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.20</version> <!-- or the latest version -->
 		</dependency>
 		<dependency>
 			<groupId>io.javalin</groupId>

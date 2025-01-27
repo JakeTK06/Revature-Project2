@@ -59,7 +59,7 @@ public class AddCelestialSteps {
             });
         } else if (fileType.equals("JPEG")){
             TestRunner.wait.until( d-> {
-                TestRunner.homePage.setPlanetImageInput(CelestialJPEG.getAbsolutePath());
+                TestRunner.homePage.setPlanetImageInput("C:\\Users\\jacob\\Desktop\\Revature-Project2\\Planetarium\\src\\test\\resources\\Celestial-Images\\moon-1.jpg");
                 return true;
             });
         } else if (fileType.equals("PNG")){
