@@ -13,16 +13,12 @@
         justify-content: center;
         height: 100vh;
     }
-    h1 {
-        text-align: center;
-    }
     .container {
       background-color: #333333;
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       width: 300px;
-      text-align: center;
     }
     .container input[type="text"],
     .container input[type="password"] {
@@ -36,36 +32,16 @@
     .container input[type="submit"] {
       width: 100%;
       padding: 10px;
-      background: #ffffff;
+      background-color: #ffffff;
       color: #000000;
       border: none;
       border-radius: 3px;
       cursor: pointer;
-      font-size: 14px;
-    }
-    .container input[type="submit"]:hover{
-      background: #2691d9;
-      color: #e9f4fb;
-      transition: .5s;
-    }
-    p {
-        text-align: center;
     }
     .container a {
       color: white;
       text-decoration: underline;
-      font-size: 14px;
-      width: 100%;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-left: 40px;
-      padding-right: 40px;
-      background-color: #6F2DA8;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      text-decoration: none;
-      margin-bottom: 20px;
+      font-size: 8px;
     }
   </style>
 </head>
@@ -76,8 +52,7 @@
       <input type="text" id="usernameInput" name="username" placeholder="Username">
       <input type="password" id="passwordInput" name="password" placeholder="Password">
       <input type="submit" value="Create">
-        <p>---OR---</p>
-      <a href="http://{URL}:{PORT}/">Login</a>
+      <a href="http://{URL}:{PORT}/">login</a>
     </form>
   </div>
 </body>
@@ -108,19 +83,19 @@
         })
         .then(response => {
             if (response.status === 201) {
-                alert(`User created successfully`);
+                alert(`Account created successfully`);
                 window.location.replace("http://{URL}:{PORT}/");
             }
         })
     });
 
 function checkUsername(credential){
-      const regex = /^[a-zA-Z][a-zA-Z0-9_-]{5,30}$/;
+      const regex = /^[a-zA-Z][a-zA-Z0-9_-]{4,29}$/;
       return regex.test(credential);
     }
 
     function checkPassword(credential){
-      const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z][a-zA-Z0-9_-]{5,30}$/;
+      const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z][a-zA-Z0-9_-]{4,29}$/;
       return regex.test(credential);
     }
   </script>

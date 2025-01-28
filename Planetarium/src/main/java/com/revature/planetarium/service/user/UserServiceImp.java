@@ -69,4 +69,15 @@ public class UserServiceImp implements UserService {
         throw new UserFail("Invalid credentials");
     }
 
+    @Override
+    public boolean checkName(String username) {
+        try {
+            Optional<User> foundUser = userDao.findUserByUsername(username);
+            return foundUser.isPresent();
+        } catch (UserFail e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }

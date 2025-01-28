@@ -69,6 +69,7 @@ public class ViewSteps {
         // Register user
         TestRunner.registrationPage.setUsername(username);
         TestRunner.registrationPage.setPassword(password);
+        TestRunner.registrationPage.submitCredentials();
         TestRunner.wait.until(ExpectedConditions.alertIsPresent());
         Alert alert = TestRunner.driver.switchTo().alert();
         alert.accept();
