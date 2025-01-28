@@ -227,11 +227,61 @@ public class MoonDaoImp implements MoonDao {
 
     @Override
     public Optional<Moon> updateMoon(Moon moon) {
+        // Order to throw exceptions
+        // 1. Planet name
+        // 2. Owner id
+        // 3. Image type
+
+        // Check planet does exist in db
+        Optional<Moon> existingMoon = readMoon(moon.getMoonId());
+        if(existingMoon.isEmpty()){
+            throw new MoonFail("Invalid moon ID");
+        }
+
+        String moonName = moon.getMoonName();
+        existingMoon = readMoon(moonName);
+        if (existingMoon.isPresent() && moon.getMoonId() != existingMoon.get().getMoonId()){
+            // planet already exists throw exception
+            throw new MoonFail("Invalid moon name");
+        }
+
+        // Verify name is valid
+
+        String validCharacters ="^[a-zA-Z0-9 _-]+$";
+        if (moonName.isEmpty() || moonName.length() > 30
+                || !moonName.matches(validCharacters)){
+            throw new MoonFail("Invalid moon name");
+        }
+
+        // Check planet id is valid
+        try {
+            if (readPlanet(moon.getOwnerId()).isEmpty()){
+                throw new MoonFail("Invalid planet ID");
+            }
+        } catch (PlanetFail e){
+            throw new MoonFail("Invalid planet ID");
+        }
+
+        // Check image type
+        try {
+            if (moon.getImageData() != null) {
+                ByteArrayInputStream bais = new ByteArrayInputStream(moon.imageDataAsByteArray());
+                String format = getFormatName(bais);
+                if (!("jpeg".equalsIgnoreCase(format) || "png".equalsIgnoreCase(format))) {
+                    throw new MoonFail("Invalid file type");
+                }
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
         try (Connection conn = DatabaseConnector.getConnection();
-             PreparedStatement stmt = conn.prepareStatement("UPDATE moons SET name = ?, myPlanetId = ? WHERE id = ?")) {
+             PreparedStatement stmt = conn.prepareStatement("UPDATE moons SET name = ?, myPlanetId = ?, image = ? WHERE id = ?")) {
             stmt.setString(1, moon.getMoonName());
             stmt.setInt(2, moon.getOwnerId());
-            stmt.setInt(3, moon.getMoonId());
+            stmt.setBytes(3, moon.imageDataAsByteArray());
+            stmt.setInt(4, moon.getMoonId());
             int rowsUpdated = stmt.executeUpdate();
             return rowsUpdated > 0 ? Optional.of(moon) : Optional.empty();
         } catch (SQLException e) {
