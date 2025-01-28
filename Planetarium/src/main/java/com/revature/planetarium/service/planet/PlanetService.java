@@ -12,5 +12,6 @@ public interface PlanetService<T> {
     List<Planet> selectByOwner(int ownerId);
     Planet updatePlanet(Planet planet);
     boolean deletePlanet(T idOrName);
+    boolean checkName(String name);
     
 }
