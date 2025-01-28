@@ -83,7 +83,8 @@
             <input type="text" id="deleteInput" placeholder="name for celestial body to be deleted">
             <button id="deleteButton" onclick="deleteCelestial()">Delete</button>
         </div>
-        <div id="inputContainer"></div>        
+        <div id="inputContainer"></div>
+        <div id="updateContainer"></div>
     </div>
     <div class="center" style="border: 3px solid black;">
         <table id="celestialTable">
@@ -99,15 +100,20 @@
         
         populateCelestialTable();
         createMoonInputs();
+        updateMoonInputs();
         greeting.textContent = `Welcome to the Home Page ${sessionStorage.getItem("user")}`
         document.getElementById('locationSelect').addEventListener('change', function() {
             let selectedValue = this.value;
             let inputContainer = document.getElementById('inputContainer');
+            let updateContainer = document.getElementById('updateContainer');
             inputContainer.innerHTML = '';
+            updateContainer.innerHTML = '';
             if (selectedValue === 'planet') {
                 createPlanetInputs();
+                updatePlanetInputs();
             } else if (selectedValue === 'moon') {
                 createMoonInputs();
+                updateMoonInputs();
             }
         });
 
@@ -239,6 +245,42 @@
             inputContainer.appendChild(submitButton);
         }
 
+        function updatePlanetInputs(){
+
+            let planetIdInput = document.createElement('input');
+            planetIdInput.type = 'number';
+            planetIdInput.id = 'planetIdUpdateInput';
+            planetIdInput.name = 'planet Id';
+            planetIdInput.placeholder = 'Enter ID to Update';
+            updateContainer.appendChild(planetIdInput);
+
+            let planetUpdateNameInput = document.createElement('input');
+            planetUpdateNameInput.type = 'text';
+            planetUpdateNameInput.id = 'planetNameUpdateInput';
+            planetUpdateNameInput.placeholder = 'Enter new name';
+            updateContainer.appendChild(planetUpdateNameInput);
+
+            let ownerIdInput = document.createElement('input');
+            ownerIdInput.type = 'number';
+            ownerIdInput.id = 'ownerIdUpdateInput';
+            ownerIdInput.name = 'owner Id';
+            ownerIdInput.placeholder = 'Enter new owner';
+            updateContainer.appendChild(ownerIdInput);
+
+            let planetUpdateImageInput = document.createElement('input');
+            planetUpdateImageInput.type = 'file';
+            planetUpdateImageInput.id = 'planetUpdateImageInput';
+            planetUpdateImageInput.accept = 'image/*';
+            planetUpdateImageInput.placeholder = 'Upload New Planet Image';
+            updateContainer.appendChild(planetUpdateImageInput);
+
+            let updateButton = document.createElement('button');
+            updateButton.textContent = 'Update Planet';
+            updateButton.className = 'update-button';
+            updateButton.addEventListener('click', updatePlanet);
+            updateContainer.appendChild(updateButton);
+        }
+
         function createMoonInputs(){
             let moonNameInput = document.createElement('input');
             moonNameInput.type = 'text';
@@ -267,6 +309,41 @@
             submitButton.className = 'submit-button';
             submitButton.addEventListener('click', createMoon);
             inputContainer.appendChild(submitButton);
+        }
+
+        function updateMoonInputs(){
+
+            let moonIdInput = document.createElement('input');
+            moonIdInput.type = 'number';
+            moonIdInput.id = 'moonIdUpdateInput';
+            moonIdInput.name = 'moon Id';
+            moonIdInput.placeholder = 'Enter ID to Update';
+            updateContainer.appendChild(moonIdInput);
+
+            let moonUpdateNameInput = document.createElement('input');
+            moonUpdateNameInput.type = 'text';
+            moonUpdateNameInput.id = 'moonNameUpdateInput';
+            moonUpdateNameInput.placeholder = 'Enter new name';
+            updateContainer.appendChild(moonUpdateNameInput);
+
+            let moonOwnerIdInput = document.createElement('input');
+            moonOwnerIdInput.type = 'number';
+            moonOwnerIdInput.id = 'moonOwnerIdUpdateInput';
+            moonOwnerIdInput.placeholder = 'Enter new owner';
+            updateContainer.appendChild(moonOwnerIdInput);
+
+            let moonUpdateImageInput = document.createElement('input');
+            moonUpdateImageInput.type = 'file';
+            moonUpdateImageInput.id = 'moonUpdateImageInput';
+            moonUpdateImageInput.accept = 'image/*';
+            moonUpdateImageInput.placeholder = 'Upload New Moon Image';
+            updateContainer.appendChild(moonUpdateImageInput);
+
+            let updateButton = document.createElement('button');
+            updateButton.textContent = 'Update Moon';
+            updateButton.className = 'update-button';
+            <!--updateButton.addEventListener('click', updateMoon);-->
+            updateContainer.appendChild(updateButton);
         }
 
         async function createPlanet(){
@@ -307,6 +384,8 @@
                 alert(`Invalid planet name`);
             }  
         }
+
+
 
         async function createMoon(){
             let moonName = document.getElementById('moonNameInput').value;
