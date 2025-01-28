@@ -28,7 +28,7 @@ public class DeleteCelestialSteps {
         // Look for the name of the planet deleted
 
         // wait for table to appear
-        TestRunner.wait.until(ExpectedConditions.numberOfElementsToBe(By.tagName("tr"), 3));
+        TestRunner.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//td[text()='Earth']")));
         // check for name of planet
         Assert.assertFalse(TestRunner.homePage.planetExists("Earth"));
 
@@ -73,7 +73,7 @@ public class DeleteCelestialSteps {
 
     @Then("the moon should be deleted")
     public void the_moon_should_be_deleted() {
-        TestRunner.wait.until(ExpectedConditions.numberOfElementsToBe(By.tagName("tr"), 4));
+        TestRunner.wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//td[text()='Titan']")));
         Assert.assertFalse(TestRunner.homePage.moonExists("Titan"));
     }
 

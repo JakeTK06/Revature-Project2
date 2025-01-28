@@ -92,10 +92,11 @@
             <option value="planet">Planet</option>
         </select>
         <div id="deleteContainer" class="heading">
-            <input type="text" id="deleteInput" placeholder="Name for celestial body to be deleted">
+            <input type="text" id="deleteInput" placeholder="name for celestial body to be deleted">
             <button id="deleteButton" onclick="deleteCelestial()">Delete</button>
         </div>
-        <div id="inputContainer"></div>        
+        <div id="inputContainer"></div>
+        <div id="updateContainer"></div>
     </div>
     <div class="center" style="border: 3px solid black;">
         <table id="celestialTable">
@@ -111,15 +112,20 @@
         
         populateCelestialTable();
         createMoonInputs();
+        updateMoonInputs();
         greeting.textContent = `Welcome to the Home Page ${sessionStorage.getItem("user")}`
         document.getElementById('locationSelect').addEventListener('change', function() {
             let selectedValue = this.value;
             let inputContainer = document.getElementById('inputContainer');
+            let updateContainer = document.getElementById('updateContainer');
             inputContainer.innerHTML = '';
+            updateContainer.innerHTML = '';
             if (selectedValue === 'planet') {
                 createPlanetInputs();
+                updatePlanetInputs();
             } else if (selectedValue === 'moon') {
                 createMoonInputs();
+                updateMoonInputs();
             }
         });
 
@@ -187,7 +193,7 @@
                 method: 'DELETE',
                 credentials: 'include'
             });
-            if (response.status === 200) {
+            if (response.status === 204) {
                 populateCelestialTable();
             } else {
                 alert(`Invalid ${selectedOption} name`);
@@ -210,6 +216,9 @@
             return new Promise((resolve, reject) => {
                 if (element.files.length > 0) {
                     let file = element.files[0];
+                    if (file.type !== "image/jpeg" && file.type !== "image/png"){
+                        alert("Invalid file type");
+                        reject(new Error("Invalid file type: must be an image"));
                     if (file.type !== "image/jpeg" && file.type !== "image/png"){
                         reject(new Error("Invalid file type"));
                         alert("Invalid file type");
@@ -252,6 +261,42 @@
             inputContainer.appendChild(submitButton);
         }
 
+        function updatePlanetInputs(){
+
+            let planetIdInput = document.createElement('input');
+            planetIdInput.type = 'number';
+            planetIdInput.id = 'planetIdUpdateInput';
+            planetIdInput.name = 'planet Id';
+            planetIdInput.placeholder = 'Enter ID to Update';
+            updateContainer.appendChild(planetIdInput);
+
+            let planetUpdateNameInput = document.createElement('input');
+            planetUpdateNameInput.type = 'text';
+            planetUpdateNameInput.id = 'planetUpdateNameInput';
+            planetUpdateNameInput.placeholder = 'Enter new name';
+            updateContainer.appendChild(planetUpdateNameInput);
+
+            let ownerIdInput = document.createElement('input');
+            ownerIdInput.type = 'number';
+            ownerIdInput.id = 'ownerIdUpdateInput';
+            ownerIdInput.name = 'owner Id';
+            ownerIdInput.placeholder = 'Enter new owner';
+            updateContainer.appendChild(ownerIdInput);
+
+            let planetUpdateImageInput = document.createElement('input');
+            planetUpdateImageInput.type = 'file';
+            planetUpdateImageInput.id = 'planetUpdateImageInput';
+            planetUpdateImageInput.accept = 'image/*';
+            planetUpdateImageInput.placeholder = 'Upload New Planet Image';
+            updateContainer.appendChild(planetUpdateImageInput);
+
+            let updatePlanetButton = document.createElement('button');
+            updatePlanetButton.textContent = 'Update Planet';
+            updatePlanetButton.className = 'submit-button';
+            updatePlanetButton.addEventListener('click', updatePlanet);
+            updateContainer.appendChild(updatePlanetButton);
+        }
+
         function createMoonInputs(){
             let moonNameInput = document.createElement('input');
             moonNameInput.type = 'text';
@@ -282,8 +327,58 @@
             inputContainer.appendChild(submitButton);
         }
 
+        function updateMoonInputs(){
+
+            let moonIdInput = document.createElement('input');
+            moonIdInput.type = 'number';
+            moonIdInput.id = 'moonIdUpdateInput';
+            moonIdInput.name = 'moon Id';
+            moonIdInput.placeholder = 'Enter ID to Update';
+            updateContainer.appendChild(moonIdInput);
+
+            let moonUpdateNameInput = document.createElement('input');
+            moonUpdateNameInput.type = 'text';
+            moonUpdateNameInput.id = 'moonNameUpdateInput';
+            moonUpdateNameInput.placeholder = 'Enter new name';
+            updateContainer.appendChild(moonUpdateNameInput);
+
+            let moonOwnerIdInput = document.createElement('input');
+            moonOwnerIdInput.type = 'number';
+            moonOwnerIdInput.id = 'moonOwnerIdUpdateInput';
+            moonOwnerIdInput.placeholder = 'Enter new owner';
+            updateContainer.appendChild(moonOwnerIdInput);
+
+            let moonUpdateImageInput = document.createElement('input');
+            moonUpdateImageInput.type = 'file';
+            moonUpdateImageInput.id = 'moonUpdateImageInput';
+            moonUpdateImageInput.accept = 'image/*';
+            moonUpdateImageInput.placeholder = 'Upload New Moon Image';
+            updateContainer.appendChild(moonUpdateImageInput);
+
+            let updateButton = document.createElement('button');
+            updateButton.textContent = 'Update Moon';
+            updateButton.className = 'update-button';
+            <!--updateButton.addEventListener('click', updateMoon);-->
+            updateContainer.appendChild(updateButton);
+        }
+
         async function createPlanet(){
             let planetName = document.getElementById('planetNameInput').value;
+            const planetExistsResponse = await fetch(`http://{URL}:{PORT}/planetarium/getPlanet?planetName=${encodeURIComponent(planetName)}`, {
+                method: 'GET',
+                headers: {
+                'Content-Type': 'application/json'
+                }
+            });
+
+            if (planetExistsResponse.status === 200) {
+                const data = await planetExistsResponse.json();
+                if (data === true) {
+                    alert("Invalid planet name");
+                    return;
+                }
+            }
+
             if (!checkCelestialName(planetName)) {
                 alert("Invalid planet name");
                 return;
@@ -321,14 +416,77 @@
             }  
         }
 
+
+        async function updatePlanet(){
+            console.log("Update Button Click");
+            let planetId = document.getElementById('planetIdUpdateInput').value;
+            let planetName = document.getElementById('planetUpdateNameInput').value;
+
+            if (!checkCelestialName(planetName)) {
+                alert("Invalid planet name");
+                return;
+            }
+
+            let newPlanetOwnerId = document.getElementById('ownerIdUpdateInput').value;
+
+            let planetImageInput = document.getElementById('planetUpdateImageInput');
+            let imageData = (planetImageInput.files.length > 0) ? await convertToBase64(planetImageInput) : null;
+            let bodyData;
+            if(imageData){
+                bodyData = {
+                    "planetName": planetName,
+                    "ownerId": newPlanetOwnerId,
+                    "imageData": imageData
+                }
+            } else{
+                bodyData = {
+                    "planetName": planetName,
+                    "ownerId": newPlanetOwnerId
+                }
+            }
+            const bodyJson = JSON.stringify(bodyData);
+            const headersList = {
+                "Accept": "*/*",
+                "Content-Type": "application/json"
+            }
+            console.log(planetId);
+            const response = await fetch('http://{URL}:{PORT}/planetarium/planet/getPlanetId?planetId=${encodeURIComponent(planetId)}', {
+                method: 'PATCH',
+                body: bodyJson,
+                headers: headersList,
+                credentials: 'include'
+            })
+            if (response.status === 201) {
+                populateCelestialTable();
+            } else {
+                alert(`Unable to update planet`);
+            }
+        }
+
         async function createMoon(){
             let moonName = document.getElementById('moonNameInput').value;
+            const moonExistsResponse = await fetch(`http://{URL}:{PORT}/planetarium/getMoon?moonName=${encodeURIComponent(moonName)}`, {
+                method: 'GET',
+                headers: {
+                'Content-Type': 'application/json'
+                }
+            });
+
+            if (moonExistsResponse.status === 200) {
+                const data = await moonExistsResponse.json();
+                if (data === true) {
+                    alert("Invalid moon name");
+                    return;
+                }
+            }
             if(!checkCelestialName(moonName)){
                 alert("Invalid moon name");
                 return;
             }
             let orbitedPlanet = document.getElementById('orbitedPlanetInput').value;
+            console.log(validatePlanetId(orbitedPlanet) + " is the value");
             if(!validatePlanetId(orbitedPlanet)){
+            console.log("this was triggered!");
                 alert("Invalid planet ID");
                 return;
             }
@@ -361,11 +519,14 @@
             if (response.status === 201) {
                 populateCelestialTable();
             } else {
-                const message = await response.text();
+                const message = await response.json();
                 switch(message){
                     case "character length fail":
                     case "unique name fail":
                         alert("invalid moon name");
+                        break;
+                    case "Invalid planet ID":
+                        alert("Invalid planet ID");
                         break;
                 }
             }             
@@ -415,13 +576,18 @@
                     continue;
                 }
                 if(row.getElementsByTagName("td")[0].textContent === "planet" && row.getElementsByTagName("td")[1].textContent === planetId){
+                    console.log("planetId: " + planetId + " exists!");
                     return true;
                 }
+                console.log("planetId: " + planetId + " does not exist!");
             }
             return false;
         }
 
         function checkCelestialName(name){
+            if (name === "") {
+                return false;
+            }
             const regex = /^[a-zA-Z0-9\s_-]{1,30}$/;
             return regex.test(name);
         }

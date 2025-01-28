@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.PlanetFail;
+import com.revature.planetarium.exceptions.UserFail;
 import com.revature.planetarium.service.planet.PlanetService;
 
 import io.javalin.http.Context;
@@ -60,11 +61,18 @@ public class PlanetController {
     }
 
     public void updatePlanet(Context ctx){
+
+        String planetId= ctx.queryParam("planetId");
+        if(planetId == null || planetId.isEmpty()) {
+            ctx.status(400);  // Bad Request
+            return;
+        }
         try {
-            Planet planet = ctx.bodyAsClass(Planet.class);
-            Planet updatedPlanet = planetService.updatePlanet(planet);
+            Planet newPlanet = ctx.bodyAsClass(Planet.class);
+            newPlanet.setPlanetId(Integer.parseInt(planetId));
+            Planet updatedPlanet = planetService.updatePlanet(newPlanet);
             ctx.json(updatedPlanet);
-            ctx.status(200);
+            ctx.status(201);
         } catch (PlanetFail e) {
             ctx.result(e.getMessage());
             ctx.status(400);
@@ -82,6 +90,26 @@ public class PlanetController {
         } catch (PlanetFail e) {
             ctx.json(Map.of("message", e.getMessage()));
             ctx.status(404);
+        }
+    }
+
+    public void checkExistingPlanet(Context ctx) {
+        String planetName = ctx.queryParam("planetName");
+
+        // Check if the username is provided
+        if (planetName == null || planetName.isEmpty()) {
+            ctx.status(400);  // Bad Request
+            ctx.json(Map.of("message", "Username is required"));
+            return;
+        }
+
+        try {
+            boolean foundUser = planetService.checkName(planetName);  // Check if the user exists
+            ctx.status(200);  // OK status
+            ctx.json(foundUser);  // Return the result (true or false)
+        } catch (UserFail e) {
+            ctx.status(401);  // Unauthorized if user not found
+            ctx.json(Map.of("message", "Invalid username"));
         }
     }
 

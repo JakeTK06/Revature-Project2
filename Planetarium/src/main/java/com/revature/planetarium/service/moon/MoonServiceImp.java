@@ -144,4 +144,15 @@ public class MoonServiceImp<T> implements MoonService<T> {
         }
     }
 
+    @Override
+    public boolean checkName(String moonName) {
+        try {
+            Optional<Moon> foundMoon = moonDao.readMoon(moonName);
+            return foundMoon.isPresent();
+        } catch (MoonFail e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
 }

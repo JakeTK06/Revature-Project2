@@ -12,5 +12,6 @@ public interface MoonService<T> {
     List<Moon> selectByPlanet(int planetId);
     Moon updateMoon(Moon moon);
     boolean deleteMoon(T idOrName);
+    boolean checkName(String name);
 
 }
