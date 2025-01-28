@@ -181,7 +181,7 @@
                 method: 'DELETE',
                 credentials: 'include'
             });
-            if (response.status === 200) {
+            if (response.status === 204) {
                 populateCelestialTable();
             } else {
                 alert(`Invalid ${selectedOption} name`);
@@ -450,13 +450,29 @@
 
         async function createMoon(){
             let moonName = document.getElementById('moonNameInput').value;
+            const moonExistsResponse = await fetch(`http://{URL}:{PORT}/planetarium/getMoon?moonName=${encodeURIComponent(moonName)}`, {
+                method: 'GET',
+                headers: {
+                'Content-Type': 'application/json'
+                }
+            });
+
+            if (moonExistsResponse.status === 200) {
+                const data = await moonExistsResponse.json();
+                if (data === true) {
+                    alert("Invalid moon name");
+                    return;
+                }
+            }
             if(!checkCelestialName(moonName)){
                 alert("Invalid moon name");
                 return;
             }
             let orbitedPlanet = document.getElementById('orbitedPlanetInput').value;
+            console.log(validatePlanetId(orbitedPlanet) + " is the value");
             if(!validatePlanetId(orbitedPlanet)){
-                alert("Invalid planet id");
+            console.log("this was triggered!");
+                alert("Invalid planet ID");
                 return;
             }
             let moonImageInput = document.getElementById('moonImageInput');
@@ -488,11 +504,14 @@
             if (response.status === 201) {
                 populateCelestialTable();
             } else {
-                const message = await response.text();
+                const message = await response.json();
                 switch(message){
                     case "character length fail":
                     case "unique name fail":
                         alert("invalid moon name");
+                        break;
+                    case "Invalid planet ID":
+                        alert("Invalid planet ID");
                         break;
                 }
             }             
@@ -542,8 +561,10 @@
                     continue;
                 }
                 if(row.getElementsByTagName("td")[0].textContent === "planet" && row.getElementsByTagName("td")[1].textContent === planetId){
+                    console.log("planetId: " + planetId + " exists!");
                     return true;
                 }
+                console.log("planetId: " + planetId + " does not exist!");
             }
             return false;
         }
