@@ -1,0 +1,3984 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 280087500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:00.488Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1120438300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "User can add a new planet with valid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-can-add-a-new-planet-with-valid-data;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 467861300,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user inputs planet \"Venus -55_\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Venus -55_\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user adds a planet image of file type \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_planet_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 91167500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user submits planet creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_planet_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2778239900,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the planet should be created",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_planet_should_be_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 31026000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the table should refresh with an extra planet",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_table_should_refresh_with_an_extra_planet()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 171135800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:05.342Z",
+        "before": [
+          {
+            "result": {
+              "duration": 907322100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "User can add a new planet with valid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-can-add-a-new-planet-with-valid-data;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 465870900,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user inputs planet \"Venus -55_\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Venus -55_\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 56199300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user adds a planet image of file type \"JPEG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JPEG\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_planet_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51641000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user submits planet creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_planet_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2911204200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the planet should be created",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_planet_should_be_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 63285700,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the table should refresh with an extra planet",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_table_should_refresh_with_an_extra_planet()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 297160700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 996000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:09.986Z",
+        "before": [
+          {
+            "result": {
+              "duration": 932590100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "User can add a new planet with valid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-can-add-a-new-planet-with-valid-data;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 842574500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user inputs planet \"Venus -55_\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Venus -55_\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 50980100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user adds a planet image of file type \"PNG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PNG\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_planet_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 109811800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user submits planet creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_planet_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3476271800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the planet should be created",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_planet_should_be_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 38463200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "the table should refresh with an extra planet",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_table_should_refresh_with_an_extra_planet()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 306349300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:15.741Z",
+        "before": [
+          {
+            "result": {
+              "duration": 911808000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "User cannot add a new planet with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-planet-with-invalid-data;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 581043600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user inputs planet \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 997300,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user adds a planet image of file type \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_planet_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 112267000,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user submits planet creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_planet_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 545830600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user should get a browser alert saying \"Invalid planet name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 425690900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:18.208Z",
+        "before": [
+          {
+            "result": {
+              "duration": 875521900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "User cannot add a new planet with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-planet-with-invalid-data;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 731285900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user inputs planet \"Planet Name That-is 1 long_name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Planet Name That-is 1 long_name\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user adds a planet image of file type \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_planet_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 125088300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user submits planet creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_planet_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 529401300,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user should get a browser alert saying \"Invalid planet name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 365806900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:20.907Z",
+        "before": [
+          {
+            "result": {
+              "duration": 937033300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "User cannot add a new planet with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-planet-with-invalid-data;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1038203900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user inputs planet \"Exciting!! planet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Exciting!! planet\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user adds a planet image of file type \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_planet_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 174152500,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user submits planet creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_planet_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1059243500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user should get a browser alert saying \"Invalid planet name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 490579800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:24.491Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1374576900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "User cannot add a new planet with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-planet-with-invalid-data;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 683187600,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user inputs planet \"Earth\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Earth\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user adds a planet image of file type \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_planet_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 52626600,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user submits planet creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_planet_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 528827900,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user should get a browser alert saying \"Invalid planet name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 162973200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:27.632Z",
+        "before": [
+          {
+            "result": {
+              "duration": 899780000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "User cannot add a new planet with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-planet-with-invalid-data;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 455775300,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user inputs planet \"Venus -55_\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Venus -55_\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 46494400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user adds a planet image of file type \"GIF\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GIF\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_planet_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 48109400,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user submits planet creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_planet_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 533120400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user should get a browser alert saying \"Invalid file type\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid file type\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 197113200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:29.794Z",
+        "before": [
+          {
+            "result": {
+              "duration": 869958000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 35,
+        "name": "User cannot add a new planet with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-planet-with-invalid-data;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 469444000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user inputs planet \"Earth\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Earth\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23556200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user adds a planet image of file type \"GIF\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GIF\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_planet_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 93568300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user submits planet creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_planet_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 521315200,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user should get a browser alert saying \"Invalid planet name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 431549800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:31.976Z",
+        "before": [
+          {
+            "result": {
+              "duration": 929048000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 36,
+        "name": "User cannot add a new planet with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-planet-with-invalid-data;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 748470200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user inputs planet \"Earth\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Earth\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23052200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user adds a planet image of file type \"JPEG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JPEG\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_planet_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 64526300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user submits planet creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_planet_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 528650500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user should get a browser alert saying \"Invalid planet name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 477368500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:34.710Z",
+        "before": [
+          {
+            "result": {
+              "duration": 918182800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 37,
+        "name": "User cannot add a new planet with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-planet-with-invalid-data;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 732501800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user inputs planet \"Earth\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Earth\"",
+                  "offset": 23
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 56911000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "the user adds a planet image of file type \"PNG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PNG\"",
+                  "offset": 42
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_planet_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 165110100,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "the user submits planet creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_planet_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 525827800,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the user should get a browser alert saying \"Invalid planet name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 308401000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:37.592Z",
+        "before": [
+          {
+            "result": {
+              "duration": 879834000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 49,
+        "name": "User can add a new moon with valid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-can-add-a-new-moon-with-valid-data;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 517317600,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "the user inputs moon name \"quasi-moon 1 Zoozve_\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"quasi-moon 1 Zoozve_\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 194838800,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "the user inputs planet that own the moon \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the user adds a moon image of file type \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 121147500,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3703143300,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the moon should be created",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_moon_should_be_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 25008100,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "the table should be refresh with an extra moon",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_table_should_be_refresh_with_an_extra_moon()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 495765400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:43.349Z",
+        "before": [
+          {
+            "result": {
+              "duration": 878827200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 50,
+        "name": "User can add a new moon with valid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-can-add-a-new-moon-with-valid-data;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 584136100,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "the user inputs moon name \"quasi-moon 1 Zoozve_\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"quasi-moon 1 Zoozve_\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 161314600,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "the user inputs planet that own the moon \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 53102400,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the user adds a moon image of file type \"JPEG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JPEG\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 151429200,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4070032500,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the moon should be created",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_moon_should_be_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 47227200,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "the table should be refresh with an extra moon",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_table_should_be_refresh_with_an_extra_moon()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 403584700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:49.798Z",
+        "before": [
+          {
+            "result": {
+              "duration": 877257200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 51,
+        "name": "User can add a new moon with valid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-can-add-a-new-moon-with-valid-data;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 529017300,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "the user inputs moon name \"quasi-moon 1 Zoozve_\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"quasi-moon 1 Zoozve_\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 158181800,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "the user inputs planet that own the moon \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 42028600,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "the user adds a moon image of file type \"PNG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PNG\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 136173400,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4537788100,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "the moon should be created",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_moon_should_be_created()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 30615100,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "the table should be refresh with an extra moon",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_table_should_be_refresh_with_an_extra_moon()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 489122000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:56.520Z",
+        "before": [
+          {
+            "result": {
+              "duration": 882755500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 64,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 469767200,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 240761700,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 142980900,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 25922500,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 421789700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1001000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:51:58.778Z",
+        "before": [
+          {
+            "result": {
+              "duration": 939112100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 65,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 693445900,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"Moon name that-is way_way2 long\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Moon name that-is way_way2 long\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 150104400,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 140309400,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 529949800,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 382640400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:01.664Z",
+        "before": [
+          {
+            "result": {
+              "duration": 898486900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 66,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 514267600,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"Exciting!! Moon\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Exciting!! Moon\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 164936500,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 99632100,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 516940800,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 466711400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:04.243Z",
+        "before": [
+          {
+            "result": {
+              "duration": 901615000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 67,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 523143200,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"Luna\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Luna\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 271000900,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 142781100,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 539686700,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 460862200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 991900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:07.096Z",
+        "before": [
+          {
+            "result": {
+              "duration": 880058800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 68,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 544940500,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"quasi-moon 1 Zoozve_\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"quasi-moon 1 Zoozve_\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 165095700,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"7\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"7\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 147851700,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 532173200,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid planet ID\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet ID\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 483218400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:09.837Z",
+        "before": [
+          {
+            "result": {
+              "duration": 852916500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 69,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 449085800,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"Luna\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Luna\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 216306600,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"7\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"7\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 111704300,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 528626000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 399713400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:12.482Z",
+        "before": [
+          {
+            "result": {
+              "duration": 851580200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 70,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 555473300,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"quasi-moon 1 Zoozve_\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"quasi-moon 1 Zoozve_\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 150789300,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 33361700,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"GIF\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GIF\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 60748200,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 526681200,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid file type\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid file type\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 370280800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:15.068Z",
+        "before": [
+          {
+            "result": {
+              "duration": 921961400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 71,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 495806900,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"Luna\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Luna\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 181714800,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28460200,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"GIF\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GIF\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 52223800,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 538763900,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 449840200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:17.663Z",
+        "before": [
+          {
+            "result": {
+              "duration": 872977500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 72,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 566398700,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"quasi-moon 1 Zoozve_\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"quasi-moon 1 Zoozve_\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 184727800,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"7\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"7\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 68072000,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"GIF\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GIF\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 170895600,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 526770800,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid planet ID\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet ID\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 418254300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:20.507Z",
+        "before": [
+          {
+            "result": {
+              "duration": 872956000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 73,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;11",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 474354700,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"Luna\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Luna\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 207462700,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"7\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"7\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 38245700,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"GIF\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GIF\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 162738000,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 528840700,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 367909100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:23.216Z",
+        "before": [
+          {
+            "result": {
+              "duration": 853069300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 74,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;12",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 515904200,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"Luna\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Luna\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 133012800,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 69968000,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"JPEG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JPEG\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 101894000,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 534522600,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 403411000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:25.800Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1049044800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 75,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;13",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 628097900,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"quasi-moon 1 Zoozve_\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"quasi-moon 1 Zoozve_\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 154427200,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"7\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"7\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 62974600,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"JPEG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JPEG\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 132242600,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 534083300,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid planet ID\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet ID\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 355059400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 508400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:28.774Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1301417500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 76,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;14",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 565642000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"Luna\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Luna\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 192446500,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"7\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"7\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 36509800,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"JPEG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"JPEG\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 96860000,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1028952200,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 410129400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:32.358Z",
+        "before": [
+          {
+            "result": {
+              "duration": 935703000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 77,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;15",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 540382800,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"Luna\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Luna\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 180410900,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"1\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 51019900,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"PNG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PNG\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 79972700,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 520221100,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 407574200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:35.081Z",
+        "before": [
+          {
+            "result": {
+              "duration": 994492000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 78,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;16",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 559866800,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"quasi-moon 1 Zoozve_\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"quasi-moon 1 Zoozve_\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 206774300,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"7\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"7\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 53136800,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"PNG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PNG\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 118344900,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 530710000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid planet ID\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet ID\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 422341500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T16:52:37.956Z",
+        "before": [
+          {
+            "result": {
+              "duration": 897611900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 79,
+        "name": "User cannot add a new moon with invalid data",
+        "description": "",
+        "id": "add-planet-or-moon;user-cannot-add-a-new-moon-with-invalid-data;;17",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 440989400,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "the user inputs moon name \"Luna\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Luna\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_moon_name(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 286531700,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "the user inputs planet that own the moon \"7\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"7\"",
+                  "offset": 41
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_inputs_planet_that_own_the_moon(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 46166100,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "the user adds a moon image of file type \"PNG\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"PNG\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.revature.steps.AddCelestialSteps.the_user_adds_a_moon_image_of_file_type(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 154944200,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "the user submits moon creation data",
+            "match": {
+              "location": "com.revature.steps.AddCelestialSteps.the_user_submits_moon_creation_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 523954500,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Add planet or moon",
+    "description": "  As a user I want to add new planets and moons to the Planetarium so I can update my findings",
+    "id": "add-planet-or-moon",
+    "keyword": "Feature",
+    "uri": "classpath:features/AddCelestialObject.feature",
+    "tags": []
+  }
+]

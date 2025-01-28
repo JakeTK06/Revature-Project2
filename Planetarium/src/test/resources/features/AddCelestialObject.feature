@@ -7,7 +7,7 @@ Feature: Add planet or moon
 
   Scenario Outline: User can add a new planet with valid data
     When  the user inputs planet "<planet>"
-    And   the user adds an image of file type "<image type>"
+    And   the user adds a planet image of file type "<image type>"
     And   the user submits planet creation data
     Then  the planet should be created
     And   the table should refresh with an extra planet
@@ -20,7 +20,7 @@ Feature: Add planet or moon
 
   Scenario Outline: User cannot add a new planet with invalid data
     When  the user inputs planet "<planet>"
-    And   the user adds an image of file type "<image type>"
+    And   the user adds a planet image of file type "<image type>"
     And   the user submits planet creation data
     Then  the user should get a browser alert saying "<alert>"
 
@@ -39,7 +39,7 @@ Feature: Add planet or moon
   Scenario Outline: User can add a new moon with valid data
     When  the user inputs moon name "<moon>"
     And   the user inputs planet that own the moon "<owner num>"
-    And   the user adds an image of file type "<image type>"
+    And   the user adds a moon image of file type "<image type>"
     And   the user submits moon creation data
     Then  the moon should be created
     And   the table should be refresh with an extra moon
@@ -55,7 +55,7 @@ Feature: Add planet or moon
   Scenario Outline: User cannot add a new moon with invalid data
     When  the user inputs moon name "<moon>"
     And   the user inputs planet that own the moon "<owner num>"
-    And   the user adds an image of file type "<image type>"
+    And   the user adds a moon image of file type "<image type>"
     And   the user submits moon creation data
     Then the user should get a browser alert saying "<alert>"
 
