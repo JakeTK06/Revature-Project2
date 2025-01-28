@@ -71,6 +71,7 @@ public class MoonDaoPositiveTest extends MoonDaoTest {
         Assert.assertFalse(result.isEmpty());
     }
 
+
     @Test
     public void daoDeleteMoonPositiveTest(){
         Assert.assertTrue(moonDao.deleteMoon(positiveMoonToDelete));

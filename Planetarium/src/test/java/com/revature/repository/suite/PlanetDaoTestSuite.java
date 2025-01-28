@@ -2,7 +2,7 @@ package com.revature.repository.suite;
 
 import com.revature.repository.negative.*;
 import com.revature.repository.positive.PlanetDaoPositiveTest;
-import com.revature.repository.positive.UserDaoPositiveTest;
+import com.revature.repository.positive.PlanetDaoUpdatePlanetPositiveTest;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
@@ -11,7 +11,9 @@ import org.junit.runners.Suite;
         PlanetDaoPositiveTest.class,
         PlanetDaoCreatePlanetNegativeTest.class,
         PlanetDaoDeletePlanetByNameNegativeTest.class,
-        PlanetDaoReadPlanetsByOwnerNegativeTest.class
+        PlanetDaoReadPlanetsByOwnerNegativeTest.class,
+        PlanetDaoUpdatePlanetPositiveTest.class,
+        PlanetDaoUpdatePlanetNegativeTest.class
 })
 public class PlanetDaoTestSuite {
 

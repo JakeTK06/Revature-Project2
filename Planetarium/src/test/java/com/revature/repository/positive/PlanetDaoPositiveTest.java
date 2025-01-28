@@ -1,7 +1,6 @@
 package com.revature.repository.positive;
 
 import com.revature.planetarium.entities.Planet;
-import com.revature.planetarium.entities.User;
 import com.revature.repository.parent.PlanetDaoTest;
 import org.junit.Assert;
 import org.junit.Before;
@@ -84,4 +83,5 @@ public class PlanetDaoPositiveTest extends PlanetDaoTest {
         Boolean response = planetDao.deletePlanet(positivePlanetNameDeletion);
         Assert.assertEquals(true, response);
     }
+
 }
