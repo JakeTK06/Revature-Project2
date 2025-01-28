@@ -83,18 +83,23 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
 
     @Override
     public Planet updatePlanet(Planet planet) {
+        String accepted_characters = "^[A-Za-z0-9 _-]+$";
         Optional<Planet> existingPlanet = planetDao.readPlanet(planet.getPlanetId());
         if (existingPlanet.isEmpty()) {
             throw new PlanetFail("Planet not found, could not update");
         }
         if (planet.getPlanetName().length() < 1 || planet.getPlanetName().length() > 30) {
-            throw new PlanetFail("Planet name must be between 1 and 30 characters, could not update");
+            throw new PlanetFail("Invalid planet name");
+        }
+        if (!planet.getPlanetName().matches(accepted_characters)) {
+            throw new PlanetFail("Invalid planet name");
         }
         if (!planet.getPlanetName().equals(existingPlanet.get().getPlanetName())) {
             if (planetDao.readPlanet(planet.getPlanetName()).isPresent()) {
                 throw new PlanetFail("Planet name must be unique, could not update");
             }
         }
+
         Optional<Planet> updatedPlanet = planetDao.updatePlanet(planet);
         if (updatedPlanet.isPresent()) {
             return updatedPlanet.get();

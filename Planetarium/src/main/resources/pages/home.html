@@ -257,7 +257,7 @@
 
             let planetUpdateNameInput = document.createElement('input');
             planetUpdateNameInput.type = 'text';
-            planetUpdateNameInput.id = 'planetNameUpdateInput';
+            planetUpdateNameInput.id = 'planetUpdateNameInput';
             planetUpdateNameInput.placeholder = 'Enter new name';
             updateContainer.appendChild(planetUpdateNameInput);
 
@@ -275,11 +275,11 @@
             planetUpdateImageInput.placeholder = 'Upload New Planet Image';
             updateContainer.appendChild(planetUpdateImageInput);
 
-            let updateButton = document.createElement('button');
-            updateButton.textContent = 'Update Planet';
-            updateButton.className = 'update-button';
-            updateButton.addEventListener('click', updatePlanet);
-            updateContainer.appendChild(updateButton);
+            let updatePlanetButton = document.createElement('button');
+            updatePlanetButton.textContent = 'Update Planet';
+            updatePlanetButton.className = 'submit-button';
+            updatePlanetButton.addEventListener('click', updatePlanet);
+            updateContainer.appendChild(updatePlanetButton);
         }
 
         function createMoonInputs(){
@@ -364,9 +364,6 @@
                 }
             }
 
-
-
-
             if (!checkCelestialName(planetName)) {
                 alert("Invalid planet name");
                 return;
@@ -405,6 +402,51 @@
         }
 
 
+        async function updatePlanet(){
+            console.log("Update Button Click");
+            let planetId = document.getElementById('planetIdUpdateInput').value;
+            let planetName = document.getElementById('planetUpdateNameInput').value;
+
+            if (!checkCelestialName(planetName)) {
+                alert("Invalid planet name");
+                return;
+            }
+
+            let newPlanetOwnerId = document.getElementById('ownerIdUpdateInput').value;
+
+            let planetImageInput = document.getElementById('planetUpdateImageInput');
+            let imageData = (planetImageInput.files.length > 0) ? await convertToBase64(planetImageInput) : null;
+            let bodyData;
+            if(imageData){
+                bodyData = {
+                    "planetName": planetName,
+                    "ownerId": newPlanetOwnerId,
+                    "imageData": imageData
+                }
+            } else{
+                bodyData = {
+                    "planetName": planetName,
+                    "ownerId": newPlanetOwnerId
+                }
+            }
+            const bodyJson = JSON.stringify(bodyData);
+            const headersList = {
+                "Accept": "*/*",
+                "Content-Type": "application/json"
+            }
+            console.log(planetId);
+            const response = await fetch('http://{URL}:{PORT}/planetarium/planet/getPlanetId?planetId=${encodeURIComponent(planetId)}', {
+                method: 'PATCH',
+                body: bodyJson,
+                headers: headersList,
+                credentials: 'include'
+            })
+            if (response.status === 201) {
+                populateCelestialTable();
+            } else {
+                alert(`Unable to update planet`);
+            }
+        }
 
         async function createMoon(){
             let moonName = document.getElementById('moonNameInput').value;
