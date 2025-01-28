@@ -32,7 +32,7 @@ public class TestRunner {
     @BeforeClass
     public static void setup(){
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         homePage = new HomePage(driver);
         loginPage = new LoginPage(driver);
