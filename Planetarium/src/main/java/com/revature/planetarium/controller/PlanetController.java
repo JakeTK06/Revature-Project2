@@ -61,11 +61,18 @@ public class PlanetController {
     }
 
     public void updatePlanet(Context ctx){
+
+        String planetId= ctx.queryParam("planetId");
+        if(planetId == null || planetId.isEmpty()) {
+            ctx.status(400);  // Bad Request
+            return;
+        }
         try {
-            Planet planet = ctx.bodyAsClass(Planet.class);
-            Planet updatedPlanet = planetService.updatePlanet(planet);
+            Planet newPlanet = ctx.bodyAsClass(Planet.class);
+            newPlanet.setPlanetId(Integer.parseInt(planetId));
+            Planet updatedPlanet = planetService.updatePlanet(newPlanet);
             ctx.json(updatedPlanet);
-            ctx.status(200);
+            ctx.status(201);
         } catch (PlanetFail e) {
             ctx.result(e.getMessage());
             ctx.status(400);
