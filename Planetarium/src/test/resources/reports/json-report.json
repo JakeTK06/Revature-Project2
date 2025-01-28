@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 280087500,
+              "duration": 383723900,
               "status": "passed"
             },
             "line": 5,
@@ -35,11 +35,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:00.488Z",
+        "start_timestamp": "2025-01-28T17:08:27.114Z",
         "before": [
           {
             "result": {
-              "duration": 1120438300,
+              "duration": 1259922700,
               "status": "passed"
             },
             "match": {
@@ -56,7 +56,7 @@
         "steps": [
           {
             "result": {
-              "duration": 467861300,
+              "duration": 1066112300,
               "status": "passed"
             },
             "line": 9,
@@ -91,7 +91,7 @@
           },
           {
             "result": {
-              "duration": 91167500,
+              "duration": 120887200,
               "status": "passed"
             },
             "line": 11,
@@ -103,7 +103,7 @@
           },
           {
             "result": {
-              "duration": 2778239900,
+              "duration": 2787241700,
               "status": "passed"
             },
             "line": 12,
@@ -115,7 +115,7 @@
           },
           {
             "result": {
-              "duration": 31026000,
+              "duration": 25099800,
               "status": "passed"
             },
             "line": 13,
@@ -136,7 +136,7 @@
         "steps": [
           {
             "result": {
-              "duration": 171135800,
+              "duration": 298859700,
               "status": "passed"
             },
             "line": 5,
@@ -160,11 +160,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:05.342Z",
+        "start_timestamp": "2025-01-28T17:08:32.838Z",
         "before": [
           {
             "result": {
-              "duration": 907322100,
+              "duration": 893614800,
               "status": "passed"
             },
             "match": {
@@ -181,7 +181,7 @@
         "steps": [
           {
             "result": {
-              "duration": 465870900,
+              "duration": 610971200,
               "status": "passed"
             },
             "line": 9,
@@ -199,7 +199,7 @@
           },
           {
             "result": {
-              "duration": 56199300,
+              "duration": 58540300,
               "status": "passed"
             },
             "line": 10,
@@ -217,7 +217,7 @@
           },
           {
             "result": {
-              "duration": 51641000,
+              "duration": 58365600,
               "status": "passed"
             },
             "line": 11,
@@ -229,7 +229,7 @@
           },
           {
             "result": {
-              "duration": 2911204200,
+              "duration": 3601398100,
               "status": "passed"
             },
             "line": 12,
@@ -241,7 +241,7 @@
           },
           {
             "result": {
-              "duration": 63285700,
+              "duration": 39552400,
               "status": "passed"
             },
             "line": 13,
@@ -262,7 +262,7 @@
         "steps": [
           {
             "result": {
-              "duration": 297160700,
+              "duration": 380669700,
               "status": "passed"
             },
             "line": 5,
@@ -274,7 +274,6 @@
           },
           {
             "result": {
-              "duration": 996000,
               "status": "passed"
             },
             "line": 6,
@@ -287,11 +286,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:09.986Z",
+        "start_timestamp": "2025-01-28T17:08:38.410Z",
         "before": [
           {
             "result": {
-              "duration": 932590100,
+              "duration": 849001100,
               "status": "passed"
             },
             "match": {
@@ -308,7 +307,7 @@
         "steps": [
           {
             "result": {
-              "duration": 842574500,
+              "duration": 615833700,
               "status": "passed"
             },
             "line": 9,
@@ -326,7 +325,7 @@
           },
           {
             "result": {
-              "duration": 50980100,
+              "duration": 44323800,
               "status": "passed"
             },
             "line": 10,
@@ -344,7 +343,7 @@
           },
           {
             "result": {
-              "duration": 109811800,
+              "duration": 134350700,
               "status": "passed"
             },
             "line": 11,
@@ -356,7 +355,7 @@
           },
           {
             "result": {
-              "duration": 3476271800,
+              "duration": 3299033400,
               "status": "passed"
             },
             "line": 12,
@@ -368,7 +367,7 @@
           },
           {
             "result": {
-              "duration": 38463200,
+              "duration": 19920000,
               "status": "passed"
             },
             "line": 13,
@@ -389,7 +388,7 @@
         "steps": [
           {
             "result": {
-              "duration": 306349300,
+              "duration": 240250300,
               "status": "passed"
             },
             "line": 5,
@@ -413,11 +412,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:15.741Z",
+        "start_timestamp": "2025-01-28T17:08:43.760Z",
         "before": [
           {
             "result": {
-              "duration": 911808000,
+              "duration": 906118100,
               "status": "passed"
             },
             "match": {
@@ -434,7 +433,7 @@
         "steps": [
           {
             "result": {
-              "duration": 581043600,
+              "duration": 712742800,
               "status": "passed"
             },
             "line": 22,
@@ -452,7 +451,6 @@
           },
           {
             "result": {
-              "duration": 997300,
               "status": "passed"
             },
             "line": 23,
@@ -470,7 +468,7 @@
           },
           {
             "result": {
-              "duration": 112267000,
+              "duration": 108117800,
               "status": "passed"
             },
             "line": 24,
@@ -482,7 +480,7 @@
           },
           {
             "result": {
-              "duration": 545830600,
+              "duration": 548811700,
               "status": "passed"
             },
             "line": 25,
@@ -509,7 +507,7 @@
         "steps": [
           {
             "result": {
-              "duration": 425690900,
+              "duration": 242776900,
               "status": "passed"
             },
             "line": 5,
@@ -533,11 +531,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:18.208Z",
+        "start_timestamp": "2025-01-28T17:08:46.291Z",
         "before": [
           {
             "result": {
-              "duration": 875521900,
+              "duration": 1066529200,
               "status": "passed"
             },
             "match": {
@@ -554,7 +552,7 @@
         "steps": [
           {
             "result": {
-              "duration": 731285900,
+              "duration": 685582700,
               "status": "passed"
             },
             "line": 22,
@@ -572,6 +570,7 @@
           },
           {
             "result": {
+              "duration": 1000400,
               "status": "passed"
             },
             "line": 23,
@@ -589,7 +588,7 @@
           },
           {
             "result": {
-              "duration": 125088300,
+              "duration": 77726400,
               "status": "passed"
             },
             "line": 24,
@@ -601,7 +600,7 @@
           },
           {
             "result": {
-              "duration": 529401300,
+              "duration": 520142900,
               "status": "passed"
             },
             "line": 25,
@@ -628,7 +627,7 @@
         "steps": [
           {
             "result": {
-              "duration": 365806900,
+              "duration": 404408100,
               "status": "passed"
             },
             "line": 5,
@@ -652,11 +651,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:20.907Z",
+        "start_timestamp": "2025-01-28T17:08:48.897Z",
         "before": [
           {
             "result": {
-              "duration": 937033300,
+              "duration": 864283000,
               "status": "passed"
             },
             "match": {
@@ -673,7 +672,7 @@
         "steps": [
           {
             "result": {
-              "duration": 1038203900,
+              "duration": 624732700,
               "status": "passed"
             },
             "line": 22,
@@ -708,7 +707,7 @@
           },
           {
             "result": {
-              "duration": 174152500,
+              "duration": 83433800,
               "status": "passed"
             },
             "line": 24,
@@ -720,7 +719,7 @@
           },
           {
             "result": {
-              "duration": 1059243500,
+              "duration": 531100200,
               "status": "passed"
             },
             "line": 25,
@@ -747,7 +746,7 @@
         "steps": [
           {
             "result": {
-              "duration": 490579800,
+              "duration": 324317600,
               "status": "passed"
             },
             "line": 5,
@@ -771,11 +770,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:24.491Z",
+        "start_timestamp": "2025-01-28T17:08:51.415Z",
         "before": [
           {
             "result": {
-              "duration": 1374576900,
+              "duration": 896506300,
               "status": "passed"
             },
             "match": {
@@ -792,7 +791,7 @@
         "steps": [
           {
             "result": {
-              "duration": 683187600,
+              "duration": 573253600,
               "status": "passed"
             },
             "line": 22,
@@ -827,7 +826,7 @@
           },
           {
             "result": {
-              "duration": 52626600,
+              "duration": 91833800,
               "status": "passed"
             },
             "line": 24,
@@ -839,7 +838,7 @@
           },
           {
             "result": {
-              "duration": 528827900,
+              "duration": 540862500,
               "status": "passed"
             },
             "line": 25,
@@ -866,7 +865,7 @@
         "steps": [
           {
             "result": {
-              "duration": 162973200,
+              "duration": 416786300,
               "status": "passed"
             },
             "line": 5,
@@ -890,11 +889,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:27.632Z",
+        "start_timestamp": "2025-01-28T17:08:53.851Z",
         "before": [
           {
             "result": {
-              "duration": 899780000,
+              "duration": 889101200,
               "status": "passed"
             },
             "match": {
@@ -911,7 +910,7 @@
         "steps": [
           {
             "result": {
-              "duration": 455775300,
+              "duration": 527239500,
               "status": "passed"
             },
             "line": 22,
@@ -929,7 +928,7 @@
           },
           {
             "result": {
-              "duration": 46494400,
+              "duration": 35827800,
               "status": "passed"
             },
             "line": 23,
@@ -947,7 +946,7 @@
           },
           {
             "result": {
-              "duration": 48109400,
+              "duration": 60000600,
               "status": "passed"
             },
             "line": 24,
@@ -959,7 +958,7 @@
           },
           {
             "result": {
-              "duration": 533120400,
+              "duration": 531018500,
               "status": "passed"
             },
             "line": 25,
@@ -986,7 +985,7 @@
         "steps": [
           {
             "result": {
-              "duration": 197113200,
+              "duration": 260909800,
               "status": "passed"
             },
             "line": 5,
@@ -1010,11 +1009,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:29.794Z",
+        "start_timestamp": "2025-01-28T17:08:56.318Z",
         "before": [
           {
             "result": {
-              "duration": 869958000,
+              "duration": 915621000,
               "status": "passed"
             },
             "match": {
@@ -1031,7 +1030,7 @@
         "steps": [
           {
             "result": {
-              "duration": 469444000,
+              "duration": 482607800,
               "status": "passed"
             },
             "line": 22,
@@ -1049,7 +1048,7 @@
           },
           {
             "result": {
-              "duration": 23556200,
+              "duration": 48764500,
               "status": "passed"
             },
             "line": 23,
@@ -1067,7 +1066,7 @@
           },
           {
             "result": {
-              "duration": 93568300,
+              "duration": 69058700,
               "status": "passed"
             },
             "line": 24,
@@ -1079,7 +1078,7 @@
           },
           {
             "result": {
-              "duration": 521315200,
+              "duration": 523410400,
               "status": "passed"
             },
             "line": 25,
@@ -1106,7 +1105,7 @@
         "steps": [
           {
             "result": {
-              "duration": 431549800,
+              "duration": 157848800,
               "status": "passed"
             },
             "line": 5,
@@ -1130,11 +1129,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:31.976Z",
+        "start_timestamp": "2025-01-28T17:08:58.625Z",
         "before": [
           {
             "result": {
-              "duration": 929048000,
+              "duration": 958938400,
               "status": "passed"
             },
             "match": {
@@ -1151,7 +1150,7 @@
         "steps": [
           {
             "result": {
-              "duration": 748470200,
+              "duration": 676189400,
               "status": "passed"
             },
             "line": 22,
@@ -1169,7 +1168,7 @@
           },
           {
             "result": {
-              "duration": 23052200,
+              "duration": 27990600,
               "status": "passed"
             },
             "line": 23,
@@ -1187,7 +1186,7 @@
           },
           {
             "result": {
-              "duration": 64526300,
+              "duration": 45889000,
               "status": "passed"
             },
             "line": 24,
@@ -1199,7 +1198,7 @@
           },
           {
             "result": {
-              "duration": 528650500,
+              "duration": 537131600,
               "status": "passed"
             },
             "line": 25,
@@ -1226,7 +1225,7 @@
         "steps": [
           {
             "result": {
-              "duration": 477368500,
+              "duration": 152552600,
               "status": "passed"
             },
             "line": 5,
@@ -1250,11 +1249,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:34.710Z",
+        "start_timestamp": "2025-01-28T17:09:01.036Z",
         "before": [
           {
             "result": {
-              "duration": 918182800,
+              "duration": 885099200,
               "status": "passed"
             },
             "match": {
@@ -1271,7 +1270,7 @@
         "steps": [
           {
             "result": {
-              "duration": 732501800,
+              "duration": 452846200,
               "status": "passed"
             },
             "line": 22,
@@ -1289,7 +1288,7 @@
           },
           {
             "result": {
-              "duration": 56911000,
+              "duration": 93050800,
               "status": "passed"
             },
             "line": 23,
@@ -1307,7 +1306,7 @@
           },
           {
             "result": {
-              "duration": 165110100,
+              "duration": 171236500,
               "status": "passed"
             },
             "line": 24,
@@ -1319,7 +1318,7 @@
           },
           {
             "result": {
-              "duration": 525827800,
+              "duration": 535744000,
               "status": "passed"
             },
             "line": 25,
@@ -1346,7 +1345,7 @@
         "steps": [
           {
             "result": {
-              "duration": 308401000,
+              "duration": 468645100,
               "status": "passed"
             },
             "line": 5,
@@ -1370,11 +1369,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:37.592Z",
+        "start_timestamp": "2025-01-28T17:09:03.334Z",
         "before": [
           {
             "result": {
-              "duration": 879834000,
+              "duration": 887888200,
               "status": "passed"
             },
             "match": {
@@ -1391,7 +1390,7 @@
         "steps": [
           {
             "result": {
-              "duration": 517317600,
+              "duration": 600790700,
               "status": "passed"
             },
             "line": 40,
@@ -1409,7 +1408,7 @@
           },
           {
             "result": {
-              "duration": 194838800,
+              "duration": 193127400,
               "status": "passed"
             },
             "line": 41,
@@ -1444,7 +1443,7 @@
           },
           {
             "result": {
-              "duration": 121147500,
+              "duration": 174760100,
               "status": "passed"
             },
             "line": 43,
@@ -1456,7 +1455,7 @@
           },
           {
             "result": {
-              "duration": 3703143300,
+              "duration": 3966004500,
               "status": "passed"
             },
             "line": 44,
@@ -1468,7 +1467,7 @@
           },
           {
             "result": {
-              "duration": 25008100,
+              "duration": 30100700,
               "status": "passed"
             },
             "line": 45,
@@ -1489,7 +1488,7 @@
         "steps": [
           {
             "result": {
-              "duration": 495765400,
+              "duration": 467319100,
               "status": "passed"
             },
             "line": 5,
@@ -1501,6 +1500,7 @@
           },
           {
             "result": {
+              "duration": 505200,
               "status": "passed"
             },
             "line": 6,
@@ -1513,11 +1513,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:43.349Z",
+        "start_timestamp": "2025-01-28T17:09:09.660Z",
         "before": [
           {
             "result": {
-              "duration": 878827200,
+              "duration": 902546800,
               "status": "passed"
             },
             "match": {
@@ -1534,7 +1534,7 @@
         "steps": [
           {
             "result": {
-              "duration": 584136100,
+              "duration": 559333400,
               "status": "passed"
             },
             "line": 40,
@@ -1552,7 +1552,7 @@
           },
           {
             "result": {
-              "duration": 161314600,
+              "duration": 171080400,
               "status": "passed"
             },
             "line": 41,
@@ -1570,7 +1570,7 @@
           },
           {
             "result": {
-              "duration": 53102400,
+              "duration": 65505800,
               "status": "passed"
             },
             "line": 42,
@@ -1588,7 +1588,7 @@
           },
           {
             "result": {
-              "duration": 151429200,
+              "duration": 127695300,
               "status": "passed"
             },
             "line": 43,
@@ -1600,7 +1600,7 @@
           },
           {
             "result": {
-              "duration": 4070032500,
+              "duration": 4114913600,
               "status": "passed"
             },
             "line": 44,
@@ -1612,7 +1612,7 @@
           },
           {
             "result": {
-              "duration": 47227200,
+              "duration": 30530000,
               "status": "passed"
             },
             "line": 45,
@@ -1633,7 +1633,7 @@
         "steps": [
           {
             "result": {
-              "duration": 403584700,
+              "duration": 426215600,
               "status": "passed"
             },
             "line": 5,
@@ -1657,11 +1657,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:49.798Z",
+        "start_timestamp": "2025-01-28T17:09:16.108Z",
         "before": [
           {
             "result": {
-              "duration": 877257200,
+              "duration": 905353100,
               "status": "passed"
             },
             "match": {
@@ -1678,7 +1678,7 @@
         "steps": [
           {
             "result": {
-              "duration": 529017300,
+              "duration": 567100000,
               "status": "passed"
             },
             "line": 40,
@@ -1696,7 +1696,7 @@
           },
           {
             "result": {
-              "duration": 158181800,
+              "duration": 227211200,
               "status": "passed"
             },
             "line": 41,
@@ -1714,7 +1714,7 @@
           },
           {
             "result": {
-              "duration": 42028600,
+              "duration": 46695600,
               "status": "passed"
             },
             "line": 42,
@@ -1732,7 +1732,7 @@
           },
           {
             "result": {
-              "duration": 136173400,
+              "duration": 190211400,
               "status": "passed"
             },
             "line": 43,
@@ -1744,7 +1744,7 @@
           },
           {
             "result": {
-              "duration": 4537788100,
+              "duration": 4638761000,
               "status": "passed"
             },
             "line": 44,
@@ -1756,7 +1756,7 @@
           },
           {
             "result": {
-              "duration": 30615100,
+              "duration": 50429200,
               "status": "passed"
             },
             "line": 45,
@@ -1777,7 +1777,7 @@
         "steps": [
           {
             "result": {
-              "duration": 489122000,
+              "duration": 514080200,
               "status": "passed"
             },
             "line": 5,
@@ -1801,11 +1801,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:56.520Z",
+        "start_timestamp": "2025-01-28T17:09:23.167Z",
         "before": [
           {
             "result": {
-              "duration": 882755500,
+              "duration": 834516600,
               "status": "passed"
             },
             "match": {
@@ -1822,7 +1822,7 @@
         "steps": [
           {
             "result": {
-              "duration": 469767200,
+              "duration": 501264400,
               "status": "passed"
             },
             "line": 56,
@@ -1840,7 +1840,7 @@
           },
           {
             "result": {
-              "duration": 240761700,
+              "duration": 282716200,
               "status": "passed"
             },
             "line": 57,
@@ -1875,7 +1875,7 @@
           },
           {
             "result": {
-              "duration": 142980900,
+              "duration": 118274700,
               "status": "passed"
             },
             "line": 59,
@@ -1887,7 +1887,7 @@
           },
           {
             "result": {
-              "duration": 25922500,
+              "duration": 17202300,
               "status": "passed"
             },
             "line": 60,
@@ -1914,7 +1914,7 @@
         "steps": [
           {
             "result": {
-              "duration": 421789700,
+              "duration": 399839500,
               "status": "passed"
             },
             "line": 5,
@@ -1926,7 +1926,7 @@
           },
           {
             "result": {
-              "duration": 1001000,
+              "duration": 1074100,
               "status": "passed"
             },
             "line": 6,
@@ -1939,11 +1939,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:51:58.778Z",
+        "start_timestamp": "2025-01-28T17:09:25.447Z",
         "before": [
           {
             "result": {
-              "duration": 939112100,
+              "duration": 951731000,
               "status": "passed"
             },
             "match": {
@@ -1960,7 +1960,7 @@
         "steps": [
           {
             "result": {
-              "duration": 693445900,
+              "duration": 512035200,
               "status": "passed"
             },
             "line": 56,
@@ -1978,7 +1978,7 @@
           },
           {
             "result": {
-              "duration": 150104400,
+              "duration": 197187800,
               "status": "passed"
             },
             "line": 57,
@@ -2013,7 +2013,7 @@
           },
           {
             "result": {
-              "duration": 140309400,
+              "duration": 117091200,
               "status": "passed"
             },
             "line": 59,
@@ -2025,7 +2025,7 @@
           },
           {
             "result": {
-              "duration": 529949800,
+              "duration": 530906700,
               "status": "passed"
             },
             "line": 60,
@@ -2052,7 +2052,7 @@
         "steps": [
           {
             "result": {
-              "duration": 382640400,
+              "duration": 429436500,
               "status": "passed"
             },
             "line": 5,
@@ -2076,11 +2076,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:01.664Z",
+        "start_timestamp": "2025-01-28T17:09:28.169Z",
         "before": [
           {
             "result": {
-              "duration": 898486900,
+              "duration": 876189500,
               "status": "passed"
             },
             "match": {
@@ -2097,7 +2097,7 @@
         "steps": [
           {
             "result": {
-              "duration": 514267600,
+              "duration": 554410600,
               "status": "passed"
             },
             "line": 56,
@@ -2115,7 +2115,7 @@
           },
           {
             "result": {
-              "duration": 164936500,
+              "duration": 194099100,
               "status": "passed"
             },
             "line": 57,
@@ -2150,7 +2150,7 @@
           },
           {
             "result": {
-              "duration": 99632100,
+              "duration": 145858000,
               "status": "passed"
             },
             "line": 59,
@@ -2162,7 +2162,7 @@
           },
           {
             "result": {
-              "duration": 516940800,
+              "duration": 519750300,
               "status": "passed"
             },
             "line": 60,
@@ -2189,7 +2189,7 @@
         "steps": [
           {
             "result": {
-              "duration": 466711400,
+              "duration": 487815200,
               "status": "passed"
             },
             "line": 5,
@@ -2213,11 +2213,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:04.243Z",
+        "start_timestamp": "2025-01-28T17:09:30.896Z",
         "before": [
           {
             "result": {
-              "duration": 901615000,
+              "duration": 927286900,
               "status": "passed"
             },
             "match": {
@@ -2234,7 +2234,7 @@
         "steps": [
           {
             "result": {
-              "duration": 523143200,
+              "duration": 493142800,
               "status": "passed"
             },
             "line": 56,
@@ -2252,7 +2252,7 @@
           },
           {
             "result": {
-              "duration": 271000900,
+              "duration": 287234900,
               "status": "passed"
             },
             "line": 57,
@@ -2287,7 +2287,7 @@
           },
           {
             "result": {
-              "duration": 142781100,
+              "duration": 68421100,
               "status": "passed"
             },
             "line": 59,
@@ -2299,7 +2299,7 @@
           },
           {
             "result": {
-              "duration": 539686700,
+              "duration": 520857200,
               "status": "passed"
             },
             "line": 60,
@@ -2326,7 +2326,7 @@
         "steps": [
           {
             "result": {
-              "duration": 460862200,
+              "duration": 455654100,
               "status": "passed"
             },
             "line": 5,
@@ -2338,7 +2338,7 @@
           },
           {
             "result": {
-              "duration": 991900,
+              "duration": 1108600,
               "status": "passed"
             },
             "line": 6,
@@ -2351,11 +2351,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:07.096Z",
+        "start_timestamp": "2025-01-28T17:09:33.686Z",
         "before": [
           {
             "result": {
-              "duration": 880058800,
+              "duration": 848297600,
               "status": "passed"
             },
             "match": {
@@ -2372,7 +2372,7 @@
         "steps": [
           {
             "result": {
-              "duration": 544940500,
+              "duration": 554153200,
               "status": "passed"
             },
             "line": 56,
@@ -2390,7 +2390,7 @@
           },
           {
             "result": {
-              "duration": 165095700,
+              "duration": 161943200,
               "status": "passed"
             },
             "line": 57,
@@ -2425,7 +2425,7 @@
           },
           {
             "result": {
-              "duration": 147851700,
+              "duration": 133717300,
               "status": "passed"
             },
             "line": 59,
@@ -2437,7 +2437,7 @@
           },
           {
             "result": {
-              "duration": 532173200,
+              "duration": 513613500,
               "status": "passed"
             },
             "line": 60,
@@ -2464,7 +2464,7 @@
         "steps": [
           {
             "result": {
-              "duration": 483218400,
+              "duration": 481130400,
               "status": "passed"
             },
             "line": 5,
@@ -2488,11 +2488,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:09.837Z",
+        "start_timestamp": "2025-01-28T17:09:36.362Z",
         "before": [
           {
             "result": {
-              "duration": 852916500,
+              "duration": 895813400,
               "status": "passed"
             },
             "match": {
@@ -2509,7 +2509,7 @@
         "steps": [
           {
             "result": {
-              "duration": 449085800,
+              "duration": 446457200,
               "status": "passed"
             },
             "line": 56,
@@ -2527,7 +2527,7 @@
           },
           {
             "result": {
-              "duration": 216306600,
+              "duration": 258460300,
               "status": "passed"
             },
             "line": 57,
@@ -2562,7 +2562,7 @@
           },
           {
             "result": {
-              "duration": 111704300,
+              "duration": 166127100,
               "status": "passed"
             },
             "line": 59,
@@ -2574,7 +2574,7 @@
           },
           {
             "result": {
-              "duration": 528626000,
+              "duration": 532781200,
               "status": "passed"
             },
             "line": 60,
@@ -2601,7 +2601,7 @@
         "steps": [
           {
             "result": {
-              "duration": 399713400,
+              "duration": 473907800,
               "status": "passed"
             },
             "line": 5,
@@ -2625,11 +2625,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:12.482Z",
+        "start_timestamp": "2025-01-28T17:09:39.149Z",
         "before": [
           {
             "result": {
-              "duration": 851580200,
+              "duration": 901015000,
               "status": "passed"
             },
             "match": {
@@ -2646,7 +2646,7 @@
         "steps": [
           {
             "result": {
-              "duration": 555473300,
+              "duration": 563085600,
               "status": "passed"
             },
             "line": 56,
@@ -2664,7 +2664,7 @@
           },
           {
             "result": {
-              "duration": 150789300,
+              "duration": 177868400,
               "status": "passed"
             },
             "line": 57,
@@ -2682,7 +2682,7 @@
           },
           {
             "result": {
-              "duration": 33361700,
+              "duration": 85572400,
               "status": "passed"
             },
             "line": 58,
@@ -2700,7 +2700,7 @@
           },
           {
             "result": {
-              "duration": 60748200,
+              "duration": 157185300,
               "status": "passed"
             },
             "line": 59,
@@ -2712,7 +2712,7 @@
           },
           {
             "result": {
-              "duration": 526681200,
+              "duration": 524102200,
               "status": "passed"
             },
             "line": 60,
@@ -2739,7 +2739,7 @@
         "steps": [
           {
             "result": {
-              "duration": 370280800,
+              "duration": 452128100,
               "status": "passed"
             },
             "line": 5,
@@ -2763,11 +2763,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:15.068Z",
+        "start_timestamp": "2025-01-28T17:09:42.040Z",
         "before": [
           {
             "result": {
-              "duration": 921961400,
+              "duration": 872143100,
               "status": "passed"
             },
             "match": {
@@ -2784,7 +2784,7 @@
         "steps": [
           {
             "result": {
-              "duration": 495806900,
+              "duration": 587783900,
               "status": "passed"
             },
             "line": 56,
@@ -2802,7 +2802,7 @@
           },
           {
             "result": {
-              "duration": 181714800,
+              "duration": 248895800,
               "status": "passed"
             },
             "line": 57,
@@ -2820,7 +2820,7 @@
           },
           {
             "result": {
-              "duration": 28460200,
+              "duration": 72134100,
               "status": "passed"
             },
             "line": 58,
@@ -2838,7 +2838,7 @@
           },
           {
             "result": {
-              "duration": 52223800,
+              "duration": 158828500,
               "status": "passed"
             },
             "line": 59,
@@ -2850,7 +2850,7 @@
           },
           {
             "result": {
-              "duration": 538763900,
+              "duration": 533136700,
               "status": "passed"
             },
             "line": 60,
@@ -2877,7 +2877,7 @@
         "steps": [
           {
             "result": {
-              "duration": 449840200,
+              "duration": 484359000,
               "status": "passed"
             },
             "line": 5,
@@ -2901,11 +2901,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:17.663Z",
+        "start_timestamp": "2025-01-28T17:09:44.981Z",
         "before": [
           {
             "result": {
-              "duration": 872977500,
+              "duration": 875785000,
               "status": "passed"
             },
             "match": {
@@ -2922,7 +2922,7 @@
         "steps": [
           {
             "result": {
-              "duration": 566398700,
+              "duration": 549829800,
               "status": "passed"
             },
             "line": 56,
@@ -2940,7 +2940,7 @@
           },
           {
             "result": {
-              "duration": 184727800,
+              "duration": 224637000,
               "status": "passed"
             },
             "line": 57,
@@ -2958,7 +2958,7 @@
           },
           {
             "result": {
-              "duration": 68072000,
+              "duration": 87166000,
               "status": "passed"
             },
             "line": 58,
@@ -2976,7 +2976,7 @@
           },
           {
             "result": {
-              "duration": 170895600,
+              "duration": 113051900,
               "status": "passed"
             },
             "line": 59,
@@ -2988,7 +2988,7 @@
           },
           {
             "result": {
-              "duration": 526770800,
+              "duration": 523737600,
               "status": "passed"
             },
             "line": 60,
@@ -3015,7 +3015,7 @@
         "steps": [
           {
             "result": {
-              "duration": 418254300,
+              "duration": 349844900,
               "status": "passed"
             },
             "line": 5,
@@ -3039,11 +3039,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:20.507Z",
+        "start_timestamp": "2025-01-28T17:09:47.848Z",
         "before": [
           {
             "result": {
-              "duration": 872956000,
+              "duration": 870948000,
               "status": "passed"
             },
             "match": {
@@ -3060,7 +3060,7 @@
         "steps": [
           {
             "result": {
-              "duration": 474354700,
+              "duration": 516686200,
               "status": "passed"
             },
             "line": 56,
@@ -3078,7 +3078,7 @@
           },
           {
             "result": {
-              "duration": 207462700,
+              "duration": 221321400,
               "status": "passed"
             },
             "line": 57,
@@ -3096,7 +3096,7 @@
           },
           {
             "result": {
-              "duration": 38245700,
+              "duration": 64707300,
               "status": "passed"
             },
             "line": 58,
@@ -3114,7 +3114,7 @@
           },
           {
             "result": {
-              "duration": 162738000,
+              "duration": 168640300,
               "status": "passed"
             },
             "line": 59,
@@ -3126,7 +3126,7 @@
           },
           {
             "result": {
-              "duration": 528840700,
+              "duration": 531695600,
               "status": "passed"
             },
             "line": 60,
@@ -3153,7 +3153,7 @@
         "steps": [
           {
             "result": {
-              "duration": 367909100,
+              "duration": 427599900,
               "status": "passed"
             },
             "line": 5,
@@ -3177,11 +3177,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:23.216Z",
+        "start_timestamp": "2025-01-28T17:09:50.578Z",
         "before": [
           {
             "result": {
-              "duration": 853069300,
+              "duration": 876596100,
               "status": "passed"
             },
             "match": {
@@ -3198,7 +3198,7 @@
         "steps": [
           {
             "result": {
-              "duration": 515904200,
+              "duration": 507802500,
               "status": "passed"
             },
             "line": 56,
@@ -3216,7 +3216,7 @@
           },
           {
             "result": {
-              "duration": 133012800,
+              "duration": 278426800,
               "status": "passed"
             },
             "line": 57,
@@ -3234,7 +3234,7 @@
           },
           {
             "result": {
-              "duration": 69968000,
+              "duration": 66929800,
               "status": "passed"
             },
             "line": 58,
@@ -3252,7 +3252,7 @@
           },
           {
             "result": {
-              "duration": 101894000,
+              "duration": 105529300,
               "status": "passed"
             },
             "line": 59,
@@ -3264,7 +3264,7 @@
           },
           {
             "result": {
-              "duration": 534522600,
+              "duration": 534123400,
               "status": "passed"
             },
             "line": 60,
@@ -3291,7 +3291,7 @@
         "steps": [
           {
             "result": {
-              "duration": 403411000,
+              "duration": 426030400,
               "status": "passed"
             },
             "line": 5,
@@ -3315,11 +3315,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:25.800Z",
+        "start_timestamp": "2025-01-28T17:09:53.382Z",
         "before": [
           {
             "result": {
-              "duration": 1049044800,
+              "duration": 921716800,
               "status": "passed"
             },
             "match": {
@@ -3336,7 +3336,7 @@
         "steps": [
           {
             "result": {
-              "duration": 628097900,
+              "duration": 584581100,
               "status": "passed"
             },
             "line": 56,
@@ -3354,7 +3354,7 @@
           },
           {
             "result": {
-              "duration": 154427200,
+              "duration": 246701600,
               "status": "passed"
             },
             "line": 57,
@@ -3372,7 +3372,7 @@
           },
           {
             "result": {
-              "duration": 62974600,
+              "duration": 56509300,
               "status": "passed"
             },
             "line": 58,
@@ -3390,7 +3390,7 @@
           },
           {
             "result": {
-              "duration": 132242600,
+              "duration": 135312400,
               "status": "passed"
             },
             "line": 59,
@@ -3402,7 +3402,7 @@
           },
           {
             "result": {
-              "duration": 534083300,
+              "duration": 538524400,
               "status": "passed"
             },
             "line": 60,
@@ -3429,7 +3429,7 @@
         "steps": [
           {
             "result": {
-              "duration": 355059400,
+              "duration": 496818700,
               "status": "passed"
             },
             "line": 5,
@@ -3441,7 +3441,6 @@
           },
           {
             "result": {
-              "duration": 508400,
               "status": "passed"
             },
             "line": 6,
@@ -3454,11 +3453,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:28.774Z",
+        "start_timestamp": "2025-01-28T17:09:56.300Z",
         "before": [
           {
             "result": {
-              "duration": 1301417500,
+              "duration": 928367500,
               "status": "passed"
             },
             "match": {
@@ -3475,7 +3474,7 @@
         "steps": [
           {
             "result": {
-              "duration": 565642000,
+              "duration": 491340200,
               "status": "passed"
             },
             "line": 56,
@@ -3493,7 +3492,7 @@
           },
           {
             "result": {
-              "duration": 192446500,
+              "duration": 237026100,
               "status": "passed"
             },
             "line": 57,
@@ -3511,7 +3510,7 @@
           },
           {
             "result": {
-              "duration": 36509800,
+              "duration": 55115100,
               "status": "passed"
             },
             "line": 58,
@@ -3529,7 +3528,7 @@
           },
           {
             "result": {
-              "duration": 96860000,
+              "duration": 153271800,
               "status": "passed"
             },
             "line": 59,
@@ -3541,7 +3540,7 @@
           },
           {
             "result": {
-              "duration": 1028952200,
+              "duration": 529122200,
               "status": "passed"
             },
             "line": 60,
@@ -3568,7 +3567,7 @@
         "steps": [
           {
             "result": {
-              "duration": 410129400,
+              "duration": 413277300,
               "status": "passed"
             },
             "line": 5,
@@ -3592,11 +3591,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:32.358Z",
+        "start_timestamp": "2025-01-28T17:09:59.195Z",
         "before": [
           {
             "result": {
-              "duration": 935703000,
+              "duration": 1027225000,
               "status": "passed"
             },
             "match": {
@@ -3613,7 +3612,7 @@
         "steps": [
           {
             "result": {
-              "duration": 540382800,
+              "duration": 536564300,
               "status": "passed"
             },
             "line": 56,
@@ -3631,7 +3630,7 @@
           },
           {
             "result": {
-              "duration": 180410900,
+              "duration": 274812600,
               "status": "passed"
             },
             "line": 57,
@@ -3649,7 +3648,7 @@
           },
           {
             "result": {
-              "duration": 51019900,
+              "duration": 54137700,
               "status": "passed"
             },
             "line": 58,
@@ -3667,7 +3666,7 @@
           },
           {
             "result": {
-              "duration": 79972700,
+              "duration": 129242900,
               "status": "passed"
             },
             "line": 59,
@@ -3679,7 +3678,7 @@
           },
           {
             "result": {
-              "duration": 520221100,
+              "duration": 534749600,
               "status": "passed"
             },
             "line": 60,
@@ -3706,7 +3705,7 @@
         "steps": [
           {
             "result": {
-              "duration": 407574200,
+              "duration": 482004600,
               "status": "passed"
             },
             "line": 5,
@@ -3718,6 +3717,7 @@
           },
           {
             "result": {
+              "duration": 1000900,
               "status": "passed"
             },
             "line": 6,
@@ -3730,11 +3730,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:35.081Z",
+        "start_timestamp": "2025-01-28T17:10:02.169Z",
         "before": [
           {
             "result": {
-              "duration": 994492000,
+              "duration": 872885100,
               "status": "passed"
             },
             "match": {
@@ -3751,7 +3751,7 @@
         "steps": [
           {
             "result": {
-              "duration": 559866800,
+              "duration": 552679300,
               "status": "passed"
             },
             "line": 56,
@@ -3769,7 +3769,7 @@
           },
           {
             "result": {
-              "duration": 206774300,
+              "duration": 242429600,
               "status": "passed"
             },
             "line": 57,
@@ -3787,7 +3787,7 @@
           },
           {
             "result": {
-              "duration": 53136800,
+              "duration": 55723100,
               "status": "passed"
             },
             "line": 58,
@@ -3805,7 +3805,7 @@
           },
           {
             "result": {
-              "duration": 118344900,
+              "duration": 133002000,
               "status": "passed"
             },
             "line": 59,
@@ -3817,7 +3817,7 @@
           },
           {
             "result": {
-              "duration": 530710000,
+              "duration": 517790000,
               "status": "passed"
             },
             "line": 60,
@@ -3844,7 +3844,7 @@
         "steps": [
           {
             "result": {
-              "duration": 422341500,
+              "duration": 312017900,
               "status": "passed"
             },
             "line": 5,
@@ -3868,11 +3868,11 @@
         ]
       },
       {
-        "start_timestamp": "2025-01-28T16:52:37.956Z",
+        "start_timestamp": "2025-01-28T17:10:05.033Z",
         "before": [
           {
             "result": {
-              "duration": 897611900,
+              "duration": 907016300,
               "status": "passed"
             },
             "match": {
@@ -3889,7 +3889,7 @@
         "steps": [
           {
             "result": {
-              "duration": 440989400,
+              "duration": 490800000,
               "status": "passed"
             },
             "line": 56,
@@ -3907,7 +3907,7 @@
           },
           {
             "result": {
-              "duration": 286531700,
+              "duration": 225196800,
               "status": "passed"
             },
             "line": 57,
@@ -3925,7 +3925,7 @@
           },
           {
             "result": {
-              "duration": 46166100,
+              "duration": 31823700,
               "status": "passed"
             },
             "line": 58,
@@ -3943,7 +3943,7 @@
           },
           {
             "result": {
-              "duration": 154944200,
+              "duration": 57885900,
               "status": "passed"
             },
             "line": 59,
@@ -3955,7 +3955,7 @@
           },
           {
             "result": {
-              "duration": 523954500,
+              "duration": 519616600,
               "status": "passed"
             },
             "line": 60,
@@ -3979,6 +3979,2861 @@
     "id": "add-planet-or-moon",
     "keyword": "Feature",
     "uri": "classpath:features/AddCelestialObject.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 336193500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:07.582Z",
+        "before": [
+          {
+            "result": {
+              "duration": 863275500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User can delete a planet with valid data",
+        "description": "",
+        "id": "delete-planet-or-moon;user-can-delete-a-planet-with-valid-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 744118800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user inputs valid planet deletion data",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.the_user_inputs_valid_planet_deletion_data()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 148272500,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user submits planet deletion data",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.the_user_submits_planet_deletion_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError\r\n\tat org.junit.Assert.fail(Assert.java:87)\r\n\tat org.junit.Assert.assertTrue(Assert.java:42)\r\n\tat org.junit.Assert.assertFalse(Assert.java:65)\r\n\tat org.junit.Assert.assertFalse(Assert.java:75)\r\n\tat com.revature.steps.DeleteCelestialSteps.the_planet_should_be_deleted(DeleteCelestialSteps.java:33)\r\n\tat ✽.the planet should be deleted(classpath:features/DeleteCelestialObject.feature:11)\r\n",
+              "duration": 80535400,
+              "status": "failed"
+            },
+            "line": 11,
+            "name": "the planet should be deleted",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.the_planet_should_be_deleted()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "all of the planets moons should be deleted",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.all_of_the_planets_moons_should_be_deleted()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "the table should refresh with less celestials",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.the_table_should_refresh_with_less_celestials()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 405225400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:09.772Z",
+        "before": [
+          {
+            "result": {
+              "duration": 879679200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "User cannot delete a planet with invalid data",
+        "description": "",
+        "id": "delete-planet-or-moon;user-cannot-delete-a-planet-with-invalid-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 727276800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the user inputs planet deletion data",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.the_user_inputs_planet_deletion_data()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 115763300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user submits planet deletion data",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.the_user_submits_planet_deletion_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 519474100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user should get a browser alert saying \"Invalid planet name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid planet name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 392194000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 990900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:12.425Z",
+        "before": [
+          {
+            "result": {
+              "duration": 907174300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "User can delete a moon with valid data",
+        "description": "",
+        "id": "delete-planet-or-moon;user-can-delete-a-moon-with-valid-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 790643700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user inputs valid moon deletion data",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.the_user_inputs_valid_moon_deletion_data()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 156649800,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the user submits moon deletion data",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.the_user_submits_moon_deletion_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : Invalid moon name}\n  (Session info: chrome\u003d132.0.6834.111): Invalid moon name\nBuild info: version: \u00274.23.0\u0027, revision: \u00274df0a231af\u0027\nSystem info: os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.25\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCommand: [c930ce50a14ab394cdff5ee2cf50801b, findElements {value\u003dtr, using\u003dtag name}]\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 132.0.6834.111, chrome: {chromedriverVersion: 132.0.6834.110 (df453a35f09..., userDataDir: C:\\Users\\harsh\\AppData\\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50386}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50386/devtoo..., se:cdpVersion: 132.0.6834.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}\nSession ID: c930ce50a14ab394cdff5ee2cf50801b\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:136)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:527)\r\n\tat org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElements(ElementLocation.java:182)\r\n\tat org.openqa.selenium.remote.ElementLocation.findElements(ElementLocation.java:103)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:370)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:364)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$36.apply(ExpectedConditions.java:1011)\r\n\tat org.openqa.selenium.support.ui.ExpectedConditions$36.apply(ExpectedConditions.java:1006)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)\r\n\tat com.revature.steps.DeleteCelestialSteps.the_moon_should_be_deleted(DeleteCelestialSteps.java:76)\r\n\tat ✽.the moon should be deleted(classpath:features/DeleteCelestialObject.feature:23)\r\n",
+              "duration": 1064020300,
+              "status": "failed"
+            },
+            "line": 23,
+            "name": "the moon should be deleted",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.the_moon_should_be_deleted()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 997200,
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "the table should refresh with less moons",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.the_table_should_refresh_with_less_moons()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 422544700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:15.763Z",
+        "before": [
+          {
+            "result": {
+              "duration": 891806600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "User cannot delete a moon with invalid data",
+        "description": "",
+        "id": "delete-planet-or-moon;user-cannot-delete-a-moon-with-invalid-data",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 550268300,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "the user inputs moon deletion data",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.the_user_inputs_moon_deletion_data()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 164466100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "the user submits moon deletion data",
+            "match": {
+              "location": "com.revature.steps.DeleteCelestialSteps.the_user_submits_moon_deletion_data()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 519912800,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "the user should get a browser alert saying \"Invalid moon name\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid moon name\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Delete planet or moon",
+    "description": "  As a user I want to remove planets and moons from the Planetarium so I can correct my findings",
+    "id": "delete-planet-or-moon",
+    "keyword": "Feature",
+    "uri": "classpath:features/DeleteCelestialObject.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 106219700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:18.315Z",
+        "before": [
+          {
+            "result": {
+              "duration": 911944000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User can login with valid credentials",
+        "description": "",
+        "id": "user-login;user-can-login-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 184686800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user provides a valid username",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_provides_a_valid_username()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 184856900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user provides a valid password",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_provides_a_valid_password()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 37990000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10327953200,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "login is successful",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.login_is_successful()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 30848200,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "the user is redirected to the home page",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_is_redirected_to_the_home_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 93303500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:30.110Z",
+        "before": [
+          {
+            "result": {
+              "duration": 953936100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "User cannot login with invalid credentials",
+        "description": "",
+        "id": "user-login;user-cannot-login-with-invalid-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 160606400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user provides username \"Batman\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserLoginSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 108299900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user provides password \"b0ts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"b0ts\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserLoginSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 26862700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 527180200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user should get a browser alert saying \"Invalid Credentials\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid Credentials\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 34787500,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user should stay on the login page",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_should_stay_on_the_login_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 65796000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:32.020Z",
+        "before": [
+          {
+            "result": {
+              "duration": 902498600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "User cannot login with invalid credentials",
+        "description": "",
+        "id": "user-login;user-cannot-login-with-invalid-credentials;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 155588200,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user provides username \"Robin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Robin\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserLoginSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 157783500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user provides password \"Iamthenight1939\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Iamthenight1939\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserLoginSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 33688400,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 525245200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user should get a browser alert saying \"Invalid Credentials\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid Credentials\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 39815900,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user should stay on the login page",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_should_stay_on_the_login_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 61359600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:33.906Z",
+        "before": [
+          {
+            "result": {
+              "duration": 902169600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "User cannot login with invalid credentials",
+        "description": "",
+        "id": "user-login;user-cannot-login-with-invalid-credentials;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 170077100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user provides username \"Robin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Robin\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserLoginSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 152964700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user provides password \"bots\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"bots\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserLoginSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 26675500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 524002800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user should get a browser alert saying \"Invalid Credentials\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid Credentials\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.SharedSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 26558700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user should stay on the login page",
+            "match": {
+              "location": "com.revature.steps.UserLoginSteps.the_user_should_stay_on_the_login_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "User Login",
+    "description": "  As a user I want to securely access my account so I can interact with the Planetarium in a secure environment",
+    "id": "user-login",
+    "keyword": "Feature",
+    "uri": "classpath:features/UserLogin.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 57820900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 288609000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:35.777Z",
+        "before": [
+          {
+            "result": {
+              "duration": 886649800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User can register a new account with valid credentials",
+        "description": "",
+        "id": "user-registration;user-can-register-a-new-account-with-valid-credentials",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 222268700,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The user provides a valid username",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_a_valid_username()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 170739800,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "The user provides a valid password",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_a_valid_password()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 41821700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1041786300,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "The user should get a browser alert saying \"Account created successfully\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Account created successfully\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 67714600,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "The user should be redirected to the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_be_redirected_to_the_login_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 47997300,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 225996200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:38.559Z",
+        "before": [
+          {
+            "result": {
+              "duration": 865218400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "User can not register a new account with invalid credentials",
+        "description": "",
+        "id": "user-registration;user-can-not-register-a-new-account-with-invalid-credentials;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 179963100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The user provides username \"Batman\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Batman\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 227628300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user provides password \"Krypton-was_2000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Krypton-was_2000\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 43835800,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 528654800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The user should get a browser alert saying \"Invalid username\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid username\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13987800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The user should stay on the registration page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_stay_on_the_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 93559400,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 190706400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:40.694Z",
+        "before": [
+          {
+            "result": {
+              "duration": 856002600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "User can not register a new account with invalid credentials",
+        "description": "",
+        "id": "user-registration;user-can-not-register-a-new-account-with-invalid-credentials;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 97668600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The user provides username \"Bane\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bane\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 85266000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user provides password \"Krypton-was_2000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Krypton-was_2000\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15652700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6458000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The user should get a browser alert saying \"Invalid username\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid username\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5125100,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The user should stay on the registration page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_stay_on_the_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 43009800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 77181400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:42.048Z",
+        "before": [
+          {
+            "result": {
+              "duration": 895306200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "User can not register a new account with invalid credentials",
+        "description": "",
+        "id": "user-registration;user-can-not-register-a-new-account-with-invalid-credentials;;4",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 64066500,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The user provides username \"wonder_woman_for_the_DC_theming\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"wonder_woman_for_the_DC_theming\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 51738300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user provides password \"Krypton-was_2000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Krypton-was_2000\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15037700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6011800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The user should get a browser alert saying \"Invalid username\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid username\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3017500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The user should stay on the registration page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_stay_on_the_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 48734500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 84396400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:43.209Z",
+        "before": [
+          {
+            "result": {
+              "duration": 854512100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "User can not register a new account with invalid credentials",
+        "description": "",
+        "id": "user-registration;user-can-not-register-a-new-account-with-invalid-credentials;;5",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 52679900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The user provides username \"2face\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2face\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 54950600,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user provides password \"Krypton-was_2000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Krypton-was_2000\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13327500,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5514800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The user should get a browser alert saying \"Invalid username\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid username\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4000200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The user should stay on the registration page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_stay_on_the_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 56960900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 92194800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:44.332Z",
+        "before": [
+          {
+            "result": {
+              "duration": 911000700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 28,
+        "name": "User can not register a new account with invalid credentials",
+        "description": "",
+        "id": "user-registration;user-can-not-register-a-new-account-with-invalid-credentials;;6",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 53778900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The user provides username \"joker!!!!!?)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"joker!!!!!?)\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 61926100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user provides password \"Krypton-was_2000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Krypton-was_2000\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15954000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 7130600,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The user should get a browser alert saying \"Invalid username\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid username\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4059200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The user should stay on the registration page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_stay_on_the_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 47802100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 84568900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:45.538Z",
+        "before": [
+          {
+            "result": {
+              "duration": 874534600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "User can not register a new account with invalid credentials",
+        "description": "",
+        "id": "user-registration;user-can-not-register-a-new-account-with-invalid-credentials;;7",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 66984700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The user provides username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 44489100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user provides password \"b0Ts\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"b0Ts\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13439700,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4731500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The user should get a browser alert saying \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5549800,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The user should stay on the registration page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_stay_on_the_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 52798000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 81822500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:46.684Z",
+        "before": [
+          {
+            "result": {
+              "duration": 884432000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "User can not register a new account with invalid credentials",
+        "description": "",
+        "id": "user-registration;user-can-not-register-a-new-account-with-invalid-credentials;;8",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 55401900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The user provides username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 63381100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user provides password \"AlfredIsTheBestButlerToExist111\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"AlfredIsTheBestButlerToExist111\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13042100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5004000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The user should get a browser alert saying \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3730000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The user should stay on the registration page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_stay_on_the_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 46700000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 74974000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:47.846Z",
+        "before": [
+          {
+            "result": {
+              "duration": 876315300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "User can not register a new account with invalid credentials",
+        "description": "",
+        "id": "user-registration;user-can-not-register-a-new-account-with-invalid-credentials;;9",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 69172200,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The user provides username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 45622700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user provides password \"3atman\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"3atman\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15065100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4001500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The user should get a browser alert saying \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4556200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The user should stay on the registration page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_stay_on_the_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 59641500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 78851300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:48.984Z",
+        "before": [
+          {
+            "result": {
+              "duration": 849381200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "User can not register a new account with invalid credentials",
+        "description": "",
+        "id": "user-registration;user-can-not-register-a-new-account-with-invalid-credentials;;10",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 57195600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The user provides username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 61054700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user provides password \"A1fredIsTheBestButlerToExist!!\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"A1fredIsTheBestButlerToExist!!\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 13981900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4989800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The user should get a browser alert saying \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3652600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The user should stay on the registration page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_stay_on_the_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 30117700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 82181700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:50.115Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1086033300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "User can not register a new account with invalid credentials",
+        "description": "",
+        "id": "user-registration;user-can-not-register-a-new-account-with-invalid-credentials;;11",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 68031600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The user provides username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 51900100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user provides password \"batman1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"batman1\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14413900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4600700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The user should get a browser alert saying \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2936600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The user should stay on the registration page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_stay_on_the_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 54866200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 81223500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:51.460Z",
+        "before": [
+          {
+            "result": {
+              "duration": 882631200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "User can not register a new account with invalid credentials",
+        "description": "",
+        "id": "user-registration;user-can-not-register-a-new-account-with-invalid-credentials;;12",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 66806600,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The user provides username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 69213800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user provides password \"BATMAN1\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"BATMAN1\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14834400,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8023300,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The user should get a browser alert saying \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4030300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The user should stay on the registration page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_stay_on_the_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 47577600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "The user is on the login page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_is_on_the_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 87930800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "The user clicks the register link",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_clicks_the_register_link()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:52.644Z",
+        "before": [
+          {
+            "result": {
+              "duration": 896441200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 35,
+        "name": "User can not register a new account with invalid credentials",
+        "description": "",
+        "id": "user-registration;user-can-not-register-a-new-account-with-invalid-credentials;;13",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 58538300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "The user provides username \"Super_man-2001\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Super_man-2001\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_username(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 40006900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "The user provides password \"Robin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Robin\"",
+                  "offset": 27
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_provides_password(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 14490900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "The user submits credentials",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_submits_credentials()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4046500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "The user should get a browser alert saying \"Invalid password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Invalid password\"",
+                  "offset": 43
+                }
+              ],
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_get_a_browser_alert_saying(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3999600,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "The user should stay on the registration page",
+            "match": {
+              "location": "com.revature.steps.UserRegistrationSteps.the_user_should_stay_on_the_registration_page()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "User registration",
+    "description": "  As a new user I want to open an account with the Planetarium so I can save my celestial findings",
+    "id": "user-registration",
+    "keyword": "Feature",
+    "uri": "classpath:features/UserRegistration.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2025-01-28T17:10:53.799Z",
+        "before": [
+          {
+            "result": {
+              "duration": 916967300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Login should allow for viewing owned resources",
+        "description": "",
+        "id": "view-users-planets-and-moons;login-should-allow-for-viewing-owned-resources",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 170926500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the user is on the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_on_the_home_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1689461000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "the user should see their planets and moons",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_should_see_their_planets_and_moons()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:56.583Z",
+        "before": [
+          {
+            "result": {
+              "duration": 863675000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Users not logged in should not be able to view the home page and its resources",
+        "description": "",
+        "id": "view-users-planets-and-moons;users-not-logged-in-should-not-be-able-to-view-the-home-page-and-its-resources",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 27720600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the user is not logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_not_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 30930500,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user tries to directly access the home page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_tries_to_directly_access_the_home_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 10051800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "the user should be denied access",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_should_be_denied_access()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:10:57.517Z",
+        "before": [
+          {
+            "result": {
+              "duration": 881545000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Users should not be able to see other user\u0027s moons and planets",
+        "description": "",
+        "id": "view-users-planets-and-moons;users-should-not-be-able-to-see-other-user-s-moons-and-planets",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1407193300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "the user has registered for the first time and logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_has_registered_for_the_first_time_and_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 448913300,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "there should be no visible celestial bodies",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.there_should_be_no_visible_celestial_bodies()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-01-28T17:11:00.257Z",
+        "before": [
+          {
+            "result": {
+              "duration": 870975300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.revature.steps.hooks.Hooks.resetDatabase()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Users who log out should not still be able to view their celestial bodies",
+        "description": "",
+        "id": "view-users-planets-and-moons;users-who-log-out-should-not-still-be-able-to-view-their-celestial-bodies",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 159533400,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user is logged in",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_is_logged_in()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 404293900,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the user presses the logout button",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_presses_the_logout_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 27034600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "the user should be redirected to the login page",
+            "match": {
+              "location": "com.revature.steps.ViewSteps.the_user_should_be_redirected_to_the_login_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "View users planets and moons",
+    "description": "  As a user I want to see my planets and moons added to the Planetarium so I can track my findings",
+    "id": "view-users-planets-and-moons",
+    "keyword": "Feature",
+    "uri": "classpath:features/ViewOwnedResources.feature",
     "tags": []
   }
 ]
