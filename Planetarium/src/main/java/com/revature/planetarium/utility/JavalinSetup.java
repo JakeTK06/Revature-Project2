@@ -54,10 +54,6 @@ public class JavalinSetup {
         // for background image
         app.get("/background", viewController::backgroundImage);
 
-        app.get("/favicon.ico", ctx -> {
-            ctx.result(new FileInputStream("images/favicon.ico"));
-            ctx.contentType("image/x-icon");
-        });
         
         /*
          * Mapping Pages to Javalin app
@@ -85,6 +81,7 @@ public class JavalinSetup {
          */
 
         app.get("/planetarium/planet", planetController::findAll);
+        app.get("/planetarium/getPlanet", planetController::checkExistingPlanet);
         app.get("/planetarium/planet/owner/{ownerId}", planetController::findAllByOwner);
         app.get("/planetarium/planet/{identifier}", planetController::findByIdentifier);
         app.post("/planetarium/planet", planetController::createPlanet);

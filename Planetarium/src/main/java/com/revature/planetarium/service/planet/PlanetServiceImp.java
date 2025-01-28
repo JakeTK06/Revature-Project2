@@ -1,7 +1,9 @@
 package com.revature.planetarium.service.planet;
 
 import com.revature.planetarium.entities.Planet;
+import com.revature.planetarium.entities.User;
 import com.revature.planetarium.exceptions.PlanetFail;
+import com.revature.planetarium.exceptions.UserFail;
 import com.revature.planetarium.repository.planet.PlanetDao;
 
 import javax.imageio.ImageIO;
@@ -127,6 +129,17 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
         } else {
             throw new PlanetFail("Invalid planet name");
         }
+    }
+
+    @Override
+    public boolean checkName(String planetName) {
+        try {
+            Optional<Planet> foundPlanet = planetDao.readPlanet(planetName);
+            return foundPlanet.isPresent();
+        } catch (PlanetFail e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     // Helper method to determine the format of the image
