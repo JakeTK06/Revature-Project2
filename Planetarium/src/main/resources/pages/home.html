@@ -198,7 +198,8 @@
             return new Promise((resolve, reject) => {
                 if (element.files.length > 0) {
                     let file = element.files[0];
-                    if (file.type !== "image/jpeg"){
+                    if (file.type !== "image/jpeg" && file.type !== "image/png"){
+                        alert("Invalid file type");
                         reject(new Error("Invalid file type: must be an image"));
                     }
                     let reader = new FileReader();
@@ -271,6 +272,24 @@
 
         async function createPlanet(){
             let planetName = document.getElementById('planetNameInput').value;
+            const planetExistsResponse = await fetch(`http://{URL}:{PORT}/planetarium/getPlanet?planetName=${encodeURIComponent(planetName)}`, {
+                method: 'GET',
+                headers: {
+                'Content-Type': 'application/json'
+                }
+            });
+
+            if (planetExistsResponse.status === 200) {
+                const data = await planetExistsResponse.json();
+                if (data === true) {
+                    alert("Invalid planet name");
+                    return;
+                }
+            }
+
+
+
+
             if (!checkCelestialName(planetName)) {
                 alert("Invalid planet name");
                 return;
@@ -305,7 +324,7 @@
                 populateCelestialTable();
             } else {
                 alert(`Invalid planet name`);
-            }  
+            }
         }
 
         async function createMoon(){
@@ -409,6 +428,9 @@
         }
 
         function checkCelestialName(name){
+            if (name === "") {
+                return false;
+            }
             const regex = /^[a-zA-Z0-9\s_-]{1,30}$/;
             return regex.test(name);
         }
