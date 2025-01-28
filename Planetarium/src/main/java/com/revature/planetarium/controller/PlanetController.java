@@ -62,7 +62,7 @@ public class PlanetController {
 
     public void updatePlanet(Context ctx){
 
-        String planetId= ctx.queryParam("planetId");
+        String planetId= ctx.pathParam("planetId");
         if(planetId == null || planetId.isEmpty()) {
             ctx.status(400);  // Bad Request
             return;

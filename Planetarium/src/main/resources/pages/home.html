@@ -435,7 +435,7 @@
                 "Content-Type": "application/json"
             }
             console.log(planetId);
-            const response = await fetch('http://{URL}:{PORT}/planetarium/planet/getPlanetId?planetId=${encodeURIComponent(planetId)}', {
+            const response = await fetch(`http://{URL}:{PORT}/planetarium/planet/${encodeURIComponent(planetId)}`, {
                 method: 'PATCH',
                 body: bodyJson,
                 headers: headersList,
