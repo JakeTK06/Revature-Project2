@@ -20,7 +20,7 @@ public class Main {
 				config.bundledPlugins.enableDevLogging();
 			});
 			JavalinSetup.mapRoutes(app);
-			app.start(8080);	
+			app.start(8080);
 		} catch (ConfigurationFail e) {
 			e.printStackTrace();
 		}
