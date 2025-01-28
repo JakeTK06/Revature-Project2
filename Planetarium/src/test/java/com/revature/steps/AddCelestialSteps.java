@@ -48,8 +48,30 @@ public class AddCelestialSteps {
         Assert.assertEquals(3, TestRunner.homePage.getNumberOfPlanets());
     }
 
-    @When("the user adds an image of file type {string}")
-    public void the_user_adds_an_image_of_file_type(String fileType) {
+    @When("the user adds a moon image of file type {string}")
+    public void the_user_adds_a_moon_image_of_file_type(String fileType) {
+        // if empty don't set anything, if GIF set to the GIF
+        if (fileType.equals("GIF")){
+            // set to GIF
+            TestRunner.wait.until( d-> {
+                TestRunner.homePage.setMoonImageInput(CelestialGIF.getAbsolutePath());
+                return true;
+            });
+        } else if (fileType.equals("JPEG")){
+            TestRunner.wait.until( d-> {
+                TestRunner.homePage.setMoonImageInput(CelestialJPEG.getAbsolutePath());
+                return true;
+            });
+        } else if (fileType.equals("PNG")){
+            TestRunner.wait.until( d-> {
+                TestRunner.homePage.setMoonImageInput(CelestialPNG.getAbsolutePath());
+                return true;
+            });
+        }
+    }
+
+    @When("the user adds a planet image of file type {string}")
+    public void the_user_adds_a_planet_image_of_file_type(String fileType) {
         // if empty don't set anything, if GIF set to the GIF
         if (fileType.equals("GIF")){
             // set to GIF

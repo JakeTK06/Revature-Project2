@@ -6,6 +6,7 @@ import java.util.Map;
 import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.MoonFail;
+import com.revature.planetarium.exceptions.UserFail;
 import com.revature.planetarium.service.moon.MoonService;
 
 import io.javalin.http.Context;
@@ -69,6 +70,26 @@ public class MoonController {
         } catch (MoonFail e) {
             ctx.json(Map.of("message", e.getMessage()));
             ctx.status(404);
+        }
+    }
+
+    public void checkExistingMoon(Context ctx) {
+        String moonName = ctx.queryParam("moonName");
+
+        // Check if the username is provided
+        if (moonName == null || moonName.isEmpty()) {
+            ctx.status(400);  // Bad Request
+            ctx.json(Map.of("message", "moon name is required"));
+            return;
+        }
+
+        try {
+            boolean foundUser = moonService.checkName(moonName);  // Check if the user exists
+            ctx.status(200);  // OK status
+            ctx.json(foundUser);  // Return the result (true or false)
+        } catch (UserFail e) {
+            ctx.status(401);  // Unauthorized if user not found
+            ctx.json(Map.of("message", "Invalid moon name"));
         }
     }
 
