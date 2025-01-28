@@ -85,7 +85,7 @@ public class JavalinSetup {
         app.get("/planetarium/planet/owner/{ownerId}", planetController::findAllByOwner);
         app.get("/planetarium/planet/{identifier}", planetController::findByIdentifier);
         app.post("/planetarium/planet", planetController::createPlanet);
-        app.patch("/planetarium/planet/getPlanetId", planetController::updatePlanet);
+        app.patch("/planetarium/planet/{planetId}", planetController::updatePlanet);
         app.delete("/planetarium/planet/{identifier}", planetController::deletePlanet);
 
         /*
