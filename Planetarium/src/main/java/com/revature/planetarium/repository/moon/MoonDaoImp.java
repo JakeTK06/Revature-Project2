@@ -30,7 +30,7 @@ public class MoonDaoImp implements MoonDao {
     public Optional<Moon> createMoon(Moon moon) {
 
         // Order to throw exceptions
-        // 1. Planet name
+        // 1. moon name
         // 2. Owner id
         // 3. Image type
 
@@ -228,8 +228,9 @@ public class MoonDaoImp implements MoonDao {
     @Override
     public Optional<Moon> updateMoon(Moon moon) {
         // Order to throw exceptions
-        // 1. Planet name
-        // 2. Owner id
+        // 1. moon id exists in db
+        // 2. new moon name is valid
+        // 2. planet id is valid
         // 3. Image type
 
         // Check planet does exist in db

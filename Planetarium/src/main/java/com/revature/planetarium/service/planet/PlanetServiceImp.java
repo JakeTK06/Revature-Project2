@@ -83,6 +83,11 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
 
     @Override
     public Planet updatePlanet(Planet planet) {
+        // Things to check for
+        // 1) planet id in db
+        // 2) new planet name
+        // 3) new owner id
+        // 4) image type
         String accepted_characters = "^[A-Za-z0-9 _-]+$";
         Optional<Planet> existingPlanet = planetDao.readPlanet(planet.getPlanetId());
         if (existingPlanet.isEmpty()) {
