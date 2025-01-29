@@ -22,9 +22,6 @@ import static org.junit.runners.Parameterized.*;
 @RunWith(Parameterized.class)
 public class PlanetDaoUpdatePlanetPositiveTest extends PlanetDaoTest{
     private Planet testPlanet;
-    private Planet newPlanet;
-    private int validPlanetId;
-    private String validPlanetName;
 
     @Parameter
     public int positivePlanetId;
@@ -32,48 +29,49 @@ public class PlanetDaoUpdatePlanetPositiveTest extends PlanetDaoTest{
     @Parameter(1)
     public String positivePlanetName;
 
-    //@Parameter(2)
-    //public String positiveImagePath;
+    @Parameter(2)
+    public int positiveNewOwnerId;
+
+    @Parameter(3)
+    public String positiveImagePath;
 
 
     @Parameters
     public static Collection<Object> inputs() {
-        //String jpegPath = "src/test/resources/Celestial-Images/moon-1.jpg";
-        //String pngPath = "src/test/resources/Celestial-Images/planet-png.png";
-        //String gifPath = "src/test/resources/Celestial-Images/planet-gif.gif";
+        String jpegPath = "src/test/resources/Celestial-Images/moon-1.jpg";
+        String pngPath = "src/test/resources/Celestial-Images/planet-png.png";
+        String existingImagePath = "src/test/resources/Celestial-Images/planet-1.jpg";
         int validPlanetId = 1;
-        String validPlanetName = "Earth";
-
-        String newPlanetName1 = "Venus -55_";
-        String newPlanetName2 = "";
+        String validNewPlanetName = "Venus -55_";
+        String existingPlanetName = "Earth";
         int newOwnerId = 2;
+        int existingOwnerId = 1;
 
         return Arrays.asList(new Object[][]{
-                {validPlanetId,newPlanetName1},
-                {validPlanetId,newPlanetName2},
-                {newOwnerId,newPlanetName1},
-                {newOwnerId,newPlanetName2},
-                {newOwnerId,validPlanetName}
+                {validPlanetId,existingPlanetName,existingOwnerId,existingImagePath},
+                {validPlanetId,validNewPlanetName,existingOwnerId,existingImagePath},
+                {validPlanetId,validNewPlanetName,newOwnerId,existingImagePath},
+                {validPlanetId,validNewPlanetName,newOwnerId,null},
+                {validPlanetId,validNewPlanetName,newOwnerId,jpegPath},
+                {validPlanetId,validNewPlanetName,newOwnerId,pngPath}
         });
 
     }
 
-    @Before
-    public void positiveSetup() {
-        validPlanetId = 1;
-        validPlanetName = "Earth";
-        testPlanet = new Planet(validPlanetId, validPlanetName);
-    }
-
     @Test
     public void daoUpdatePlanetPositiveTest() {
-        newPlanet = new Planet(positivePlanetId, positivePlanetName);
+        testPlanet = new Planet(positivePlanetId,positivePlanetName,positiveNewOwnerId);
+        if (positiveImagePath != null){
+            imageHelper(positiveImagePath);
+        }
         Optional<Planet> updatedPlanet = planetDao.updatePlanet(testPlanet);
         Assert.assertTrue(updatedPlanet.isPresent());
-        Assert.assertEquals(newPlanet, updatedPlanet.get());
+        Assert.assertEquals(positivePlanetName, updatedPlanet.get().getPlanetName());
+        Assert.assertEquals(positiveNewOwnerId, updatedPlanet.get().getOwnerId());
+        Assert.assertEquals(testPlanet.getImageData(), updatedPlanet.get().getImageData());
     }
 
-    /*public void imageHelper(String path){
+    public void imageHelper(String path){
         byte[] imageData;
         {
             try {
@@ -84,5 +82,5 @@ public class PlanetDaoUpdatePlanetPositiveTest extends PlanetDaoTest{
         }
 
         testPlanet.setImageData(Base64.getEncoder().encodeToString(imageData));
-    }*/
+    }
 }

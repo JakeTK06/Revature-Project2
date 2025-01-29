@@ -355,11 +355,11 @@
             moonUpdateImageInput.placeholder = 'Upload New Moon Image';
             updateContainer.appendChild(moonUpdateImageInput);
 
-            let updateButton = document.createElement('button');
-            updateButton.textContent = 'Update Moon';
-            updateButton.className = 'update-button';
-            <!--updateButton.addEventListener('click', updateMoon);-->
-            updateContainer.appendChild(updateButton);
+            let updateMoonButton = document.createElement('button');
+            updateMoonButton.textContent = 'Update Moon';
+            updateMoonButton.className = 'update-button';
+            updateMoonButton.addEventListener('click', updateMoon);
+            updateContainer.appendChild(updateMoonButton);
         }
 
         async function createPlanet(){
@@ -450,7 +450,7 @@
                 "Content-Type": "application/json"
             }
             console.log(planetId);
-            const response = await fetch('http://{URL}:{PORT}/planetarium/planet/getPlanetId?planetId=${encodeURIComponent(planetId)}', {
+            const response = await fetch(`http://{URL}:{PORT}/planetarium/planet/${encodeURIComponent(planetId)}`, {
                 method: 'PATCH',
                 body: bodyJson,
                 headers: headersList,
@@ -460,6 +460,51 @@
                 populateCelestialTable();
             } else {
                 alert(`Unable to update planet`);
+            }
+        }
+
+        async function updateMoon(){
+            console.log("Update Button Click");
+            let moonId = document.getElementById('moonIdUpdateInput').value;
+            let moonName = document.getElementById('moonNameUpdateInput').value;
+
+            if (!checkCelestialName(moonName)) {
+                alert("Invalid moon name");
+                return;
+            }
+
+            let newMoonOwnerId = document.getElementById('moonOwnerIdUpdateInput').value;
+
+            let moonImageInput = document.getElementById('moonUpdateImageInput');
+            let imageData = (moonImageInput.files.length > 0) ? await convertToBase64(moonImageInput) : null;
+            let bodyData;
+            if(imageData){
+                bodyData = {
+                    "moonName": moonName,
+                    "ownerId": newMoonOwnerId,
+                    "imageData": imageData
+                }
+            } else{
+                bodyData = {
+                    "moonName": moonName,
+                    "ownerId": newMoonOwnerId
+                }
+            }
+            const bodyJson = JSON.stringify(bodyData);
+            const headersList = {
+                "Accept": "*/*",
+                "Content-Type": "application/json"
+            }
+            const response = await fetch(`http://{URL}:{PORT}/planetarium/moon/${encodeURIComponent(moonId)}`, {
+                method: 'PATCH',
+                body: bodyJson,
+                headers: headersList,
+                credentials: 'include'
+            })
+            if (response.status === 201) {
+                populateCelestialTable();
+            } else {
+                alert(`Unable to update moon`);
             }
         }
 

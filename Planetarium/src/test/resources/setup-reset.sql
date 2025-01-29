@@ -35,6 +35,7 @@ create table if not exists users(
 );
 
 insert into users (username, password) values ('Batman', 'Iamthenight1939');
+insert into users (username, password) values ('Penguin', 'Iamtheday1939');
 
 create table if not exists planets(
 	id SERIAL primary key,

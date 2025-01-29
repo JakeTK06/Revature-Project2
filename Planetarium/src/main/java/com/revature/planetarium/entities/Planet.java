@@ -12,9 +12,10 @@ public class Planet {
 
     public Planet() {};
 
-    public Planet(int id, String name) {
+    public Planet(int id, String name, int ownId) {
         this.planetName = name;
         this.planetId = id;
+        this.ownerId = ownId;
     }
     
     public int getPlanetId() {
