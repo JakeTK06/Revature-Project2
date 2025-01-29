@@ -102,8 +102,8 @@
 						include them in the test run
 					-->
 					<includes>
-<!--						<include>**/PlanetariumTestSuite.java</include>-->
-						<include>**/TestRunner.java</include>
+						<include>**/PlanetariumTestSuite.java</include>
+<!--						<include>**/TestRunner.java</include>-->
 					</includes>
 
 					<!--					<excludes></excludes>-->
