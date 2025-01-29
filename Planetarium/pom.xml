@@ -101,7 +101,11 @@
 						wrap those files that hold the class data in excludes tags to tell Surefire not to
 						include them in the test run
 					-->
-					<includes>**/PlanetariumTestSuite.java</includes>
+					<includes>
+<!--						<include>**/PlanetariumTestSuite.java</include>-->
+						<include>**/TestRunner.java</include>
+					</includes>
+
 					<!--					<excludes></excludes>-->
 				</configuration>
 			</plugin>
