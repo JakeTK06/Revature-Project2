@@ -60,6 +60,24 @@ public class MoonController {
         }
     }
 
+    public void updateMoon(Context ctx) {
+        String moonId= ctx.pathParam("moonId");
+        if(moonId == null || moonId.isEmpty()) {
+            ctx.status(400);  // Bad Request
+            return;
+        }
+        try {
+            Moon newMoon = ctx.bodyAsClass(Moon.class);
+            newMoon.setMoonId(Integer.parseInt(moonId));
+            Moon updatedMoon = moonService.updateMoon(newMoon);
+            ctx.json(updatedMoon);
+            ctx.status(201);
+        } catch (MoonFail e) {
+            ctx.result(e.getMessage());
+            ctx.status(400);
+        }
+    }
+
     public void deleteMoon(Context ctx) {
         try {
             String identifier = ctx.pathParam("identifier");
