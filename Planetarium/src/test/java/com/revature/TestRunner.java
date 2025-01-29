@@ -1,5 +1,6 @@
 package com.revature;
 
+import com.revature.planetarium.Main;
 import com.revature.poms.HomePage;
 import com.revature.poms.LoginPage;
 import com.revature.poms.RegistrationPage;
@@ -32,10 +33,9 @@ public class TestRunner {
 
     @BeforeClass
     public static void setup(){
-
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--headless");
-        driver = new ChromeDriver(chromeOptions);
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        chromeOptions.addArguments("--headless");
+        driver = new ChromeDriver(/*chromeOptions*/);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         homePage = new HomePage(driver);
