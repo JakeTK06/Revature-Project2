@@ -111,7 +111,7 @@ public class MoonServiceImp<T> implements MoonService<T> {
         // Check moon id
         Optional<Moon> existingMoon = moonDao.readMoon(moon.getMoonId());
         if (existingMoon.isEmpty()) {
-            throw new MoonFail("Invalid moon ID");
+            throw new MoonFail("Invalid moon id");
         }
 
         // Moon name check
@@ -130,10 +130,10 @@ public class MoonServiceImp<T> implements MoonService<T> {
         // Check planet id is valid
         try {
             if (moonDao.readPlanet(moon.getOwnerId()).isEmpty()){
-                throw new MoonFail("Invalid planet ID");
+                throw new MoonFail("Invalid planet id");
             }
         } catch (PlanetFail e){
-            throw new MoonFail("Invalid planet ID");
+            throw new MoonFail("Invalid planet id");
         }
         // Check image type is valid
         try {

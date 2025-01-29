@@ -1,7 +1,9 @@
 package com.revature.planetarium.service.planet;
 
+import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.entities.User;
+import com.revature.planetarium.exceptions.MoonFail;
 import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.planetarium.exceptions.UserFail;
 import com.revature.planetarium.repository.planet.PlanetDao;
@@ -86,23 +88,45 @@ public class PlanetServiceImp<T> implements PlanetService<T> {
         // Things to check for
         // 1) planet id in db
         // 2) new planet name
+        //      - doesnt exist in database at a different id
+        //      - meets character constraints
         // 3) new owner id
         // 4) image type
-        String accepted_characters = "^[A-Za-z0-9 _-]+$";
+
+        // planet id in db
         Optional<Planet> existingPlanet = planetDao.readPlanet(planet.getPlanetId());
         if (existingPlanet.isEmpty()) {
-            throw new PlanetFail("Planet not found, could not update");
+            throw new PlanetFail("Planet not in database");
         }
-        if (planet.getPlanetName().length() < 1 || planet.getPlanetName().length() > 30) {
+
+        // planet doesnt exist in db at a different id
+        Optional<Planet> planetWithSameName = planetDao.readPlanet(planet.getPlanetName());
+        if (planetWithSameName.isPresent() && planetWithSameName.get().getPlanetId() != planet.getPlanetId()) {
             throw new PlanetFail("Invalid planet name");
         }
-        if (!planet.getPlanetName().matches(accepted_characters)) {
+        // - Moon name meets character constraints
+        String validCharacters ="^[a-zA-Z0-9 _-]+$";
+        if (planet.getPlanetName().isEmpty() || planet.getPlanetName().length() > 30
+                || !planet.getPlanetName().matches(validCharacters)){
             throw new PlanetFail("Invalid planet name");
         }
-        if (!planet.getPlanetName().equals(existingPlanet.get().getPlanetName())) {
-            if (planetDao.readPlanet(planet.getPlanetName()).isPresent()) {
-                throw new PlanetFail("Planet name must be unique, could not update");
+
+        // check owner id
+        if(!planetDao.checkOwnerExists(planet.getOwnerId())){
+            throw new PlanetFail("Invalid owner id");
+        }
+        // check image type
+        try {
+            if (planet.getImageData() != null) {
+                ByteArrayInputStream bais = new ByteArrayInputStream(planet.imageDataAsByteArray());
+                String format = getFormatName(bais);
+                if (!("jpeg".equalsIgnoreCase(format) || "png".equalsIgnoreCase(format))) {
+                    throw new PlanetFail("Invalid file type");
+                }
             }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
         }
 
         Optional<Planet> updatedPlanet = planetDao.updatePlanet(planet);

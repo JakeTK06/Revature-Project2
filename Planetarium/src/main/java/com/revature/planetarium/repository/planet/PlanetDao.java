@@ -15,5 +15,6 @@ public interface PlanetDao {
     Optional<Planet> updatePlanet(Planet planet);
     boolean deletePlanet(int id);
     boolean deletePlanet(String name);
+    boolean checkOwnerExists(int ownerId);
 
 }

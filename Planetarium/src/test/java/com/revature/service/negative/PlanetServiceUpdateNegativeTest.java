@@ -1,24 +1,31 @@
-package com.revature.repository.negative;
+package com.revature.service.negative;
 
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.PlanetFail;
-import com.revature.repository.parent.PlanetDaoTest;
+import com.revature.service.parent.PlanetServiceTest;
 import org.junit.Assert;
-import org.junit.runner.RunWith;
+import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.mockito.Mockito;
 
+import javax.swing.text.html.Option;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
-import java.util.Collection;
-import static org.junit.runners.Parameterized.*;
 import java.util.Base64;
+import java.util.Collection;
+import java.util.Optional;
+
+import static org.junit.runners.Parameterized.*;
 
 @RunWith(Parameterized.class)
-public class PlanetDaoUpdatePlanetNegativeTest extends PlanetDaoTest {
+public class PlanetServiceUpdateNegativeTest extends PlanetServiceTest {
     private Planet testPlanet;
+    private Planet earthPlanet;
+    private Planet marsPlanet;
 
     @Parameter
     public int planetId;
@@ -109,18 +116,49 @@ public class PlanetDaoUpdatePlanetNegativeTest extends PlanetDaoTest {
 
     }
 
-    @Test
-    public void daoUpdatePlanetNegativeTest() {
-        testPlanet = new Planet(planetId, newPlanetName, newOwnerId);
-        // Set image if there  is one
-        if (imagePath != null){
-            imageHelper(imagePath);
-        }
-        PlanetFail exception = Assert.assertThrows(PlanetFail.class, () -> {planetDao.updatePlanet(testPlanet);});
-        Assert.assertEquals(exceptionMessage, exception.getMessage());
+    @Before
+    public void positiveSetup(){
+        earthPlanet = new Planet(1,"Earth",1);
+        earthPlanet.setImageData(Base64.getEncoder().encodeToString(imageHelper("src/test/resources/Celestial-Images/planet-1.jpg")));
+
+        marsPlanet = new Planet();
+        marsPlanet.setPlanetId(2);
+        marsPlanet.setPlanetName("Mars");
+        marsPlanet.setOwnerId(1);
+        marsPlanet.setImageData(Base64.getEncoder().encodeToString(imageHelper("src/test/resources/Celestial-Images/planet-2.jpg")));
     }
 
-    public void imageHelper(String path){
+    @Test
+    public void serviceUpdatePlanetNegativeTest() {
+        /*
+            Need to mock:
+            planetDao.readPlanet(planet_id);
+            planetDao.readPlanet(planet_name);
+            planetDao.checkOwnerExists(owner_id);
+            planetDao.updatePlanet(planet);
+         */
+        Mockito.when(planetDao.readPlanet(1)).thenReturn(Optional.of(earthPlanet));
+        Mockito.when(planetDao.readPlanet(7)).thenReturn(Optional.empty());
+        Mockito.when(planetDao.readPlanet("Earth")).thenReturn(Optional.of(earthPlanet));
+        Mockito.when(planetDao.readPlanet("Venus -55_")).thenReturn(Optional.empty());
+        Mockito.when(planetDao.readPlanet("")).thenReturn(Optional.empty());
+        Mockito.when(planetDao.readPlanet("Planet name that-is way_way2 long")).thenReturn(Optional.empty());
+        Mockito.when(planetDao.readPlanet("Exciting!! planet")).thenReturn(Optional.empty());
+        Mockito.when(planetDao.readPlanet("Mars")).thenReturn(Optional.of(marsPlanet));
+        Mockito.when(planetDao.checkOwnerExists(1)).thenReturn(true);
+        Mockito.when(planetDao.checkOwnerExists(2)).thenReturn(true);
+        Mockito.when(planetDao.checkOwnerExists(10)).thenReturn(false);
+
+        testPlanet = new Planet(planetId, newPlanetName, newOwnerId);
+        if (imagePath != null){
+            testPlanet.setImageData(Base64.getEncoder().encodeToString(imageHelper(imagePath)));
+        }
+        Mockito.when(planetDao.updatePlanet(testPlanet)).thenThrow(new AssertionError("PlanetFail exception expected but was never thrown"));
+        PlanetFail planetFail = Assert.assertThrows(PlanetFail.class, ()-> {planetService.updatePlanet(testPlanet);});
+        Assert.assertEquals(exceptionMessage, planetFail.getMessage());
+    }
+
+    public byte[] imageHelper(String path){
         byte[] imageData;
         {
             try {
@@ -130,7 +168,8 @@ public class PlanetDaoUpdatePlanetNegativeTest extends PlanetDaoTest {
             }
         }
 
-        testPlanet.setImageData(Base64.getEncoder().encodeToString(imageData));
+//        testMoon.setImageData(Base64.getEncoder().encodeToString(imageData));
+        return imageData;
     }
 
 }
