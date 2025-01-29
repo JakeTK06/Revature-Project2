@@ -1,0 +1,1917 @@
+{
+	"info": {
+		"_postman_id": "68da6b7d-1399-4e16-8a04-7c9d19291c09",
+		"name": "Planetarium",
+		"description": "This collection is for API Testing of the Planetarium application.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40730701",
+		"_collection_link": "https://kuiper-belt.postman.co/workspace/Kuiper-Belt-Workspace~a93d590a-9df5-4179-8dd4-f57d09f5cd86/collection/40730660-68da6b7d-1399-4e16-8a04-7c9d19291c09?action=share&source=collection_link&creator=40730701"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"item": [
+				{
+					"name": "Register Positive",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"pm.test(\"Message is User created successfully\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"User created successfully\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"{{validNewUser}}\",\r\n    \"password\":\"{{validNewPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Negative (password length long fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Message should be Invalid password\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Invalid password\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Super_man-2001\",\r\n    \"password\":\"AlfredIsTheBestButlerToExist111\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Negative (password length short fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Message should be Invalid password\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Invalid password\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Super_man-2001\",\r\n    \"password\":\"b0Ts\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Negative (password start character fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Message should be Invalid password\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Invalid password\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Super_man-2001\",\r\n    \"password\":\"3atman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Negative (password character fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Message should be Invalid password\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Invalid password\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Super_man-2001\",\r\n    \"password\":\"A1fredIsTheBestButlerToExist!!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Negative (password uppercase constraint fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Message should be Invalid password\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Invalid password\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Super_man-2001\",\r\n    \"password\":\"batman1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Negative (password lowercase constraint fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Message should be Invalid password\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Invalid password\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Super_man-2001\",\r\n    \"password\":\"BATMAN1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Negative (password number constraint fail)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Message should be Invalid password\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Invalid password\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Super_man-2001\",\r\n    \"password\":\"Robin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Negative (non unique username)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Message should be Invalid username\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Invalid username\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Batman\",\r\n    \"password\":\"{{validLoginPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Negative (Username too short)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Message should be Invalid username\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Invalid username\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"Bane\",\r\n    \"password\":\"{{validNewPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Negative (Username too long)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Message should be Invalid username\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Invalid username\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"wonder_woman_for_the_DC_theming\",\r\n    \"password\":\"{{validNewPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Negative (username doesn't start with letter)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Message should be Invalid username\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Invalid username\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"2face\",\r\n    \"password\":\"{{validNewPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register Negative (Username has invalid characters)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Message should be Invalid username\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Invalid username\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"joker!!!!!!?)\",\r\n    \"password\":\"{{validNewPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}register",
+							"host": [
+								"{{Base url}}register"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Tests related to User Story 1\n\nAs a new user I want to open an account with the Planetarium so I can save my celestial findings"
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login Negative (invalid username)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									"pm.test(\"Message should be invalid credentials\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"invalid credentials\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"{{invalidLoginUsername}}\",\r\n    \"password\":\"{{validLoginPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}login",
+							"host": [
+								"{{Base url}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Negative (invalid password)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									"pm.test(\"Message should be invalid credentials\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"invalid credentials\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"{{validLoginUsername}}\",\r\n    \"password\":\"{{invalidLoginPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}login",
+							"host": [
+								"{{Base url}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Negative (both invalid)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 401\", function () {\r",
+									"    pm.response.to.have.status(401);\r",
+									"});\r",
+									"pm.test(\"Message should be invalid credentials\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"invalid credentials\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"{{invalidLoginUsername}}\",\r\n    \"password\":\"{{invalidLoginPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}login",
+							"host": [
+								"{{Base url}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Positive",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Id should be returned\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.id).to.eql(1);\r",
+									"});\r",
+									"pm.test(\"Username should be returned\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.username).to.eql(\"Batman\");\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"{{validLoginUsername}}\",\r\n    \"password\":\"{{validLoginPassword}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}login",
+							"host": [
+								"{{Base url}}login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Tests related to User Story 2\n\nAs a user I want to securely access my account so I can interact with the Planetarium in a secure environment"
+		},
+		{
+			"name": "View",
+			"item": [
+				{
+					"name": "Get Planets by Owner ID (ID = 1)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var expectedResponse = [\r",
+									"    {\r",
+									"        \"planetId\": 1,\r",
+									"        \"planetName\": \"Earth\",\r",
+									"        \"ownerId\": 1\r",
+									"    },\r",
+									"    {\r",
+									"        \"planetId\": 2,\r",
+									"        \"planetName\": \"Mars\",\r",
+									"        \"ownerId\": 1\r",
+									"    }\r",
+									"];\r",
+									"\r",
+									"var responseBody = pm.response.json();\r",
+									"\r",
+									"// Function to remove the `imageData` field from all objects in an array\r",
+									"function removeImageData(array) {\r",
+									"    return array.map(item => ({\r",
+									"        planetId: item.planetId,\r",
+									"        planetName: item.planetName,\r",
+									"        ownerId: item.ownerId\r",
+									"    }));\r",
+									"}\r",
+									"\r",
+									"// Process the response body to ignore `imageData`\r",
+									"var processedResponseBody = removeImageData(responseBody);\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Planet details match (ignoring imageData)\", function () {\r",
+									"    pm.expect(processedResponseBody).to.eql(expectedResponse);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "JSESSIONID",
+								"value": "node0g50dt9d2qlflssef6doeii3x1.node0",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}planetarium/planet/owner/1",
+							"host": [
+								"{{Base url}}planetarium"
+							],
+							"path": [
+								"planet",
+								"owner",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Planets by Owner ID (ID = 10) Not in DB",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var expectedResponse = [\r",
+									"   \r",
+									"]\r",
+									"\r",
+									"var responseBody = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body is correct\", function () {\r",
+									"    pm.expect(responseBody).to.eql(expectedResponse);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "JSESSIONID",
+								"value": "node0g50dt9d2qlflssef6doeii3x1.node0",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}planetarium/planet/owner/10",
+							"host": [
+								"{{Base url}}planetarium"
+							],
+							"path": [
+								"planet",
+								"owner",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Moon by Planet ID (ID = 1)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var expectedResponse = [\r",
+									"    {\r",
+									"        \"moonId\": 1,\r",
+									"        \"moonName\": \"Luna\",\r",
+									"        \"ownerId\": 1\r",
+									"    }\r",
+									"];\r",
+									"\r",
+									"var responseBody = pm.response.json();\r",
+									"\r",
+									"// Function to remove the `imageData` field from all objects in an array\r",
+									"function removeImageData(array) {\r",
+									"    return array.map(item => ({\r",
+									"        moonId: item.moonId,\r",
+									"        moonName: item.moonName,\r",
+									"        ownerId: item.ownerId\r",
+									"    }));\r",
+									"}\r",
+									"\r",
+									"// Process the response body to ignore `imageData`\r",
+									"var processedResponseBody = removeImageData(responseBody);\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Moon details match (ignoring imageData)\", function () {\r",
+									"    pm.expect(processedResponseBody).to.eql(expectedResponse);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "JSESSIONID",
+								"value": "node0g50dt9d2qlflssef6doeii3x1.node0",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}planetarium/moon/owner/1",
+							"host": [
+								"{{Base url}}planetarium"
+							],
+							"path": [
+								"moon",
+								"owner",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Moon by Planet ID (ID = 10) Not in DB",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var expectedResponse = [\r",
+									"    \r",
+									"]\r",
+									"\r",
+									"var responseBody = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body is correct\", function () {\r",
+									"    pm.expect(responseBody).to.eql(expectedResponse);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "JSESSIONID",
+								"value": "node0g50dt9d2qlflssef6doeii3x1.node0",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Base url}}planetarium/moon/owner/10",
+							"host": [
+								"{{Base url}}planetarium"
+							],
+							"path": [
+								"moon",
+								"owner",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "tests related to User Story 3\n\nAs a user I want to see my planets and moons added to the Planetarium so I can track my findings"
+		},
+		{
+			"name": "Create",
+			"item": [
+				{
+					"name": "Moon",
+					"item": [
+						{
+							"name": "Create Moon without image Positive",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"moonName\": \"Ganymedes\",\r\n    \"ownerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/moon",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"moon"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Moon with image Positive",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								},
+								{
+									"listen": "prerequest",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"moonName\": \"lalalallalala1\",\r\n    \"ownerId\": 1,\r\n    \"imageData\": \"{{EarthImage}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/moon",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"moon"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Moon without image Negative (moon name invalid characters fail)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Return message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid moon name\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"moonName\": \"Luna!\",\r\n    \"ownerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/moon",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"moon"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Moon without image Negative (moon name unique fail)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Return message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid moon name\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"moonName\": \"Luna\",\r\n    \"ownerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/moon",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"moon"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Moon without image Negative (moon name length short fail)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Return message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid moon name\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"moonName\": \"\",\r\n    \"ownerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/moon",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"moon"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Moon without image Negative (moon name length long fail)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Return message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid moon name\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"moonName\": \"xdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\",\r\n    \"ownerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/moon",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"moon"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Moon without image Negative  (planet id fail)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Return message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid planet ID\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"moonName\": \"Ganymedesa\",\r\n    \"ownerId\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/moon",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"moon"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Moon with image Negative (invalid file format)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Return message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid file type\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"moonName\": \"MoonV2\",\r\n    \"ownerId\": 1,\r\n    \"imageData\": \"{{GIFImage}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/moon",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"moon"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "tests related to moon creation"
+				},
+				{
+					"name": "Planet",
+					"item": [
+						{
+							"name": "Create Planet without image data Positive",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"planetName\": \"Venus -55_\",\r\n    \"ownerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/planet",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"planet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Planet with image data Positive",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 201\", function () {\r",
+											"    pm.response.to.have.status(201);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"planetName\": \"Earth 30\",\r\n    \"ownerId\": \"1\",\r\n    \"imageData\": \"{{EarthImage}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/planet",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"planet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Planet with Invalid name (planet name length long fail)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Return message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid planet name\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"planetName\": \"Planet Name That-is 1  long_name \",\r\n    \"ownerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/planet",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"planet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Planet with Invalid name (planet name length short fail)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Return message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid planet name\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"planetName\": \"\",\r\n    \"ownerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/planet",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"planet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Planet with Invalid name (planet name unique fail)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Return message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid planet name\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"planetName\": \"Earth\",\r\n    \"ownerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/planet",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"planet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Planet with Invalid name (planet name  character fail)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Return message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid planet name\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"planetName\": \"Exciting!! planet\",\r\n    \"ownerId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/planet",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"planet"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Planet Negative (Invalid file type)",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Return message\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid file type\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"planetName\": \"Earth 39\",\r\n    \"ownerId\": \"1\",\r\n    \"imageData\": \"{{GIFImage}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/planet",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"planet"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "tests related to planet creation"
+				}
+			],
+			"description": "tests related to User story 4\n\nAs a user I want to add new planets and moons to the Planetarium so I can update my findings"
+		},
+		{
+			"name": "Delete",
+			"item": [
+				{
+					"name": "Moon",
+					"item": [
+						{
+							"name": "Delete Moon Negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});\r",
+											"pm.test(\"Message should be Invalid moon name\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid moon name\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/moon/xyz",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"moon",
+										"xyz"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Moon Positive",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 204\", function () {\r",
+											"    pm.response.to.have.status(204);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/moon/Luna",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"moon",
+										"Luna"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "tests related to moon deletion"
+				},
+				{
+					"name": "Planet",
+					"item": [
+						{
+							"name": "Delete Planet Positive",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 204\", function () {\r",
+											"    pm.response.to.have.status(204);\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{Base url}}planetarium/planet/Earth",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"planet",
+										"Earth"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Planet Negative",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 404\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});\r",
+											"pm.test(\"Message should say Invalid planet name\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid planet name\");\r",
+											"});"
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{Base url}}planetarium/planet/Planet Name That-is 1  long_name",
+									"host": [
+										"{{Base url}}planetarium"
+									],
+									"path": [
+										"planet",
+										"Planet Name That-is 1  long_name"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "tests related to planet deletion"
+				}
+			],
+			"description": "Tests related to User Story 5\n\nAs a user I want to remove planets and moons from the Planetarium so I can correct my findings"
+		},
+		{
+			"name": "Logout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JSESSIONID=node012o86ic1czrdwk7yrwqil13m19.node0; Path=/; HttpOnly; SameSite=Lax",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Base url}}logout",
+					"host": [
+						"{{Base url}}logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

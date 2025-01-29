@@ -1,0 +1,1503 @@
+{
+	"id": "756e6124-09c3-43a5-a036-5d161e953cba",
+	"name": "Planetarium",
+	"timestamp": "2025-01-29T20:18:49.647Z",
+	"collection_id": "40730660-68da6b7d-1399-4e16-8a04-7c9d19291c09",
+	"folder_id": 0,
+	"environment_id": "40730660-2519c280-728a-4a04-bee3-888de0d147de",
+	"totalPass": 76,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-01-29T20:18:25.525Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "bb773b8a-f148-498a-9a89-c0866cc0059c",
+			"name": "Register Positive",
+			"url": "localhost:8081/register",
+			"time": 1991,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Message is User created successfully": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message is User created successfully": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1991
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Message is User created successfully": true
+				}
+			]
+		},
+		{
+			"id": "a72c63bd-2dca-489c-b740-3deaa8881460",
+			"name": "Register Negative (password length long fail)",
+			"url": "localhost:8081/register",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Message should be Invalid password": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid password": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Message should be Invalid password": true
+				}
+			]
+		},
+		{
+			"id": "c65aeea3-7736-4415-a155-197a7a4dedc7",
+			"name": "Register Negative (password length short fail)",
+			"url": "localhost:8081/register",
+			"time": 9,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Message should be Invalid password": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid password": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Message should be Invalid password": true
+				}
+			]
+		},
+		{
+			"id": "db409262-078f-43b9-9cf6-4ff01076e505",
+			"name": "Register Negative (password start character fail)",
+			"url": "localhost:8081/register",
+			"time": 15,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Message should be Invalid password": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid password": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Message should be Invalid password": true
+				}
+			]
+		},
+		{
+			"id": "f2c9ba5d-b31d-48f0-9745-043c244fc4b7",
+			"name": "Register Negative (password character fail)",
+			"url": "localhost:8081/register",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Message should be Invalid password": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid password": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Message should be Invalid password": true
+				}
+			]
+		},
+		{
+			"id": "b660c8e7-df2b-46d1-8524-5acfe29e7a7f",
+			"name": "Register Negative (password uppercase constraint fail)",
+			"url": "localhost:8081/register",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Message should be Invalid password": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid password": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Message should be Invalid password": true
+				}
+			]
+		},
+		{
+			"id": "3eeca68d-a3f9-4a4b-a80c-bc65c923be08",
+			"name": "Register Negative (password lowercase constraint fail)",
+			"url": "localhost:8081/register",
+			"time": 7,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Message should be Invalid password": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid password": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Message should be Invalid password": true
+				}
+			]
+		},
+		{
+			"id": "ebcc6563-1777-4195-bd05-7999be68cb9d",
+			"name": "Register Negative (password number constraint fail)",
+			"url": "localhost:8081/register",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Message should be Invalid password": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid password": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Message should be Invalid password": true
+				}
+			]
+		},
+		{
+			"id": "3df4c91c-9385-44c5-909a-4e6a9b62e953",
+			"name": "Register Negative (non unique username)",
+			"url": "localhost:8081/register",
+			"time": 406,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Message should be Invalid username": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid username": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				406
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Message should be Invalid username": true
+				}
+			]
+		},
+		{
+			"id": "197149ff-d3f4-4037-92cd-c4c28aedd7f0",
+			"name": "Register Negative (Username too short)",
+			"url": "localhost:8081/register",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Message should be Invalid username": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid username": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Message should be Invalid username": true
+				}
+			]
+		},
+		{
+			"id": "70d6aefe-8516-4cbe-b627-c5e73e7b7c09",
+			"name": "Register Negative (Username too long)",
+			"url": "localhost:8081/register",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Message should be Invalid username": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid username": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Message should be Invalid username": true
+				}
+			]
+		},
+		{
+			"id": "a586e8aa-ce51-43cf-b621-d118c5531a90",
+			"name": "Register Negative (username doesn't start with letter)",
+			"url": "localhost:8081/register",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Message should be Invalid username": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid username": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Message should be Invalid username": true
+				}
+			]
+		},
+		{
+			"id": "ecefc73e-a516-418b-84d4-5eb0a33dc642",
+			"name": "Register Negative (Username has invalid characters)",
+			"url": "localhost:8081/register",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Message should be Invalid username": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid username": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Message should be Invalid username": true
+				}
+			]
+		},
+		{
+			"id": "bac1233b-0277-4d8f-945a-8bd234b0fd49",
+			"name": "Login Negative (invalid username)",
+			"url": "localhost:8081/login",
+			"time": 395,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true,
+				"Message should be invalid credentials": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be invalid credentials": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				395
+			],
+			"allTests": [
+				{
+					"Status code is 401": true,
+					"Message should be invalid credentials": true
+				}
+			]
+		},
+		{
+			"id": "afb11925-4247-40a4-87ef-808d115d145f",
+			"name": "Login Negative (invalid password)",
+			"url": "localhost:8081/login",
+			"time": 396,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true,
+				"Message should be invalid credentials": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be invalid credentials": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				396
+			],
+			"allTests": [
+				{
+					"Status code is 401": true,
+					"Message should be invalid credentials": true
+				}
+			]
+		},
+		{
+			"id": "8756ed1c-2f7e-4a6a-afc3-0ec39c012d22",
+			"name": "Login Negative (both invalid)",
+			"url": "localhost:8081/login",
+			"time": 366,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true,
+				"Message should be invalid credentials": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be invalid credentials": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				366
+			],
+			"allTests": [
+				{
+					"Status code is 401": true,
+					"Message should be invalid credentials": true
+				}
+			]
+		},
+		{
+			"id": "09d72a30-dc83-4b8c-931d-a94bd4826301",
+			"name": "Login Positive",
+			"url": "localhost:8081/login",
+			"time": 414,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Id should be returned": true,
+				"Username should be returned": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Id should be returned": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Username should be returned": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				414
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Id should be returned": true,
+					"Username should be returned": true
+				}
+			]
+		},
+		{
+			"id": "ab6a187d-ccff-4634-8a87-8dc66066f995",
+			"name": "Get Planets by Owner ID (ID = 1)",
+			"url": "localhost:8081/planetarium/planet/owner/1",
+			"time": 628,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Planet details match (ignoring imageData)": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Planet details match (ignoring imageData)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				628
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Planet details match (ignoring imageData)": true
+				}
+			]
+		},
+		{
+			"id": "1849e1e5-71d7-4bd2-bf50-a6f3a3cff746",
+			"name": "Get Planets by Owner ID (ID = 10) Not in DB",
+			"url": "localhost:8081/planetarium/planet/owner/10",
+			"time": 375,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				375
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "bf62732e-9891-406e-b985-0377885d396b",
+			"name": "Get Moon by Planet ID (ID = 1)",
+			"url": "localhost:8081/planetarium/moon/owner/1",
+			"time": 531,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Moon details match (ignoring imageData)": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Moon details match (ignoring imageData)": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				531
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Moon details match (ignoring imageData)": true
+				}
+			]
+		},
+		{
+			"id": "8944d91a-9bec-421b-a654-b9cef2031cc4",
+			"name": "Get Moon by Planet ID (ID = 10) Not in DB",
+			"url": "localhost:8081/planetarium/moon/owner/10",
+			"time": 392,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body is correct": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body is correct": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				392
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body is correct": true
+				}
+			]
+		},
+		{
+			"id": "d96eab4e-2a84-41cb-abf7-4c703e4dd7d1",
+			"name": "Create Moon without image Positive",
+			"url": "localhost:8081/planetarium/moon",
+			"time": 2268,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2268
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "3c190489-7ecc-4708-9cd4-75527337b400",
+			"name": "Create Moon with image Positive",
+			"url": "localhost:8081/planetarium/moon",
+			"time": 2539,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				2539
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "ef272275-0b0d-4e04-93ce-a0941e3bcfce",
+			"name": "Create Moon without image Negative (moon name invalid characters fail)",
+			"url": "localhost:8081/planetarium/moon",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Return message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Return message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Return message": true
+				}
+			]
+		},
+		{
+			"id": "638bef85-fbbd-498c-ac8f-bb467de79091",
+			"name": "Create Moon without image Negative (moon name unique fail)",
+			"url": "localhost:8081/planetarium/moon",
+			"time": 528,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Return message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Return message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				528
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Return message": true
+				}
+			]
+		},
+		{
+			"id": "687b4f26-2af9-4545-b5c2-d5b19d6056bf",
+			"name": "Create Moon without image Negative (moon name length short fail)",
+			"url": "localhost:8081/planetarium/moon",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Return message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Return message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Return message": true
+				}
+			]
+		},
+		{
+			"id": "93b61a90-270d-4a0f-a155-9b92d12ad478",
+			"name": "Create Moon without image Negative (moon name length long fail)",
+			"url": "localhost:8081/planetarium/moon",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Return message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Return message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Return message": true
+				}
+			]
+		},
+		{
+			"id": "9cedcbf0-5f61-456a-b662-0ea79c52e104",
+			"name": "Create Moon without image Negative  (planet id fail)",
+			"url": "localhost:8081/planetarium/moon",
+			"time": 764,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Return message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Return message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				764
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Return message": true
+				}
+			]
+		},
+		{
+			"id": "9093b984-7311-486f-98cb-27093e1d3f8a",
+			"name": "Create Moon with image Negative (invalid file format)",
+			"url": "localhost:8081/planetarium/moon",
+			"time": 965,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Return message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Return message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				965
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Return message": true
+				}
+			]
+		},
+		{
+			"id": "babb11a0-d74a-4469-b4b8-77891e0c8a8d",
+			"name": "Create Planet without image data Positive",
+			"url": "localhost:8081/planetarium/planet",
+			"time": 1196,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1196
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "c08b8272-101b-4a64-9307-0a5dfb5919b1",
+			"name": "Create Planet with image data Positive",
+			"url": "localhost:8081/planetarium/planet",
+			"time": 1442,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1442
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "e7c62ad2-1cdb-419e-952e-d66141972246",
+			"name": "Create Planet with Invalid name (planet name length long fail)",
+			"url": "localhost:8081/planetarium/planet",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Return message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Return message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Return message": true
+				}
+			]
+		},
+		{
+			"id": "ef54b423-74ad-40c5-b308-a6c2a2efdfe1",
+			"name": "Create Planet with Invalid name (planet name length short fail)",
+			"url": "localhost:8081/planetarium/planet",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Return message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Return message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Return message": true
+				}
+			]
+		},
+		{
+			"id": "919bf4e5-e050-4b8a-8e81-f44a46cc141b",
+			"name": "Create Planet with Invalid name (planet name unique fail)",
+			"url": "localhost:8081/planetarium/planet",
+			"time": 577,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Return message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Return message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				577
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Return message": true
+				}
+			]
+		},
+		{
+			"id": "b11a5333-de9d-4e10-83b8-f276f4a3b1d7",
+			"name": "Create Planet with Invalid name (planet name  character fail)",
+			"url": "localhost:8081/planetarium/planet",
+			"time": 3,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Return message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Return message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Return message": true
+				}
+			]
+		},
+		{
+			"id": "df0ef80f-84c0-46bf-b1d2-e1805c2169fd",
+			"name": "Create Planet Negative (Invalid file type)",
+			"url": "localhost:8081/planetarium/planet",
+			"time": 385,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Return message": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Return message": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				385
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Return message": true
+				}
+			]
+		},
+		{
+			"id": "d5305742-6a80-4c63-bb11-6e403a5af24f",
+			"name": "Delete Moon Negative",
+			"url": "localhost:8081/planetarium/moon/xyz",
+			"time": 406,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Message should be Invalid moon name": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should be Invalid moon name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				406
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Message should be Invalid moon name": true
+				}
+			]
+		},
+		{
+			"id": "0e244c2b-895c-4de5-9156-21a199a9ff73",
+			"name": "Delete Moon Positive",
+			"url": "localhost:8081/planetarium/moon/Luna",
+			"time": 884,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				884
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				}
+			]
+		},
+		{
+			"id": "7fa333fb-9864-46e1-83d5-b14eb1112e07",
+			"name": "Delete Planet Positive",
+			"url": "localhost:8081/planetarium/planet/Earth",
+			"time": 954,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Status code is 204": true
+			},
+			"testPassFailCounts": {
+				"Status code is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				954
+			],
+			"allTests": [
+				{
+					"Status code is 204": true
+				}
+			]
+		},
+		{
+			"id": "8b1b5b92-04c9-4f43-81d2-8f5fd9fc0da7",
+			"name": "Delete Planet Negative",
+			"url": "localhost:8081/planetarium/planet/Planet Name That-is 1  long_name",
+			"time": 411,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 404": true,
+				"Message should say Invalid planet name": true
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Message should say Invalid planet name": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				411
+			],
+			"allTests": [
+				{
+					"Status code is 404": true,
+					"Message should say Invalid planet name": true
+				}
+			]
+		},
+		{
+			"id": "2b3b6ce8-08e4-4a84-8bd9-e1dd1d8b619a",
+			"name": "Logout",
+			"url": "localhost:8081/logout",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 19305,
+	"collection": {
+		"requests": [
+			{
+				"id": "bb773b8a-f148-498a-9a89-c0866cc0059c",
+				"method": "POST"
+			},
+			{
+				"id": "a72c63bd-2dca-489c-b740-3deaa8881460",
+				"method": "POST"
+			},
+			{
+				"id": "c65aeea3-7736-4415-a155-197a7a4dedc7",
+				"method": "POST"
+			},
+			{
+				"id": "db409262-078f-43b9-9cf6-4ff01076e505",
+				"method": "POST"
+			},
+			{
+				"id": "f2c9ba5d-b31d-48f0-9745-043c244fc4b7",
+				"method": "POST"
+			},
+			{
+				"id": "b660c8e7-df2b-46d1-8524-5acfe29e7a7f",
+				"method": "POST"
+			},
+			{
+				"id": "3eeca68d-a3f9-4a4b-a80c-bc65c923be08",
+				"method": "POST"
+			},
+			{
+				"id": "ebcc6563-1777-4195-bd05-7999be68cb9d",
+				"method": "POST"
+			},
+			{
+				"id": "3df4c91c-9385-44c5-909a-4e6a9b62e953",
+				"method": "POST"
+			},
+			{
+				"id": "197149ff-d3f4-4037-92cd-c4c28aedd7f0",
+				"method": "POST"
+			},
+			{
+				"id": "70d6aefe-8516-4cbe-b627-c5e73e7b7c09",
+				"method": "POST"
+			},
+			{
+				"id": "a586e8aa-ce51-43cf-b621-d118c5531a90",
+				"method": "POST"
+			},
+			{
+				"id": "ecefc73e-a516-418b-84d4-5eb0a33dc642",
+				"method": "POST"
+			},
+			{
+				"id": "bac1233b-0277-4d8f-945a-8bd234b0fd49",
+				"method": "POST"
+			},
+			{
+				"id": "afb11925-4247-40a4-87ef-808d115d145f",
+				"method": "POST"
+			},
+			{
+				"id": "8756ed1c-2f7e-4a6a-afc3-0ec39c012d22",
+				"method": "POST"
+			},
+			{
+				"id": "09d72a30-dc83-4b8c-931d-a94bd4826301",
+				"method": "POST"
+			},
+			{
+				"id": "ab6a187d-ccff-4634-8a87-8dc66066f995",
+				"method": "GET"
+			},
+			{
+				"id": "1849e1e5-71d7-4bd2-bf50-a6f3a3cff746",
+				"method": "GET"
+			},
+			{
+				"id": "bf62732e-9891-406e-b985-0377885d396b",
+				"method": "GET"
+			},
+			{
+				"id": "8944d91a-9bec-421b-a654-b9cef2031cc4",
+				"method": "GET"
+			},
+			{
+				"id": "d96eab4e-2a84-41cb-abf7-4c703e4dd7d1",
+				"method": "POST"
+			},
+			{
+				"id": "3c190489-7ecc-4708-9cd4-75527337b400",
+				"method": "POST"
+			},
+			{
+				"id": "ef272275-0b0d-4e04-93ce-a0941e3bcfce",
+				"method": "POST"
+			},
+			{
+				"id": "638bef85-fbbd-498c-ac8f-bb467de79091",
+				"method": "POST"
+			},
+			{
+				"id": "687b4f26-2af9-4545-b5c2-d5b19d6056bf",
+				"method": "POST"
+			},
+			{
+				"id": "93b61a90-270d-4a0f-a155-9b92d12ad478",
+				"method": "POST"
+			},
+			{
+				"id": "9cedcbf0-5f61-456a-b662-0ea79c52e104",
+				"method": "POST"
+			},
+			{
+				"id": "9093b984-7311-486f-98cb-27093e1d3f8a",
+				"method": "POST"
+			},
+			{
+				"id": "babb11a0-d74a-4469-b4b8-77891e0c8a8d",
+				"method": "POST"
+			},
+			{
+				"id": "c08b8272-101b-4a64-9307-0a5dfb5919b1",
+				"method": "POST"
+			},
+			{
+				"id": "e7c62ad2-1cdb-419e-952e-d66141972246",
+				"method": "POST"
+			},
+			{
+				"id": "ef54b423-74ad-40c5-b308-a6c2a2efdfe1",
+				"method": "POST"
+			},
+			{
+				"id": "919bf4e5-e050-4b8a-8e81-f44a46cc141b",
+				"method": "POST"
+			},
+			{
+				"id": "b11a5333-de9d-4e10-83b8-f276f4a3b1d7",
+				"method": "POST"
+			},
+			{
+				"id": "df0ef80f-84c0-46bf-b1d2-e1805c2169fd",
+				"method": "POST"
+			},
+			{
+				"id": "d5305742-6a80-4c63-bb11-6e403a5af24f",
+				"method": "DELETE"
+			},
+			{
+				"id": "0e244c2b-895c-4de5-9156-21a199a9ff73",
+				"method": "DELETE"
+			},
+			{
+				"id": "7fa333fb-9864-46e1-83d5-b14eb1112e07",
+				"method": "DELETE"
+			},
+			{
+				"id": "8b1b5b92-04c9-4f43-81d2-8f5fd9fc0da7",
+				"method": "DELETE"
+			},
+			{
+				"id": "2b3b6ce8-08e4-4a84-8bd9-e1dd1d8b619a",
+				"method": "POST"
+			}
+		]
+	}
+}
