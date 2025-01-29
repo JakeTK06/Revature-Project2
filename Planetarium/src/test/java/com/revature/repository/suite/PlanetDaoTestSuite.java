@@ -13,7 +13,8 @@ import org.junit.runners.Suite;
         PlanetDaoDeletePlanetByNameNegativeTest.class,
         PlanetDaoReadPlanetsByOwnerNegativeTest.class,
         PlanetDaoUpdatePlanetPositiveTest.class,
-        PlanetDaoUpdatePlanetNegativeTest.class
+        PlanetDaoUpdatePlanetNegativeTest.class,
+        PlanetDaoCheckUserExistsNegativeTest.class
 })
 public class PlanetDaoTestSuite {
 

@@ -236,7 +236,7 @@ public class MoonDaoImp implements MoonDao {
         // Check planet does exist in db
         Optional<Moon> existingMoon = readMoon(moon.getMoonId());
         if(existingMoon.isEmpty()){
-            throw new MoonFail("Invalid moon ID");
+            throw new MoonFail("Invalid moon id");
         }
 
         String moonName = moon.getMoonName();
@@ -257,10 +257,10 @@ public class MoonDaoImp implements MoonDao {
         // Check planet id is valid
         try {
             if (readPlanet(moon.getOwnerId()).isEmpty()){
-                throw new MoonFail("Invalid planet ID");
+                throw new MoonFail("Invalid planet id");
             }
         } catch (PlanetFail e){
-            throw new MoonFail("Invalid planet ID");
+            throw new MoonFail("Invalid planet id");
         }
 
         // Check image type

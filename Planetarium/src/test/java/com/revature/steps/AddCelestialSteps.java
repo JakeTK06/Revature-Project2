@@ -76,7 +76,7 @@ public class AddCelestialSteps {
         if (fileType.equals("GIF")){
             // set to GIF
             TestRunner.wait.until( d-> {
-                TestRunner.homePage.setPlanetImageInput("C:\\Users\\David\\Desktop\\PS2\\Planetarium\\src\\test\\resources\\Celestial-Images\\planet-gif.gif");
+                TestRunner.homePage.setPlanetImageInput(CelestialGIF.getAbsolutePath());
                 return true;
             });
         } else if (fileType.equals("JPEG")){
@@ -86,7 +86,7 @@ public class AddCelestialSteps {
             });
         } else if (fileType.equals("PNG")){
             TestRunner.wait.until( d-> {
-                TestRunner.homePage.setPlanetImageInput("C:\\Users\\David\\Desktop\\PS2\\Planetarium\\src\\test\\resources\\Celestial-Images\\planet-png.png");
+                TestRunner.homePage.setPlanetImageInput(CelestialPNG.getAbsolutePath());
                 return true;
             });
         }

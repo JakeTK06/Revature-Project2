@@ -67,9 +67,9 @@ public class MoonServiceUpdateNegativeTest extends MoonServiceTest {
         int invalidNewPlanetId = 10;
         String gifPath = "src/test/resources/Celestial-Images/planet-gif.gif";
         String fileTypeExceptionMessage = "Invalid file type";
-        String planetIdExceptionMessage = "Invalid planet ID";
+        String planetIdExceptionMessage = "Invalid planet id";
         String moonNameExceptionMessage = "Invalid moon name";
-        String moonIdExceptionMessage = "Invalid moon ID";
+        String moonIdExceptionMessage = "Invalid moon id";
 
         return Arrays.asList(new Object[][]{
                 {validMoonId,validNewMoonName,validNewPlanetId,gifPath,fileTypeExceptionMessage},

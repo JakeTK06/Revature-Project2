@@ -204,11 +204,7 @@ public class PlanetDaoImp implements PlanetDao {
         }
 
         // Check planet id is valid
-        try {
-            if (readPlanet(planet.getOwnerId()).isEmpty()){
-                throw new PlanetFail("Invalid owner id");
-            }
-        } catch (PlanetFail e){
+        if(!checkOwnerExists(planet.getOwnerId())){
             throw new PlanetFail("Invalid owner id");
         }
 
@@ -274,5 +270,18 @@ public class PlanetDaoImp implements PlanetDao {
             throw new PlanetFail(e.getMessage());
         }
     }
-    
+
+    @Override
+    public boolean checkOwnerExists(int ownerId) {
+        try (Connection conn = DatabaseConnector.getConnection();
+             PreparedStatement stmt = conn.prepareStatement("SELECT FROM users WHERE id = ?")) {
+            stmt.setInt(1, ownerId);
+            ResultSet rs = stmt.executeQuery();
+            return rs.isBeforeFirst();
+        } catch (SQLException e) {
+            System.out.println(e);
+            throw new PlanetFail(e.getMessage());
+        }
+    }
+
 }

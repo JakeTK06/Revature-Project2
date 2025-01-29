@@ -84,4 +84,10 @@ public class PlanetDaoPositiveTest extends PlanetDaoTest {
         Assert.assertEquals(true, response);
     }
 
+    @Test
+    public void daoCheckUserExistsPositiveTest(){
+        boolean response = planetDao.checkOwnerExists(1);
+        Assert.assertTrue(response);
+    }
+
 }
