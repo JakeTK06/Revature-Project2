@@ -76,6 +76,7 @@ public class MoonController {
             ctx.result(e.getMessage());
             ctx.status(400);
         }
+
     }
 
     public void deleteMoon(Context ctx) {
