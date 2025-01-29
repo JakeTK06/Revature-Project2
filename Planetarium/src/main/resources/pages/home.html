@@ -39,6 +39,12 @@
 
         .submit-button {
             margin-top: 10px;
+            color: white;
+            background-color: #007FFF;
+            border-radius: 3px;
+            cursor: pointer;
+            border: none;
+            padding: 7px;
         }
         #deleteContainer {
             margin-top: 20px;
@@ -50,12 +56,18 @@
 
         #deleteButton {
             margin-left: 10px;
-            padding: 5px 10px;
+            padding: 7px 10px;
+            color: white;
+            background-color: #fd5c63;
+            border-radius: 3px;
+            cursor: pointer;
+            border: none;
         }
         .logout-button {
             position: fixed;
             top: 10px;
             right: 10px;
+            cursor: pointer;
         }
 
         .center{
@@ -207,6 +219,9 @@
                     if (file.type !== "image/jpeg" && file.type !== "image/png"){
                         alert("Invalid file type");
                         reject(new Error("Invalid file type: must be an image"));
+                    if (file.type !== "image/jpeg" && file.type !== "image/png"){
+                        reject(new Error("Invalid file type"));
+                        alert("Invalid file type");
                     }
                     let reader = new FileReader();
                     reader.onload = function() {
@@ -398,7 +413,7 @@
                 populateCelestialTable();
             } else {
                 alert(`Invalid planet name`);
-            }
+            }  
         }
 
 

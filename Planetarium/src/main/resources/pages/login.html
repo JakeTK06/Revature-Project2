@@ -13,12 +13,16 @@
       justify-content: center;
       height: 100vh;
     }
+    h1 {
+      text-align: center;
+    }
     .container {
       background-color: #333333;
       padding: 20px;
       border-radius: 5px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
       width: 300px;
+      text-align: center;
     }
     .container input[type="text"],
     .container input[type="password"] {
@@ -37,11 +41,27 @@
       border: none;
       border-radius: 3px;
       cursor: pointer;
+      font-size: 14px;
+    }
+    .container input[type="submit"]:hover{
+      background: #2691d9;
+      color: #e9f4fb;
+      transition: .5s;
+    }
+    p {
+      text-align: center;
     }
     .container a {
       color: white;
-      text-decoration: underline;
-      font-size: 8px;
+      width: 50px;
+      padding: 10px;
+      background-color: #6F2DA8;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -52,6 +72,7 @@
       <input type="text" id="usernameInput" name="username" placeholder="Username">
       <input type="password" id="passwordInput" name="password" placeholder="Password">
       <input type="submit" value="Login">
+      <p>---OR---</p>
       <a href="http://{URL}:{PORT}/register">Create an Account</a>
     </form>
   </div>
@@ -86,7 +107,7 @@
       sessionStorage.setItem("userId", data.id)
       window.location.replace("http://{URL}:{PORT}/planetarium");
     } else {
-      alert("Invalid Credentials");
+      alert("invalid credentials");
     }
   }
 

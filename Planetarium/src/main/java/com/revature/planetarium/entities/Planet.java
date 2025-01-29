@@ -4,12 +4,19 @@ package com.revature.planetarium.entities;
 import java.util.Base64;
 
 public class Planet {
-    
 
     private int planetId;
     private String planetName;
     private int ownerId;
     private byte[] imageData;
+
+    public Planet() {};
+
+    public Planet(int id, String name, int ownId) {
+        this.planetName = name;
+        this.planetId = id;
+        this.ownerId = ownId;
+    }
     
     public int getPlanetId() {
         return planetId;
