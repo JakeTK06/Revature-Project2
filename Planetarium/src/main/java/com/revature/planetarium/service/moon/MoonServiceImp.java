@@ -100,17 +100,56 @@ public class MoonServiceImp<T> implements MoonService<T> {
 
     @Override
     public Moon updateMoon(Moon moon) {
+        // Order to throw exceptions
+        // 1. moon id exists in db
+        // 2. new moon name is valid
+        //      - doesnt exist in database at a different id
+        //      - meets character constraints
+        // 2. planet id is valid
+        // 3. Image type
+
+        // Check moon id
         Optional<Moon> existingMoon = moonDao.readMoon(moon.getMoonId());
         if (existingMoon.isEmpty()) {
-            throw new MoonFail("Moon not found, could not update");
+            throw new MoonFail("Invalid moon ID");
         }
-        if (moon.getMoonName().length() < 1 || moon.getMoonName().length() > 30) {
-            throw new MoonFail("Moon name must be between 1 and 30 characters, could not update");
-        }
+
+        // Moon name check
+        // - Moon name is unique
         Optional<Moon> moonWithSameName = moonDao.readMoon(moon.getMoonName());
         if (moonWithSameName.isPresent() && moonWithSameName.get().getMoonId() != moon.getMoonId()) {
-            throw new MoonFail("Moon name must be unique, could not update");
+            throw new MoonFail("Invalid moon name");
         }
+        // - Moon name meets character constraints
+        String validCharacters ="^[a-zA-Z0-9 _-]+$";
+        if (moon.getMoonName().isEmpty() || moon.getMoonName().length() > 30
+                || !moon.getMoonName().matches(validCharacters)){
+            throw new MoonFail("Invalid moon name");
+        }
+
+        // Check planet id is valid
+        try {
+            if (moonDao.readPlanet(moon.getOwnerId()).isEmpty()){
+                throw new MoonFail("Invalid planet ID");
+            }
+        } catch (PlanetFail e){
+            throw new MoonFail("Invalid planet ID");
+        }
+        // Check image type is valid
+        try {
+            if (moon.getImageData() != null) {
+                ByteArrayInputStream bais = new ByteArrayInputStream(moon.imageDataAsByteArray());
+                String format = getFormatName(bais);
+                if (!("jpeg".equalsIgnoreCase(format) || "png".equalsIgnoreCase(format))) {
+                    throw new MoonFail("Invalid file type");
+                }
+            }
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // now update
         Optional<Moon> updatedMoon = moonDao.updateMoon(moon);
         if (updatedMoon.isPresent()) {
             return updatedMoon.get();
