@@ -2,9 +2,7 @@ package com.revature.service.positive;
 
 import com.revature.planetarium.entities.Planet;
 import com.revature.service.parent.PlanetServiceTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mockito;
@@ -57,6 +55,16 @@ public class PlanetServiceUpdatePositiveTest extends PlanetServiceTest {
                 {validPlanetId,validNewPlanetName,newOwnerId,pngPath}
         });
 
+    }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running PlanetServiceUpdatePositiveTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("PlanetServiceUpdatePositiveTest Finished");
     }
 
     @Before

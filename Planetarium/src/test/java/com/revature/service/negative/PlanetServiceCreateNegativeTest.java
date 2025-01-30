@@ -3,9 +3,7 @@ package com.revature.service.negative;
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.service.parent.PlanetServiceTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import static org.junit.runners.Parameterized.Parameter;
 import static org.junit.runners.Parameterized.Parameters;
@@ -63,6 +61,16 @@ public class PlanetServiceCreateNegativeTest extends PlanetServiceTest {
             throw new RuntimeException(e);
         }
         negativePlanet.setImageData(Base64.getEncoder().encodeToString(imageData));
+    }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running PlanetServiceCreateNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("PlanetServiceCreateNegativeTest Finished");
     }
 
     @Before

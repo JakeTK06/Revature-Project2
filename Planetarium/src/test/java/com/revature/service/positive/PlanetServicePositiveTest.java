@@ -3,10 +3,7 @@ package com.revature.service.positive;
 import com.revature.planetarium.entities.Planet;
 import com.revature.service.parent.PlanetServiceTest;
 import com.revature.planetarium.repository.planet.PlanetDaoImp;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
 import org.mockito.Mockito;
 
 import java.io.IOException;
@@ -45,6 +42,17 @@ public class PlanetServicePositiveTest extends PlanetServiceTest{
         }
         positivePlanet.setImageData(Base64.getEncoder().encodeToString(imageData));
     }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running PlanetServicePositiveTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("PlanetServicePositiveTest Finished");
+    }
+
     @Before
     public void positiveSetup() {
         positivePlanet = new Planet();

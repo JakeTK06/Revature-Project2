@@ -3,7 +3,9 @@ package com.revature.repository.negative;
 import com.revature.planetarium.entities.User;
 import com.revature.planetarium.exceptions.UserFail;
 import com.revature.repository.parent.UserDaoTest;
+import org.junit.AfterClass;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -49,6 +51,16 @@ public class UserDaoCreateUserNegativeTest extends UserDaoTest {
                 {0,"Super_man-2001","BATMAN1","Invalid password"},
                 {0,"Super_man-2001","Robin","Invalid password"},
         });
+    }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running UserDaoCreateUserNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("UserDaoCreateUserNegativeTest Finished");
     }
 
     /*

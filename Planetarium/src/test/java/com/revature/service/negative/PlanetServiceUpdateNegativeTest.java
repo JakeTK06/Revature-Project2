@@ -3,9 +3,7 @@ package com.revature.service.negative;
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.service.parent.PlanetServiceTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mockito;
@@ -114,6 +112,16 @@ public class PlanetServiceUpdateNegativeTest extends PlanetServiceTest {
                 {invalidPlanetId,validPlanetName,invalidNewOwnerId,gifPath,planetDoesNotExistMessage},
         });
 
+    }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running PlanetServiceUpdateNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("PlanetServiceUpdateNegativeTest Finished");
     }
 
     @Before

@@ -3,7 +3,9 @@ package com.revature.repository.negative;
 import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.exceptions.MoonFail;
 import com.revature.repository.parent.MoonDaoTest;
+import org.junit.AfterClass;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -108,6 +110,16 @@ public class MoonDaoUpdateNegativeTest extends MoonDaoTest {
                 {invalidMoonId,existingMoonName,invalidNewPlanetId,pngPath,moonIdExceptionMessage},
                 {invalidMoonId,existingMoonName,invalidNewPlanetId,gifPath,moonIdExceptionMessage}
         });
+    }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running MoonDaoUpdateNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("MoonDaoUpdateNegativeTest Finished");
     }
 
     @Test

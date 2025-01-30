@@ -5,9 +5,7 @@ import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.entities.User;
 import com.revature.planetarium.exceptions.MoonFail;
 import com.revature.service.parent.MoonServiceTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mockito;
@@ -56,6 +54,16 @@ public class MoonServiceCreateMoonNegativeTest extends MoonServiceTest {
                 {0, "quasi-moon 1 Zoozve_", 1, "src/test/resources/Celestial-Images/planet-gif.gif", "Invalid file type"},
                 {0, "quasi-moon 1 Zoozve_", 3, "src/test/resources/Celestial-Images/planet-1.jpg", "Invalid planet ID"}
         });
+    }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running MoonServiceCreateMoonNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("MoonServiceCreateMoonNegativeTest Finished");
     }
 
     @Before

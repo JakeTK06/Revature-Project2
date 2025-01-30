@@ -2,9 +2,7 @@ package com.revature.repository.positive;
 
 import com.revature.planetarium.entities.Moon;
 import com.revature.repository.parent.MoonDaoTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -22,6 +20,16 @@ public class MoonDaoPositiveTest extends MoonDaoTest {
     private String positiveMoonToDelete;
 
     private final File CelestialPNG = new File("src/test/resources/Celestial-Images/planet-png.png");
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running MoonDaoPositiveTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("MoonDaoPositiveTest Finished");
+    }
 
 //    positivePlanet.setImageData(Base64.getEncoder().encodeToString(imageData));
     @Before

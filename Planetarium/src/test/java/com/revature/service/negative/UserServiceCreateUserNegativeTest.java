@@ -3,9 +3,7 @@ package com.revature.service.negative;
 import com.revature.planetarium.entities.User;
 import com.revature.planetarium.exceptions.UserFail;
 import com.revature.service.parent.UserServiceTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mockito;
@@ -52,6 +50,16 @@ public class UserServiceCreateUserNegativeTest extends UserServiceTest {
                 {0,"Super_man-2001","BATMAN1","Invalid password"},
                 {0,"Super_man-2001","Robin","Invalid password"},
         });
+    }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running UserServiceCreateUserNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("UserServiceCreateUserNegativeTest Finished");
     }
 
     @Before
