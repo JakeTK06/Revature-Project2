@@ -2,9 +2,7 @@ package com.revature.repository.positive;
 
 import com.revature.planetarium.entities.Planet;
 import com.revature.repository.parent.PlanetDaoTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,6 +19,16 @@ public class PlanetDaoPositiveTest extends PlanetDaoTest {
     private String positivePlanetNameDeletion;
     private int positiveOwnerId;
     private byte[] imageData;
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running PlanetDaoPositiveTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("PlanetDaoPositiveTest Finished");
+    }
 
     @Before
     public void positiveSetup(){

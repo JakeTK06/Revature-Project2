@@ -2,9 +2,7 @@ package com.revature.repository.positive;
 
 import com.revature.planetarium.entities.User;
 import com.revature.repository.parent.UserDaoTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import java.util.Optional;
 
@@ -12,6 +10,16 @@ public class UserDaoPositiveTest extends UserDaoTest {
 
     private User positiveUser;
     private String positiveUsername;
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running UserDaoPositiveTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("UserDaoPositiveTest Finished");
+    }
 
     @Before
     public void positiveSetup(){

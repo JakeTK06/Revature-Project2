@@ -3,10 +3,8 @@ package com.revature.repository.positive;
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.repository.parent.PlanetDaoTest;
-import org.junit.Assert;
-import org.junit.Before;
+import org.junit.*;
 import org.junit.runner.RunWith;
-import org.junit.Test;
 import org.junit.runners.Parameterized;
 
 import java.io.IOException;
@@ -56,6 +54,16 @@ public class PlanetDaoUpdatePlanetPositiveTest extends PlanetDaoTest{
                 {validPlanetId,validNewPlanetName,newOwnerId,pngPath}
         });
 
+    }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running PlanetDaoUpdatePlanetPositiveTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("PlanetDaoUpdatePlanetPositiveTest Finished");
     }
 
     @Test

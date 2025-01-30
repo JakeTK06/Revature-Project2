@@ -3,9 +3,7 @@ package com.revature.service.negative;
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.service.parent.PlanetServiceTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.mockito.Mockito;
 
 import java.util.Optional;
@@ -13,6 +11,16 @@ import java.util.Optional;
 public class PlanetServiceDeletionNegativeTest extends PlanetServiceTest {
     private String negativePlanetName;
     private String expectedMessage;
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running PlanetServiceDeletionNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("PlanetServiceDeletionNegativeTest Finished");
+    }
 
     @Before
     public void negativeSetup() {

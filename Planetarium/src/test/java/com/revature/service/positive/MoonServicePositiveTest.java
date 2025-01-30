@@ -3,10 +3,7 @@ package com.revature.service.positive;
 import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.entities.Planet;
 import com.revature.service.parent.MoonServiceTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 
@@ -39,6 +36,16 @@ public class MoonServicePositiveTest extends MoonServiceTest {
     private Optional<Moon> positiveDeleteMoonOptional;
     private String positiveDeleteMoonName;
     private Moon mockReturnedMoon;
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running MoonServicePositiveTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("MoonServicePositiveTest Finished");
+    }
 
     @Before
     public void positiveSetup() {

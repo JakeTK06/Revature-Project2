@@ -3,9 +3,7 @@ package com.revature.service.positive;
 import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.entities.Planet;
 import com.revature.service.parent.MoonServiceTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mockito;
@@ -60,6 +58,16 @@ public class MoonServiceUpdatePositiveTest extends MoonServiceTest {
                 {validMoonId,validNewMoonName,validNewPlanetId,jpegPath},
                 {validMoonId,validNewMoonName,validNewPlanetId,pngPath}
         });
+    }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running MoonServiceUpdatePositiveTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("MoonServiceUpdatePositiveTest Finished");
     }
 
     @Before

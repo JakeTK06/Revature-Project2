@@ -4,9 +4,7 @@ import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.MoonFail;
 import com.revature.service.parent.MoonServiceTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mockito;
@@ -115,6 +113,16 @@ public class MoonServiceUpdateNegativeTest extends MoonServiceTest {
                 {invalidMoonId,existingMoonName,invalidNewPlanetId,pngPath,moonIdExceptionMessage},
                 {invalidMoonId,existingMoonName,invalidNewPlanetId,gifPath,moonIdExceptionMessage}
         });
+    }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running MoonServiceUpdateNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("MoonServiceUpdateNegativeTest Finished");
     }
 
     @Before

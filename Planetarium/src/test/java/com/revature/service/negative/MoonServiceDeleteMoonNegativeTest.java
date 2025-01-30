@@ -4,9 +4,7 @@ import com.revature.planetarium.entities.Moon;
 import com.revature.planetarium.exceptions.MoonFail;
 import com.revature.planetarium.exceptions.UserFail;
 import com.revature.service.parent.MoonServiceTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mockito;
@@ -23,6 +21,15 @@ public class MoonServiceDeleteMoonNegativeTest extends MoonServiceTest {
     private String negativeMoonName;
     private String expectedExceptionMessage;
 
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running MoonServiceDeleteMoonNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("MoonServiceDeleteMoonNegativeTest Finished");
+    }
 
     @Before
     public void negativeSetup(){

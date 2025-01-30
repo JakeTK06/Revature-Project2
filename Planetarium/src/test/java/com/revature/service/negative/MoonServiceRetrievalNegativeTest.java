@@ -2,9 +2,7 @@ package com.revature.service.negative;
 
 import com.revature.planetarium.entities.Moon;
 import com.revature.service.parent.MoonServiceTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.mockito.Mockito;
@@ -19,6 +17,16 @@ public class MoonServiceRetrievalNegativeTest extends MoonServiceTest {
 
     private int negativePlanetId;
     private List<Moon> mockReturnedMoons;
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running MoonServiceRetrievalNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("MoonServiceRetrievalNegativeTest Finished");
+    }
 
     @Before
     public void negativeSetup(){

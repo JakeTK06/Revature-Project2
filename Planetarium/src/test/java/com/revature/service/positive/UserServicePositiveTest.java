@@ -2,9 +2,7 @@ package com.revature.service.positive;
 
 import com.revature.planetarium.entities.User;
 import com.revature.service.parent.UserServiceTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 import org.mockito.Mockito;
 
 import java.util.Optional;
@@ -20,6 +18,16 @@ public class UserServicePositiveTest extends UserServiceTest {
     private Optional<User> authenticateUserOptional;
     private User positiveAuthenticateUser;
     private User expectedAuthenticateResult;
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running UserServicePositiveTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("UserServicePositiveTest Finished");
+    }
 
     @Before
     public void positiveSetup(){

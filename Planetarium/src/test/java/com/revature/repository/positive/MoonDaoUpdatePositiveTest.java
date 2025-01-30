@@ -2,7 +2,9 @@ package com.revature.repository.positive;
 
 import com.revature.planetarium.entities.Moon;
 import com.revature.repository.parent.MoonDaoTest;
+import org.junit.AfterClass;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -55,6 +57,16 @@ public class MoonDaoUpdatePositiveTest extends MoonDaoTest {
                 {validMoonId,validNewMoonName,validNewPlanetId,jpegPath},
                 {validMoonId,validNewMoonName,validNewPlanetId,pngPath}
         });
+    }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running MoonDaoUpdatePositiveTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("MoonDaoUpdatePositiveTest Finished");
     }
 
     @Test

@@ -2,15 +2,23 @@ package com.revature.repository.negative;
 
 import com.revature.planetarium.entities.Moon;
 import com.revature.repository.parent.MoonDaoTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import java.util.List;
 
 public class MoonDaoRetrievalNegativeTest extends MoonDaoTest {
 
     private int negativePlanetIdForRetrieval;
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running MoonDaoRetrievalNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("MoonDaoRetrievalNegativeTest Finished");
+    }
 
     @Before
     public void negativeSetup(){

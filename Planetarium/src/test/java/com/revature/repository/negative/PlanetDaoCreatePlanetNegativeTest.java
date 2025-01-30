@@ -3,7 +3,9 @@ package com.revature.repository.negative;
 import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.repository.parent.PlanetDaoTest;
+import org.junit.AfterClass;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -47,6 +49,16 @@ public class PlanetDaoCreatePlanetNegativeTest extends PlanetDaoTest {
                 {0, "Earth", 1, "src/test/resources/Celestial-Images/planet-1.jpg", "Invalid planet name"},
                 {0, "", 1, "", "Invalid planet name"},
         });
+    }
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running PlanetDaoCreatePlanetNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("PlanetDaoCreatePlanetNegativeTest Finished");
     }
 
     @Test

@@ -4,9 +4,7 @@ import com.revature.planetarium.entities.Planet;
 import com.revature.planetarium.exceptions.MoonFail;
 import com.revature.planetarium.exceptions.PlanetFail;
 import com.revature.repository.parent.PlanetDaoTest;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import java.util.List;
 
@@ -14,6 +12,16 @@ public class PlanetDaoDeletePlanetByNameNegativeTest extends PlanetDaoTest {
 
     private String negativePlanetName;
     private String exceptionMessage;
+
+    @BeforeClass
+    public static void startTestOutput(){
+        System.out.println("Running PlanetDaoDeletePlanetByNameNegativeTest...");
+    }
+
+    @AfterClass
+    public static void endTestOutput(){
+        System.out.println("PlanetDaoDeletePlanetByNameNegativeTest Finished");
+    }
 
     @Before
     public void negativeSetup(){
